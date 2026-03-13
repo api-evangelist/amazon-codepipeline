@@ -1,0 +1,326 @@
+openapi: 3.1.0
+info:
+  title: Amazon CodePipeline API
+  description: >-
+    Amazon CodePipeline is a fully managed continuous delivery service that
+    helps you automate your release pipelines for fast and reliable application
+    and infrastructure updates. The API enables programmatic management of
+    pipelines, stages, actions, and pipeline executions.
+  version: "2015-07-09"
+  contact:
+    name: Amazon Web Services
+    url: https://aws.amazon.com/codepipeline/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+  - url: https://codepipeline.amazonaws.com
+    description: Amazon CodePipeline API endpoint
+paths:
+  /:
+    post:
+      operationId: CreatePipeline
+      summary: Create a new pipeline
+      description: >-
+        Creates a pipeline with the specified name and structure. A pipeline
+        consists of stages and actions that process code changes.
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              $ref: "#/components/schemas/CreatePipelineInput"
+      responses:
+        "200":
+          description: Pipeline created successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Pipeline"
+        "400":
+          description: Bad request
+        "409":
+          description: Pipeline already exists
+      tags:
+        - Pipelines
+  /getPipeline:
+    post:
+      operationId: GetPipeline
+      summary: Get pipeline details
+      description: >-
+        Returns the metadata, structure, stages, and actions of a pipeline.
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              required:
+                - name
+              properties:
+                name:
+                  type: string
+                  description: The name of the pipeline.
+                version:
+                  type: integer
+                  description: The version number of the pipeline.
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Pipeline"
+        "404":
+          description: Pipeline not found
+      tags:
+        - Pipelines
+  /listPipelines:
+    post:
+      operationId: ListPipelines
+      summary: List pipelines
+      description: Gets a summary of all of the pipelines associated with your account.
+      requestBody:
+        required: false
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              properties:
+                nextToken:
+                  type: string
+                maxResults:
+                  type: integer
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PipelineList"
+      tags:
+        - Pipelines
+  /deletePipeline:
+    post:
+      operationId: DeletePipeline
+      summary: Delete a pipeline
+      description: Deletes the specified pipeline.
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              required:
+                - name
+              properties:
+                name:
+                  type: string
+                  description: The name of the pipeline to delete.
+      responses:
+        "200":
+          description: Pipeline deleted successfully
+        "404":
+          description: Pipeline not found
+      tags:
+        - Pipelines
+  /startPipelineExecution:
+    post:
+      operationId: StartPipelineExecution
+      summary: Start a pipeline execution
+      description: Starts the specified pipeline, causing it to run its most recent revision.
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              required:
+                - name
+              properties:
+                name:
+                  type: string
+                  description: The name of the pipeline to start.
+      responses:
+        "200":
+          description: Pipeline execution started
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  pipelineExecutionId:
+                    type: string
+        "404":
+          description: Pipeline not found
+      tags:
+        - Executions
+  /getPipelineExecution:
+    post:
+      operationId: GetPipelineExecution
+      summary: Get pipeline execution details
+      description: Returns information about an execution of a pipeline.
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              required:
+                - pipelineName
+                - pipelineExecutionId
+              properties:
+                pipelineName:
+                  type: string
+                pipelineExecutionId:
+                  type: string
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PipelineExecution"
+        "404":
+          description: Execution not found
+      tags:
+        - Executions
+components:
+  schemas:
+    Pipeline:
+      type: object
+      properties:
+        name:
+          type: string
+          description: The name of the pipeline.
+        roleArn:
+          type: string
+          description: The ARN of the IAM role used by the pipeline.
+        stages:
+          type: array
+          items:
+            $ref: "#/components/schemas/StageDeclaration"
+        version:
+          type: integer
+          description: The version number of the pipeline.
+    CreatePipelineInput:
+      type: object
+      required:
+        - pipeline
+      properties:
+        pipeline:
+          $ref: "#/components/schemas/Pipeline"
+        tags:
+          type: array
+          items:
+            $ref: "#/components/schemas/Tag"
+    StageDeclaration:
+      type: object
+      required:
+        - name
+        - actions
+      properties:
+        name:
+          type: string
+          description: The name of the stage.
+        actions:
+          type: array
+          items:
+            $ref: "#/components/schemas/ActionDeclaration"
+    ActionDeclaration:
+      type: object
+      required:
+        - name
+        - actionTypeId
+      properties:
+        name:
+          type: string
+          description: The action declaration name.
+        actionTypeId:
+          type: object
+          properties:
+            category:
+              type: string
+              enum:
+                - Source
+                - Build
+                - Deploy
+                - Test
+                - Invoke
+                - Approval
+            owner:
+              type: string
+            provider:
+              type: string
+            version:
+              type: string
+        configuration:
+          type: object
+          additionalProperties:
+            type: string
+        inputArtifacts:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+        outputArtifacts:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+    PipelineExecution:
+      type: object
+      properties:
+        pipelineName:
+          type: string
+        pipelineExecutionId:
+          type: string
+        pipelineVersion:
+          type: integer
+        status:
+          type: string
+          enum:
+            - InProgress
+            - Stopped
+            - Stopping
+            - Succeeded
+            - Superseded
+            - Failed
+        statusSummary:
+          type: string
+    PipelineList:
+      type: object
+      properties:
+        pipelines:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              version:
+                type: integer
+              created:
+                type: string
+                format: date-time
+              updated:
+                type: string
+                format: date-time
+        nextToken:
+          type: string
+    Tag:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          type: string
+tags:
+  - name: Pipelines
+    description: Operations for managing CodePipeline pipelines
+  - name: Executions
+    description: Operations for managing pipeline executions

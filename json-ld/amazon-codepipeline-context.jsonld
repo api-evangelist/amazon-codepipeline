@@ -1,0 +1,84 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "codepipeline": "https://docs.aws.amazon.com/codepipeline/latest/APIReference/",
+    "aws": "https://aws.amazon.com/",
+    "Pipeline": {
+      "@id": "codepipeline:API_Pipeline",
+      "@context": {
+        "pipelineName": {
+          "@id": "codepipeline:Pipeline/Name",
+          "@type": "xsd:string"
+        },
+        "roleArn": {
+          "@id": "codepipeline:Pipeline/RoleArn",
+          "@type": "xsd:string"
+        },
+        "version": {
+          "@id": "codepipeline:Pipeline/Version",
+          "@type": "xsd:integer"
+        },
+        "pipelineType": {
+          "@id": "codepipeline:Pipeline/PipelineType",
+          "@type": "xsd:string"
+        },
+        "executionMode": {
+          "@id": "codepipeline:Pipeline/ExecutionMode",
+          "@type": "xsd:string"
+        }
+      }
+    },
+    "Stage": {
+      "@id": "codepipeline:API_Stage",
+      "@context": {
+        "stageName": {
+          "@id": "codepipeline:Stage/Name",
+          "@type": "xsd:string"
+        },
+        "actions": {
+          "@id": "codepipeline:Stage/Actions",
+          "@container": "@list"
+        }
+      }
+    },
+    "Action": {
+      "@id": "codepipeline:API_Action",
+      "@context": {
+        "actionName": {
+          "@id": "codepipeline:Action/Name",
+          "@type": "xsd:string"
+        },
+        "category": {
+          "@id": "codepipeline:Action/Category",
+          "@type": "xsd:string"
+        },
+        "provider": {
+          "@id": "codepipeline:Action/Provider",
+          "@type": "xsd:string"
+        },
+        "runOrder": {
+          "@id": "codepipeline:Action/RunOrder",
+          "@type": "xsd:integer"
+        }
+      }
+    },
+    "PipelineExecution": {
+      "@id": "codepipeline:API_PipelineExecution",
+      "@context": {
+        "pipelineExecutionId": {
+          "@id": "codepipeline:PipelineExecution/Id",
+          "@type": "xsd:string"
+        },
+        "status": {
+          "@id": "codepipeline:PipelineExecution/Status",
+          "@type": "xsd:string"
+        },
+        "statusSummary": {
+          "@id": "codepipeline:PipelineExecution/StatusSummary",
+          "@type": "xsd:string"
+        }
+      }
+    },
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  }
+}
