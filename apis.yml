@@ -1,7 +1,7 @@
 aid: amazon-codepipeline
 url: >-
   https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/apis.yml
-name: Amazon CodePipeline API
+name: Amazon CodePipeline
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 specificationVersion: '0.19'
