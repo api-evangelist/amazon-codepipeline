@@ -320,7 +320,7 @@ components:
         value:
           type: string
 tags:
-  - name: Pipelines
-    description: Operations for managing CodePipeline pipelines
   - name: Executions
     description: Operations for managing pipeline executions
+  - name: Pipelines
+    description: Operations for managing CodePipeline pipelines
