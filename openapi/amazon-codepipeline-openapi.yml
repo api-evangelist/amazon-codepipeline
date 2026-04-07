@@ -20,7 +20,7 @@ paths:
   /:
     post:
       operationId: CreatePipeline
-      summary: Create a new pipeline
+      summary: Amazon CodePipeline Create a new pipeline
       description: >-
         Creates a pipeline with the specified name and structure. A pipeline
         consists of stages and actions that process code changes.
@@ -46,7 +46,7 @@ paths:
   /getPipeline:
     post:
       operationId: GetPipeline
-      summary: Get pipeline details
+      summary: Amazon CodePipeline Get pipeline details
       description: >-
         Returns the metadata, structure, stages, and actions of a pipeline.
       requestBody:
@@ -78,7 +78,7 @@ paths:
   /listPipelines:
     post:
       operationId: ListPipelines
-      summary: List pipelines
+      summary: Amazon CodePipeline List pipelines
       description: Gets a summary of all of the pipelines associated with your account.
       requestBody:
         required: false
@@ -103,7 +103,7 @@ paths:
   /deletePipeline:
     post:
       operationId: DeletePipeline
-      summary: Delete a pipeline
+      summary: Amazon CodePipeline Delete a pipeline
       description: Deletes the specified pipeline.
       requestBody:
         required: true
@@ -127,7 +127,7 @@ paths:
   /startPipelineExecution:
     post:
       operationId: StartPipelineExecution
-      summary: Start a pipeline execution
+      summary: Amazon CodePipeline Start a pipeline execution
       description: Starts the specified pipeline, causing it to run its most recent revision.
       requestBody:
         required: true
@@ -158,7 +158,7 @@ paths:
   /getPipelineExecution:
     post:
       operationId: GetPipelineExecution
-      summary: Get pipeline execution details
+      summary: Amazon CodePipeline Get pipeline execution details
       description: Returns information about an execution of a pipeline.
       requestBody:
         required: true
