@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-stage-name-structure.json",
+  "name": "StageName",
+  "description": "StageName schema from Amazon CodePipeline",
+  "type": "string",
+  "pattern": "[A-Za-z0-9.@\\-_]+",
+  "minLength": 1,
+  "maxLength": 100
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-list-webhooks-output-structure.json",
+  "name": "ListWebhooksOutput",
+  "description": "ListWebhooksOutput schema from Amazon CodePipeline",
+  "type": "object",
+  "properties": {
+    "webhooks": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/WebhookList"
+        },
+        {
+          "description": "The JSON detail returned for each webhook in the list output for the ListWebhooks call."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NextToken"
+        },
+        {
+          "description": "If the amount of returned information is significantly large, an identifier is also returned and can be used in a subsequent ListWebhooks call to return the next set of webhooks in the list. "
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-action-run-order-schema.json",
+  "title": "ActionRunOrder",
+  "description": "ActionRunOrder schema from Amazon CodePipeline",
+  "type": "integer",
+  "minimum": 1,
+  "maximum": 999
+}

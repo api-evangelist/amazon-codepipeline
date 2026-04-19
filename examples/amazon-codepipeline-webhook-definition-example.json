@@ -1,0 +1,8 @@
+{
+  "name": "example-resource",
+  "targetPipeline": "example-value",
+  "targetAction": "example-value",
+  "filters": "example-value",
+  "authentication": "example-value",
+  "authenticationConfiguration": "example-value"
+}

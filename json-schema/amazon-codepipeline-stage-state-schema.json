@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-stage-state-schema.json",
+  "title": "StageState",
+  "description": "Represents information about the state of the stage.",
+  "type": "object",
+  "properties": {
+    "stageName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StageName"
+        },
+        {
+          "description": "The name of the stage."
+        }
+      ]
+    },
+    "inboundExecution": {
+      "$ref": "#/components/schemas/StageExecution"
+    },
+    "inboundTransitionState": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TransitionState"
+        },
+        {
+          "description": "The state of the inbound transition, which is either enabled or disabled."
+        }
+      ]
+    },
+    "actionStates": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionStateList"
+        },
+        {
+          "description": "The state of the stage."
+        }
+      ]
+    },
+    "latestExecution": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StageExecution"
+        },
+        {
+          "description": "Information about the latest execution in the stage, including its ID and status."
+        }
+      ]
+    }
+  }
+}

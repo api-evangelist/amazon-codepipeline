@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-job-timeout-schema.json",
+  "title": "JobTimeout",
+  "description": "JobTimeout schema from Amazon CodePipeline",
+  "type": "integer",
+  "minimum": 60,
+  "maximum": 43200
+}

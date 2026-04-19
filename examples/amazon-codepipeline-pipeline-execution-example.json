@@ -1,0 +1,7 @@
+{
+  "pipelineName": "example-resource",
+  "pipelineExecutionId": "500123",
+  "pipelineVersion": 1,
+  "status": "InProgress",
+  "statusSummary": "ACTIVE"
+}

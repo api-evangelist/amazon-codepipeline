@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-maximum-action-type-artifact-count-structure.json",
+  "name": "MaximumActionTypeArtifactCount",
+  "description": "MaximumActionTypeArtifactCount schema from Amazon CodePipeline",
+  "type": "int32",
+  "minimum": 0,
+  "maximum": 10
+}

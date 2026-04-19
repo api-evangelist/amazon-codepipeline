@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-start-pipeline-execution-input-structure.json",
+  "name": "StartPipelineExecutionInput",
+  "description": "Represents the input of a <code>StartPipelineExecution</code> action.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PipelineName"
+        },
+        {
+          "description": "The name of the pipeline to start."
+        }
+      ]
+    },
+    "clientRequestToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ClientRequestToken"
+        },
+        {
+          "description": "The system-generated unique ID used to identify a unique execution request."
+        }
+      ]
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

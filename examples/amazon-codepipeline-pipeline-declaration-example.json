@@ -1,0 +1,8 @@
+{
+  "name": "example-resource",
+  "roleArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "artifactStore": "example-value",
+  "artifactStores": "example-value",
+  "stages": "example-value",
+  "version": "1.0.0"
+}

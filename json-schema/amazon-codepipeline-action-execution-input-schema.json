@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-action-execution-input-schema.json",
+  "title": "ActionExecutionInput",
+  "description": "Input information used for an action execution.",
+  "type": "object",
+  "properties": {
+    "actionTypeId": {
+      "$ref": "#/components/schemas/ActionTypeId"
+    },
+    "configuration": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionConfigurationMap"
+        },
+        {
+          "description": "Configuration data for an action execution."
+        }
+      ]
+    },
+    "resolvedConfiguration": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResolvedActionConfigurationMap"
+        },
+        {
+          "description": "Configuration data for an action execution with all variable references replaced with their real values for the execution."
+        }
+      ]
+    },
+    "roleArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RoleArn"
+        },
+        {
+          "description": "The ARN of the IAM service role that performs the declared action. This is assumed through the roleArn for the pipeline. "
+        }
+      ]
+    },
+    "region": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AWSRegionName"
+        },
+        {
+          "description": "The Amazon Web Services Region for the action, such as us-east-1."
+        }
+      ]
+    },
+    "inputArtifacts": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ArtifactDetailList"
+        },
+        {
+          "description": "Details of input artifacts of the action that correspond to the action execution."
+        }
+      ]
+    },
+    "namespace": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionNamespace"
+        },
+        {
+          "description": "The variable namespace associated with the action. All variables produced as output by this action fall under this namespace."
+        }
+      ]
+    }
+  }
+}

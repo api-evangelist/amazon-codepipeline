@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-maximum-action-type-artifact-count-schema.json",
+  "title": "MaximumActionTypeArtifactCount",
+  "description": "MaximumActionTypeArtifactCount schema from Amazon CodePipeline",
+  "type": "integer",
+  "minimum": 0,
+  "maximum": 10
+}

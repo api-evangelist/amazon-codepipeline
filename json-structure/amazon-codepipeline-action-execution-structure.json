@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-action-execution-structure.json",
+  "name": "ActionExecution",
+  "description": "Represents information about the run of an action.",
+  "type": "object",
+  "properties": {
+    "actionExecutionId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionExecutionId"
+        },
+        {
+          "description": "<p>ID of the workflow action execution in the current stage. Use the <a>GetPipelineState</a> action to retrieve the current action execution details of the current stage.</p> <note> <p>For older executions, this field might be empty. The action execution ID is available for executions run on or after March 2020.</p> </note>"
+        }
+      ]
+    },
+    "status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionExecutionStatus"
+        },
+        {
+          "description": "The status of the action, or for a completed action, the last status of the action."
+        }
+      ]
+    },
+    "summary": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ExecutionSummary"
+        },
+        {
+          "description": "A summary of the run of the action."
+        }
+      ]
+    },
+    "lastStatusChange": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The last status change of the action."
+        }
+      ]
+    },
+    "token": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionExecutionToken"
+        },
+        {
+          "description": "The system-generated token used to identify a unique approval request. The token for each open approval request can be obtained using the <code>GetPipelineState</code> command. It is used to validate that the approval request corresponding to this token is still valid."
+        }
+      ]
+    },
+    "lastUpdatedBy": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LastUpdatedBy"
+        },
+        {
+          "description": "The ARN of the user who last changed the pipeline."
+        }
+      ]
+    },
+    "externalExecutionId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ExecutionId"
+        },
+        {
+          "description": "The external ID of the run of the action."
+        }
+      ]
+    },
+    "externalExecutionUrl": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Url"
+        },
+        {
+          "description": "The URL of a resource external to Amazon Web Services that is used when running the action (for example, an external repository URL)."
+        }
+      ]
+    },
+    "percentComplete": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Percentage"
+        },
+        {
+          "description": "A percentage of completeness of the action as it runs."
+        }
+      ]
+    },
+    "errorDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ErrorDetails"
+        },
+        {
+          "description": "The details of an error returned by a URL external to Amazon Web Services."
+        }
+      ]
+    }
+  }
+}

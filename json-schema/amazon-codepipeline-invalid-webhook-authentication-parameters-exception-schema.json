@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-invalid-webhook-authentication-parameters-exception-schema.json",
+  "title": "InvalidWebhookAuthenticationParametersException",
+  "description": "InvalidWebhookAuthenticationParametersException schema from Amazon CodePipeline"
+}

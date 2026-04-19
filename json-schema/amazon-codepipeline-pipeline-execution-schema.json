@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-pipeline-execution-schema.json",
+  "title": "PipelineExecution",
+  "description": "PipelineExecution schema from Amazon CodePipeline",
+  "type": "object",
+  "properties": {
+    "pipelineName": {
+      "type": "string"
+    },
+    "pipelineExecutionId": {
+      "type": "string"
+    },
+    "pipelineVersion": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "InProgress",
+        "Stopped",
+        "Stopping",
+        "Succeeded",
+        "Superseded",
+        "Failed"
+      ]
+    },
+    "statusSummary": {
+      "type": "string"
+    }
+  }
+}

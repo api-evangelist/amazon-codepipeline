@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-list-webhooks-input-schema.json",
+  "title": "ListWebhooksInput",
+  "description": "ListWebhooksInput schema from Amazon CodePipeline",
+  "type": "object",
+  "properties": {
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NextToken"
+        },
+        {
+          "description": "The token that was returned from the previous ListWebhooks call, which can be used to return the next set of webhooks in the list."
+        }
+      ]
+    },
+    "MaxResults": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MaxResults"
+        },
+        {
+          "description": "The maximum number of results to return in a single call. To retrieve the remaining results, make another call with the returned nextToken value."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-current-revision-structure.json",
+  "name": "CurrentRevision",
+  "description": "Represents information about a current revision.",
+  "type": "object",
+  "properties": {
+    "revision": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Revision"
+        },
+        {
+          "description": "The revision ID of the current version of an artifact."
+        }
+      ]
+    },
+    "changeIdentifier": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RevisionChangeIdentifier"
+        },
+        {
+          "description": "The change identifier for the current revision."
+        }
+      ]
+    },
+    "created": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Time"
+        },
+        {
+          "description": "The date and time when the most recent revision of the artifact was created, in timestamp format."
+        }
+      ]
+    },
+    "revisionSummary": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RevisionSummary"
+        },
+        {
+          "description": "The summary of the most recent revision of the artifact."
+        }
+      ]
+    }
+  },
+  "required": [
+    "revision",
+    "changeIdentifier"
+  ]
+}

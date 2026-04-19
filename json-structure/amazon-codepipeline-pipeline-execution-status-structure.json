@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-pipeline-execution-status-structure.json",
+  "name": "PipelineExecutionStatus",
+  "description": "PipelineExecutionStatus schema from Amazon CodePipeline",
+  "type": "string",
+  "enum": [
+    "Cancelled",
+    "InProgress",
+    "Stopped",
+    "Stopping",
+    "Succeeded",
+    "Superseded",
+    "Failed"
+  ]
+}

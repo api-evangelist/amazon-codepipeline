@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-start-pipeline-execution-output-structure.json",
+  "name": "StartPipelineExecutionOutput",
+  "description": "Represents the output of a <code>StartPipelineExecution</code> action.",
+  "type": "object",
+  "properties": {
+    "pipelineExecutionId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PipelineExecutionId"
+        },
+        {
+          "description": "The unique system-generated ID of the pipeline execution that was started."
+        }
+      ]
+    }
+  }
+}

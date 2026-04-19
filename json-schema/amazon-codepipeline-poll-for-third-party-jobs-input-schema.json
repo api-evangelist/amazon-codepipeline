@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-poll-for-third-party-jobs-input-schema.json",
+  "title": "PollForThirdPartyJobsInput",
+  "description": "Represents the input of a <code>PollForThirdPartyJobs</code> action.",
+  "type": "object",
+  "properties": {
+    "actionTypeId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionTypeId"
+        },
+        {
+          "description": "Represents information about an action type."
+        }
+      ]
+    },
+    "maxBatchSize": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MaxBatchSize"
+        },
+        {
+          "description": "The maximum number of jobs to return in a poll for jobs call."
+        }
+      ]
+    }
+  },
+  "required": [
+    "actionTypeId"
+  ]
+}

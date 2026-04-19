@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-update-action-type-input-schema.json",
+  "title": "UpdateActionTypeInput",
+  "description": "UpdateActionTypeInput schema from Amazon CodePipeline",
+  "type": "object",
+  "properties": {
+    "actionType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionTypeDeclaration"
+        },
+        {
+          "description": "The action type definition for the action type to be updated."
+        }
+      ]
+    }
+  },
+  "required": [
+    "actionType"
+  ]
+}

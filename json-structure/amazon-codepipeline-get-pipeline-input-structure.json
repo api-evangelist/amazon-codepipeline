@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-get-pipeline-input-structure.json",
+  "name": "GetPipelineInput",
+  "description": "Represents the input of a <code>GetPipeline</code> action.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PipelineName"
+        },
+        {
+          "description": "The name of the pipeline for which you want to get information. Pipeline names must be unique in an Amazon Web Services account."
+        }
+      ]
+    },
+    "version": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PipelineVersion"
+        },
+        {
+          "description": "The version number of the pipeline. If you do not specify a version, defaults to the current version."
+        }
+      ]
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

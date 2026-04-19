@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-pipeline-summary-structure.json",
+  "name": "PipelineSummary",
+  "description": "Returns a summary of a pipeline.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PipelineName"
+        },
+        {
+          "description": "The name of the pipeline."
+        }
+      ]
+    },
+    "version": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PipelineVersion"
+        },
+        {
+          "description": "The version number of the pipeline."
+        }
+      ]
+    },
+    "created": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The date and time the pipeline was created, in timestamp format."
+        }
+      ]
+    },
+    "updated": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The date and time of the last update to the pipeline, in timestamp format."
+        }
+      ]
+    }
+  }
+}

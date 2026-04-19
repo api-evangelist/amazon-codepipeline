@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-third-party-job-details-structure.json",
+  "name": "ThirdPartyJobDetails",
+  "description": "The details of a job sent in response to a <code>GetThirdPartyJobDetails</code> request.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ThirdPartyJobId"
+        },
+        {
+          "description": "The identifier used to identify the job details in CodePipeline."
+        }
+      ]
+    },
+    "data": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ThirdPartyJobData"
+        },
+        {
+          "description": "The data to be returned by the third party job worker."
+        }
+      ]
+    },
+    "nonce": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Nonce"
+        },
+        {
+          "description": "A system-generated random number that CodePipeline uses to ensure that the job is being worked on by only one job worker. Use this number in an <a>AcknowledgeThirdPartyJob</a> request."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "pipelineName": "example-resource",
+  "stageName": "example-resource",
+  "actionName": "example-resource",
+  "actionRevision": "example-value"
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-s3-bucket-structure.json",
+  "name": "S3Bucket",
+  "description": "S3Bucket schema from Amazon CodePipeline",
+  "type": "string",
+  "minLength": 3,
+  "maxLength": 63
+}

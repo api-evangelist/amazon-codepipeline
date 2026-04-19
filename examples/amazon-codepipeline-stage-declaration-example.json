@@ -1,0 +1,6 @@
+{
+  "name": "example-resource",
+  "actions": [
+    "example-value"
+  ]
+}

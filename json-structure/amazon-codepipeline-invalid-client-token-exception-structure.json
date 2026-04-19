@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-invalid-client-token-exception-structure.json",
+  "name": "InvalidClientTokenException",
+  "description": "InvalidClientTokenException schema from Amazon CodePipeline"
+}

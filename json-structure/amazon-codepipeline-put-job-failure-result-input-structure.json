@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-put-job-failure-result-input-structure.json",
+  "name": "PutJobFailureResultInput",
+  "description": "Represents the input of a <code>PutJobFailureResult</code> action.",
+  "type": "object",
+  "properties": {
+    "jobId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JobId"
+        },
+        {
+          "description": "The unique system-generated ID of the job that failed. This is the same ID returned from <code>PollForJobs</code>."
+        }
+      ]
+    },
+    "failureDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FailureDetails"
+        },
+        {
+          "description": "The details about the failure of a job."
+        }
+      ]
+    }
+  },
+  "required": [
+    "jobId",
+    "failureDetails"
+  ]
+}

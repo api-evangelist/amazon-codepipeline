@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-register-webhook-with-third-party-input-structure.json",
+  "name": "RegisterWebhookWithThirdPartyInput",
+  "description": "RegisterWebhookWithThirdPartyInput schema from Amazon CodePipeline",
+  "type": "object",
+  "properties": {
+    "webhookName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/WebhookName"
+        },
+        {
+          "description": "The name of an existing webhook created with PutWebhook to register with a supported third party. "
+        }
+      ]
+    }
+  }
+}

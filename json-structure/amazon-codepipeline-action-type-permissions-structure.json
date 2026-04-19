@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-action-type-permissions-structure.json",
+  "name": "ActionTypePermissions",
+  "description": "Details identifying the users with permissions to use the action type.",
+  "type": "object",
+  "properties": {
+    "allowedAccounts": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AllowedAccounts"
+        },
+        {
+          "description": "A list of Amazon Web Services account IDs with access to use the action type in their pipelines."
+        }
+      ]
+    }
+  },
+  "required": [
+    "allowedAccounts"
+  ]
+}

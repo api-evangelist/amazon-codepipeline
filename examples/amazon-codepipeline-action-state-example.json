@@ -1,0 +1,7 @@
+{
+  "actionName": "example-resource",
+  "currentRevision": "example-value",
+  "latestExecution": "example-value",
+  "entityUrl": "https://example.amazonaws.com",
+  "revisionUrl": "https://example.amazonaws.com"
+}

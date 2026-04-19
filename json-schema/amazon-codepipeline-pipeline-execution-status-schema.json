@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-pipeline-execution-status-schema.json",
+  "title": "PipelineExecutionStatus",
+  "description": "PipelineExecutionStatus schema from Amazon CodePipeline",
+  "type": "string",
+  "enum": [
+    "Cancelled",
+    "InProgress",
+    "Stopped",
+    "Stopping",
+    "Succeeded",
+    "Superseded",
+    "Failed"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-list-pipelines-input-structure.json",
+  "name": "ListPipelinesInput",
+  "description": "Represents the input of a <code>ListPipelines</code> action.",
+  "type": "object",
+  "properties": {
+    "nextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NextToken"
+        },
+        {
+          "description": "An identifier that was returned from the previous list pipelines call. It can be used to return the next set of pipelines in the list."
+        }
+      ]
+    },
+    "maxResults": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MaxPipelines"
+        },
+        {
+          "description": "The maximum number of pipelines to return in a single call. To retrieve the remaining pipelines, make another call with the returned nextToken value. The minimum value you can specify is 1. The maximum accepted value is 1000."
+        }
+      ]
+    }
+  }
+}

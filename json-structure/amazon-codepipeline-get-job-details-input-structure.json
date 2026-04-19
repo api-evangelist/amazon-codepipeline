@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-get-job-details-input-structure.json",
+  "name": "GetJobDetailsInput",
+  "description": "Represents the input of a <code>GetJobDetails</code> action.",
+  "type": "object",
+  "properties": {
+    "jobId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JobId"
+        },
+        {
+          "description": "The unique system-generated ID for the job."
+        }
+      ]
+    }
+  },
+  "required": [
+    "jobId"
+  ]
+}

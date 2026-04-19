@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-pipeline-arn-structure.json",
+  "name": "PipelineArn",
+  "description": "PipelineArn schema from Amazon CodePipeline",
+  "type": "string",
+  "pattern": "arn:aws(-[\\w]+)*:codepipeline:.+:[0-9]{12}:.+"
+}

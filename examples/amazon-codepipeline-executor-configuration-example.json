@@ -1,0 +1,4 @@
+{
+  "lambdaExecutorConfiguration": "example-value",
+  "jobWorkerExecutorConfiguration": "example-value"
+}

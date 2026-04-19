@@ -1,0 +1,10 @@
+{
+  "description": "Example description",
+  "executor": "example-value",
+  "id": "500123",
+  "inputArtifactDetails": "example-value",
+  "outputArtifactDetails": "example-value",
+  "permissions": "example-value",
+  "properties": "example-value",
+  "urls": "https://example.amazonaws.com"
+}

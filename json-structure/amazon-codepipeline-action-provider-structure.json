@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-action-provider-structure.json",
+  "name": "ActionProvider",
+  "description": "ActionProvider schema from Amazon CodePipeline",
+  "type": "string",
+  "pattern": "[0-9A-Za-z_-]+",
+  "minLength": 1,
+  "maxLength": 35
+}

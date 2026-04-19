@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-stage-retry-mode-structure.json",
+  "name": "StageRetryMode",
+  "description": "StageRetryMode schema from Amazon CodePipeline",
+  "type": "string",
+  "enum": [
+    "FAILED_ACTIONS"
+  ]
+}

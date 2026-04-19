@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-action-type-artifact-details-structure.json",
+  "name": "ActionTypeArtifactDetails",
+  "description": "Information about parameters for artifacts associated with the action type, such as the minimum and maximum artifacts allowed.",
+  "type": "object",
+  "properties": {
+    "minimumCount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MinimumActionTypeArtifactCount"
+        },
+        {
+          "description": "The minimum number of artifacts that can be used with the action type. For example, you should specify a minimum and maximum of zero input artifacts for an action type with a category of <code>source</code>."
+        }
+      ]
+    },
+    "maximumCount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MaximumActionTypeArtifactCount"
+        },
+        {
+          "description": "The maximum number of artifacts that can be used with the actiontype. For example, you should specify a minimum and maximum of zero input artifacts for an action type with a category of <code>source</code>."
+        }
+      ]
+    }
+  },
+  "required": [
+    "minimumCount",
+    "maximumCount"
+  ]
+}

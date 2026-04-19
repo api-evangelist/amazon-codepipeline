@@ -1,0 +1,9 @@
+{
+  "pipelineExecutionId": "500123",
+  "status": "ACTIVE",
+  "startTime": "example-value",
+  "lastUpdateTime": "example-value",
+  "sourceRevisions": "example-value",
+  "trigger": "example-value",
+  "stopTrigger": "example-value"
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-action-type-properties-schema.json",
+  "title": "ActionTypeProperties",
+  "description": "ActionTypeProperties schema from Amazon CodePipeline",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/ActionTypeProperty"
+  },
+  "maxItems": 10
+}

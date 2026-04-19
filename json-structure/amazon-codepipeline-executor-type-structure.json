@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-executor-type-structure.json",
+  "name": "ExecutorType",
+  "description": "ExecutorType schema from Amazon CodePipeline",
+  "type": "string",
+  "enum": [
+    "JobWorker",
+    "Lambda"
+  ]
+}

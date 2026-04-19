@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-max-pipelines-structure.json",
+  "name": "MaxPipelines",
+  "description": "MaxPipelines schema from Amazon CodePipeline",
+  "type": "int32",
+  "minimum": 1,
+  "maximum": 1000
+}

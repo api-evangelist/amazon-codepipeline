@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-job-details-structure.json",
+  "name": "JobDetails",
+  "description": "Represents information about the details of a job.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JobId"
+        },
+        {
+          "description": "The unique system-generated ID of the job."
+        }
+      ]
+    },
+    "data": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JobData"
+        },
+        {
+          "description": "Represents other information about a job required for a job worker to complete the job. "
+        }
+      ]
+    },
+    "accountId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountId"
+        },
+        {
+          "description": "The Amazon Web Services account ID associated with the job."
+        }
+      ]
+    }
+  }
+}

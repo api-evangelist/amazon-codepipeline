@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-action-execution-detail-structure.json",
+  "name": "ActionExecutionDetail",
+  "description": "Returns information about an execution of an action, including the action execution ID, and the name, version, and timing of the action. ",
+  "type": "object",
+  "properties": {
+    "pipelineExecutionId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PipelineExecutionId"
+        },
+        {
+          "description": "The pipeline execution ID for the action execution."
+        }
+      ]
+    },
+    "actionExecutionId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionExecutionId"
+        },
+        {
+          "description": "The action execution ID."
+        }
+      ]
+    },
+    "pipelineVersion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PipelineVersion"
+        },
+        {
+          "description": "The version of the pipeline where the action was run."
+        }
+      ]
+    },
+    "stageName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StageName"
+        },
+        {
+          "description": "The name of the stage that contains the action."
+        }
+      ]
+    },
+    "actionName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionName"
+        },
+        {
+          "description": "The name of the action."
+        }
+      ]
+    },
+    "startTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The start time of the action execution."
+        }
+      ]
+    },
+    "lastUpdateTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The last update time of the action execution."
+        }
+      ]
+    },
+    "status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionExecutionStatus"
+        },
+        {
+          "description": " The status of the action execution. Status categories are <code>InProgress</code>, <code>Succeeded</code>, and <code>Failed</code>."
+        }
+      ]
+    },
+    "input": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionExecutionInput"
+        },
+        {
+          "description": "Input details for the action execution, such as role ARN, Region, and input artifacts."
+        }
+      ]
+    },
+    "output": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionExecutionOutput"
+        },
+        {
+          "description": "Output details for the action execution, such as the action execution result."
+        }
+      ]
+    }
+  }
+}

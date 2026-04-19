@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-action-category-structure.json",
+  "name": "ActionCategory",
+  "description": "ActionCategory schema from Amazon CodePipeline",
+  "type": "string",
+  "enum": [
+    "Source",
+    "Build",
+    "Deploy",
+    "Test",
+    "Invoke",
+    "Approval"
+  ]
+}

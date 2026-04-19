@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-allowed-account-structure.json",
+  "name": "AllowedAccount",
+  "description": "AllowedAccount schema from Amazon CodePipeline",
+  "type": "string",
+  "pattern": "[0-9]{12}|\\*"
+}

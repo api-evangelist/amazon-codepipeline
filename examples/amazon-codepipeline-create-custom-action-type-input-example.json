@@ -1,0 +1,10 @@
+{
+  "category": "example-value",
+  "provider": "500123",
+  "version": "1.0.0",
+  "settings": "example-value",
+  "configurationProperties": "example-value",
+  "inputArtifactDetails": "example-value",
+  "outputArtifactDetails": "example-value",
+  "tags": "example-value"
+}

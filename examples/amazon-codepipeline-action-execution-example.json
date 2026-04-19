@@ -1,0 +1,10 @@
+{
+  "actionExecutionId": "500123",
+  "status": "ACTIVE",
+  "summary": "example-value",
+  "lastStatusChange": "ACTIVE",
+  "token": "example-value",
+  "lastUpdatedBy": "example-value",
+  "externalExecutionId": "500123",
+  "externalExecutionUrl": "https://example.amazonaws.com"
+}

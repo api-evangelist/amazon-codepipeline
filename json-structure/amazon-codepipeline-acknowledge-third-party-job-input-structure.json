@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-acknowledge-third-party-job-input-structure.json",
+  "name": "AcknowledgeThirdPartyJobInput",
+  "description": "Represents the input of an AcknowledgeThirdPartyJob action.",
+  "type": "object",
+  "properties": {
+    "jobId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ThirdPartyJobId"
+        },
+        {
+          "description": "The unique system-generated ID of the job."
+        }
+      ]
+    },
+    "nonce": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Nonce"
+        },
+        {
+          "description": "A system-generated random number that CodePipeline uses to ensure that the job is being worked on by only one job worker. Get this number from the response to a <a>GetThirdPartyJobDetails</a> request."
+        }
+      ]
+    },
+    "clientToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ClientToken"
+        },
+        {
+          "description": "The clientToken portion of the clientId and clientToken pair used to verify that the calling entity is allowed access to the job and its details."
+        }
+      ]
+    }
+  },
+  "required": [
+    "jobId",
+    "nonce",
+    "clientToken"
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-action-declaration-schema.json",
+  "title": "ActionDeclaration",
+  "description": "ActionDeclaration schema from Amazon CodePipeline",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The action declaration name."
+    },
+    "actionTypeId": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "Source",
+            "Build",
+            "Deploy",
+            "Test",
+            "Invoke",
+            "Approval"
+          ]
+        },
+        "owner": {
+          "type": "string"
+        },
+        "provider": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      }
+    },
+    "configuration": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "inputArtifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "outputArtifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "name",
+    "actionTypeId"
+  ]
+}

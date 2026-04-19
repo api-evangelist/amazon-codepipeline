@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-get-pipeline-output-schema.json",
+  "title": "GetPipelineOutput",
+  "description": "Represents the output of a <code>GetPipeline</code> action.",
+  "type": "object",
+  "properties": {
+    "pipeline": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PipelineDeclaration"
+        },
+        {
+          "description": "Represents the structure of actions and stages to be performed in the pipeline. "
+        }
+      ]
+    },
+    "metadata": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PipelineMetadata"
+        },
+        {
+          "description": "Represents the pipeline metadata information returned as part of the output of a <code>GetPipeline</code> action."
+        }
+      ]
+    }
+  }
+}

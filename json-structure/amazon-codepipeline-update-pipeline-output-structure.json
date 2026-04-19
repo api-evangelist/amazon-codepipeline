@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-update-pipeline-output-structure.json",
+  "name": "UpdatePipelineOutput",
+  "description": "Represents the output of an <code>UpdatePipeline</code> action.",
+  "type": "object",
+  "properties": {
+    "pipeline": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PipelineDeclaration"
+        },
+        {
+          "description": "The structure of the updated pipeline."
+        }
+      ]
+    }
+  }
+}

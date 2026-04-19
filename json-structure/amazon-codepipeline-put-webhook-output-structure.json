@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-put-webhook-output-structure.json",
+  "name": "PutWebhookOutput",
+  "description": "PutWebhookOutput schema from Amazon CodePipeline",
+  "type": "object",
+  "properties": {
+    "webhook": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ListWebhookItem"
+        },
+        {
+          "description": "The detail returned from creating the webhook, such as the webhook name, webhook URL, and webhook ARN."
+        }
+      ]
+    }
+  }
+}

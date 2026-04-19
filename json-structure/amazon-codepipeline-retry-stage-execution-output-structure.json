@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-retry-stage-execution-output-structure.json",
+  "name": "RetryStageExecutionOutput",
+  "description": "Represents the output of a <code>RetryStageExecution</code> action.",
+  "type": "object",
+  "properties": {
+    "pipelineExecutionId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PipelineExecutionId"
+        },
+        {
+          "description": "The ID of the current workflow execution in the failed stage."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-action-execution-result-schema.json",
+  "title": "ActionExecutionResult",
+  "description": "Execution result information, such as the external execution ID.",
+  "type": "object",
+  "properties": {
+    "externalExecutionId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ExternalExecutionId"
+        },
+        {
+          "description": "The action provider's external ID for the action execution."
+        }
+      ]
+    },
+    "externalExecutionSummary": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ExternalExecutionSummary"
+        },
+        {
+          "description": "The action provider's summary for the action execution."
+        }
+      ]
+    },
+    "externalExecutionUrl": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Url"
+        },
+        {
+          "description": "The deepest external link to the external resource (for example, a repository URL or deployment endpoint) that is used when running the action."
+        }
+      ]
+    }
+  }
+}

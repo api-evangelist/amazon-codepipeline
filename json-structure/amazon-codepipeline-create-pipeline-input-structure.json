@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-create-pipeline-input-structure.json",
+  "name": "CreatePipelineInput",
+  "description": "CreatePipelineInput schema from Amazon CodePipeline",
+  "type": "object",
+  "properties": {
+    "pipeline": {
+      "$ref": "#/components/schemas/Pipeline"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/Tag"
+      }
+    }
+  },
+  "required": [
+    "pipeline"
+  ]
+}

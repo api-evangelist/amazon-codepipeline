@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-lambda-function-arn-structure.json",
+  "name": "LambdaFunctionArn",
+  "description": "LambdaFunctionArn schema from Amazon CodePipeline",
+  "type": "string",
+  "pattern": "arn:aws(-[\\w]+)*:lambda:.+:[0-9]{12}:function:.+",
+  "minLength": 1,
+  "maxLength": 140
+}

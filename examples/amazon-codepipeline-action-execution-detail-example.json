@@ -1,0 +1,10 @@
+{
+  "pipelineExecutionId": "500123",
+  "actionExecutionId": "500123",
+  "pipelineVersion": "1.0.0",
+  "stageName": "example-resource",
+  "actionName": "example-resource",
+  "startTime": "example-value",
+  "lastUpdateTime": "example-value",
+  "status": "ACTIVE"
+}

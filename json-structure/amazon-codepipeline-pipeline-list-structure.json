@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-pipeline-list-structure.json",
+  "name": "PipelineList",
+  "description": "PipelineList schema from Amazon CodePipeline",
+  "type": "object",
+  "properties": {
+    "pipelines": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "version": {
+            "type": "int32"
+          },
+          "created": {
+            "type": "datetime"
+          },
+          "updated": {
+            "type": "datetime"
+          }
+        }
+      }
+    },
+    "nextToken": {
+      "type": "string"
+    }
+  }
+}

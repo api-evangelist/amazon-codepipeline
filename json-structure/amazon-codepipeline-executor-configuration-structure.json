@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-executor-configuration-structure.json",
+  "name": "ExecutorConfiguration",
+  "description": "The action engine, or executor, related to the supported integration model used to create and update the action type. The available executor types are <code>Lambda</code> and <code>JobWorker</code>.",
+  "type": "object",
+  "properties": {
+    "lambdaExecutorConfiguration": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LambdaExecutorConfiguration"
+        },
+        {
+          "description": "Details about the <code>Lambda</code> executor of the action type."
+        }
+      ]
+    },
+    "jobWorkerExecutorConfiguration": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JobWorkerExecutorConfiguration"
+        },
+        {
+          "description": "Details about the <code>JobWorker</code> executor of the action type."
+        }
+      ]
+    }
+  }
+}

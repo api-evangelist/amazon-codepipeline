@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-list-tags-for-resource-input-schema.json",
+  "title": "ListTagsForResourceInput",
+  "description": "ListTagsForResourceInput schema from Amazon CodePipeline",
+  "type": "object",
+  "properties": {
+    "resourceArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceArn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the resource to get tags for."
+        }
+      ]
+    },
+    "nextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NextToken"
+        },
+        {
+          "description": "The token that was returned from the previous API call, which would be used to return the next page of the list. The ListTagsforResource call lists all available tags in one call and does not use pagination."
+        }
+      ]
+    },
+    "maxResults": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MaxResults"
+        },
+        {
+          "description": "The maximum number of results to return in a single call."
+        }
+      ]
+    }
+  },
+  "required": [
+    "resourceArn"
+  ]
+}

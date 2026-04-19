@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-deregister-webhook-with-third-party-output-structure.json",
+  "name": "DeregisterWebhookWithThirdPartyOutput",
+  "description": "DeregisterWebhookWithThirdPartyOutput schema from Amazon CodePipeline",
+  "type": "object",
+  "properties": {}
+}

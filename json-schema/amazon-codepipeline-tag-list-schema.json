@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-tag-list-schema.json",
+  "title": "TagList",
+  "description": "TagList schema from Amazon CodePipeline",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/Tag"
+  }
+}

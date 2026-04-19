@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-disable-stage-transition-input-schema.json",
+  "title": "DisableStageTransitionInput",
+  "description": "Represents the input of a <code>DisableStageTransition</code> action.",
+  "type": "object",
+  "properties": {
+    "pipelineName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PipelineName"
+        },
+        {
+          "description": "The name of the pipeline in which you want to disable the flow of artifacts from one stage to another."
+        }
+      ]
+    },
+    "stageName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StageName"
+        },
+        {
+          "description": "The name of the stage where you want to disable the inbound or outbound transition of artifacts."
+        }
+      ]
+    },
+    "transitionType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StageTransitionType"
+        },
+        {
+          "description": "Specifies whether artifacts are prevented from transitioning into the stage and being processed by the actions in that stage (inbound), or prevented from transitioning from the stage after they have been processed by the actions in that stage (outbound)."
+        }
+      ]
+    },
+    "reason": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DisabledReason"
+        },
+        {
+          "description": "The reason given to the user that a stage is disabled, such as waiting for manual approval or manual tests. This message is displayed in the pipeline console UI."
+        }
+      ]
+    }
+  },
+  "required": [
+    "pipelineName",
+    "stageName",
+    "transitionType",
+    "reason"
+  ]
+}

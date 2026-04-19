@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-create-custom-action-type-output-schema.json",
+  "title": "CreateCustomActionTypeOutput",
+  "description": "Represents the output of a <code>CreateCustomActionType</code> operation.",
+  "type": "object",
+  "properties": {
+    "actionType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionType"
+        },
+        {
+          "description": "Returns information about the details of an action type."
+        }
+      ]
+    },
+    "tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagList"
+        },
+        {
+          "description": "Specifies the tags applied to the custom action."
+        }
+      ]
+    }
+  },
+  "required": [
+    "actionType"
+  ]
+}

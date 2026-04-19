@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-get-job-details-output-structure.json",
+  "name": "GetJobDetailsOutput",
+  "description": "Represents the output of a <code>GetJobDetails</code> action.",
+  "type": "object",
+  "properties": {
+    "jobDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JobDetails"
+        },
+        {
+          "description": "<p>The details of the job.</p> <note> <p>If AWSSessionCredentials is used, a long-running job can call <code>GetJobDetails</code> again to obtain new credentials.</p> </note>"
+        }
+      ]
+    }
+  }
+}

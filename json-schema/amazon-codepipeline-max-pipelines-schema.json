@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-max-pipelines-schema.json",
+  "title": "MaxPipelines",
+  "description": "MaxPipelines schema from Amazon CodePipeline",
+  "type": "integer",
+  "minimum": 1,
+  "maximum": 1000
+}

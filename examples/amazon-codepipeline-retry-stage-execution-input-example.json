@@ -1,0 +1,6 @@
+{
+  "pipelineName": "example-resource",
+  "stageName": "example-resource",
+  "pipelineExecutionId": "500123",
+  "retryMode": "example-value"
+}

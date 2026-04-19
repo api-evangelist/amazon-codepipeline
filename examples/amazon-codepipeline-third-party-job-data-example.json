@@ -1,0 +1,10 @@
+{
+  "actionTypeId": "500123",
+  "actionConfiguration": "example-value",
+  "pipelineContext": "example-value",
+  "inputArtifacts": "example-value",
+  "outputArtifacts": "example-value",
+  "artifactCredentials": "example-value",
+  "continuationToken": "example-value",
+  "encryptionKey": "example-value"
+}

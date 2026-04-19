@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-put-action-revision-input-schema.json",
+  "title": "PutActionRevisionInput",
+  "description": "Represents the input of a <code>PutActionRevision</code> action.",
+  "type": "object",
+  "properties": {
+    "pipelineName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PipelineName"
+        },
+        {
+          "description": "The name of the pipeline that starts processing the revision to the source."
+        }
+      ]
+    },
+    "stageName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StageName"
+        },
+        {
+          "description": "The name of the stage that contains the action that acts on the revision."
+        }
+      ]
+    },
+    "actionName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionName"
+        },
+        {
+          "description": "The name of the action that processes the revision."
+        }
+      ]
+    },
+    "actionRevision": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionRevision"
+        },
+        {
+          "description": "Represents information about the version (or revision) of an action."
+        }
+      ]
+    }
+  },
+  "required": [
+    "pipelineName",
+    "stageName",
+    "actionName",
+    "actionRevision"
+  ]
+}

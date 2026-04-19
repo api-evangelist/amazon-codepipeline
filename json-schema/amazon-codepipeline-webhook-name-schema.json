@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-webhook-name-schema.json",
+  "title": "WebhookName",
+  "description": "WebhookName schema from Amazon CodePipeline",
+  "type": "string",
+  "pattern": "[A-Za-z0-9.@\\-_]+",
+  "minLength": 1,
+  "maxLength": 100
+}

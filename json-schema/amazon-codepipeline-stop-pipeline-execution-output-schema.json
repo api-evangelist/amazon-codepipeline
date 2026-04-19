@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-stop-pipeline-execution-output-schema.json",
+  "title": "StopPipelineExecutionOutput",
+  "description": "StopPipelineExecutionOutput schema from Amazon CodePipeline",
+  "type": "object",
+  "properties": {
+    "pipelineExecutionId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PipelineExecutionId"
+        },
+        {
+          "description": "The unique system-generated ID of the pipeline execution that was stopped."
+        }
+      ]
+    }
+  }
+}

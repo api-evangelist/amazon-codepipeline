@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-invalid-job-state-exception-structure.json",
+  "name": "InvalidJobStateException",
+  "description": "InvalidJobStateException schema from Amazon CodePipeline"
+}

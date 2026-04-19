@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-poll-for-third-party-jobs-output-structure.json",
+  "name": "PollForThirdPartyJobsOutput",
+  "description": "Represents the output of a <code>PollForThirdPartyJobs</code> action.",
+  "type": "object",
+  "properties": {
+    "jobs": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ThirdPartyJobList"
+        },
+        {
+          "description": "Information about the jobs to take action on."
+        }
+      ]
+    }
+  }
+}

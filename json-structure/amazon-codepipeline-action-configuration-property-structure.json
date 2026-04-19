@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-action-configuration-property-structure.json",
+  "name": "ActionConfigurationProperty",
+  "description": "Represents information about an action configuration property.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionConfigurationKey"
+        },
+        {
+          "description": "The name of the action configuration property."
+        }
+      ]
+    },
+    "required": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "description": "Whether the configuration property is a required value."
+        }
+      ]
+    },
+    "key": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "description": "Whether the configuration property is a key."
+        }
+      ]
+    },
+    "secret": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "description": "<p>Whether the configuration property is secret. Secrets are hidden from all calls except for <code>GetJobDetails</code>, <code>GetThirdPartyJobDetails</code>, <code>PollForJobs</code>, and <code>PollForThirdPartyJobs</code>.</p> <p>When updating a pipeline, passing * * * * * without changing any other values of the action preserves the previous value of the secret.</p>"
+        }
+      ]
+    },
+    "queryable": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "description": "<p>Indicates that the property is used with <code>PollForJobs</code>. When creating a custom action, an action can have up to one queryable property. If it has one, that property must be both required and not secret.</p> <p>If you create a pipeline with a custom action type, and that custom action contains a queryable property, the value for that configuration property is subject to other restrictions. The value must be less than or equal to twenty (20) characters. The value can contain only alphanumeric characters, underscores, and hyphens.</p>"
+        }
+      ]
+    },
+    "description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Description"
+        },
+        {
+          "description": "The description of the action configuration property that is displayed to users."
+        }
+      ]
+    },
+    "type": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionConfigurationPropertyType"
+        },
+        {
+          "description": "The type of the configuration property."
+        }
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "required",
+    "key",
+    "secret"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-output-variables-size-exceeded-exception-schema.json",
+  "title": "OutputVariablesSizeExceededException",
+  "description": "OutputVariablesSizeExceededException schema from Amazon CodePipeline"
+}

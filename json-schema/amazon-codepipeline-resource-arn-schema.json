@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-resource-arn-schema.json",
+  "title": "ResourceArn",
+  "description": "ResourceArn schema from Amazon CodePipeline",
+  "type": "string",
+  "pattern": "arn:aws(-[\\w]+)*:codepipeline:.+:[0-9]{12}:.+"
+}

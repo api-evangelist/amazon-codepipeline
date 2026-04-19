@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-artifact-details-structure.json",
+  "name": "ArtifactDetails",
+  "description": "Returns information about the details of an artifact.",
+  "type": "object",
+  "properties": {
+    "minimumCount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MinimumArtifactCount"
+        },
+        {
+          "description": "The minimum number of artifacts allowed for the action type."
+        }
+      ]
+    },
+    "maximumCount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MaximumArtifactCount"
+        },
+        {
+          "description": "The maximum number of artifacts allowed for the action type."
+        }
+      ]
+    }
+  },
+  "required": [
+    "minimumCount",
+    "maximumCount"
+  ]
+}

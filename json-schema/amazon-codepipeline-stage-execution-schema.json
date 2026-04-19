@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-stage-execution-schema.json",
+  "title": "StageExecution",
+  "description": "Represents information about the run of a stage.",
+  "type": "object",
+  "properties": {
+    "pipelineExecutionId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PipelineExecutionId"
+        },
+        {
+          "description": "The ID of the pipeline execution associated with the stage."
+        }
+      ]
+    },
+    "status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StageExecutionStatus"
+        },
+        {
+          "description": "<p>The status of the stage, or for a completed stage, the last status of the stage.</p> <note> <p>A status of cancelled means that the pipeline\u2019s definition was updated before the stage execution could be completed.</p> </note>"
+        }
+      ]
+    }
+  },
+  "required": [
+    "pipelineExecutionId",
+    "status"
+  ]
+}

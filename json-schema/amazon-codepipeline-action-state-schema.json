@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-action-state-schema.json",
+  "title": "ActionState",
+  "description": "Represents information about the state of an action.",
+  "type": "object",
+  "properties": {
+    "actionName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionName"
+        },
+        {
+          "description": "The name of the action."
+        }
+      ]
+    },
+    "currentRevision": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionRevision"
+        },
+        {
+          "description": "Represents information about the version (or revision) of an action."
+        }
+      ]
+    },
+    "latestExecution": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionExecution"
+        },
+        {
+          "description": "Represents information about the run of an action."
+        }
+      ]
+    },
+    "entityUrl": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Url"
+        },
+        {
+          "description": "A URL link for more information about the state of the action, such as a deployment group details page."
+        }
+      ]
+    },
+    "revisionUrl": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Url"
+        },
+        {
+          "description": "A URL link for more information about the revision, such as a commit details page."
+        }
+      ]
+    }
+  }
+}

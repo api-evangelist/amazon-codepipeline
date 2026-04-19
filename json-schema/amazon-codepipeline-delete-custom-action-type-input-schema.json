@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-delete-custom-action-type-input-schema.json",
+  "title": "DeleteCustomActionTypeInput",
+  "description": "Represents the input of a <code>DeleteCustomActionType</code> operation. The custom action will be marked as deleted.",
+  "type": "object",
+  "properties": {
+    "category": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionCategory"
+        },
+        {
+          "description": "The category of the custom action that you want to delete, such as source or deploy."
+        }
+      ]
+    },
+    "provider": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionProvider"
+        },
+        {
+          "description": "The provider of the service used in the custom action, such as CodeDeploy."
+        }
+      ]
+    },
+    "version": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Version"
+        },
+        {
+          "description": "The version of the custom action to delete."
+        }
+      ]
+    }
+  },
+  "required": [
+    "category",
+    "provider",
+    "version"
+  ]
+}

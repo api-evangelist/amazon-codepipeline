@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-last-updated-by-structure.json",
+  "name": "LastUpdatedBy",
+  "description": "LastUpdatedBy schema from Amazon CodePipeline",
+  "type": "string"
+}

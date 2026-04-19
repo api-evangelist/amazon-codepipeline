@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-action-type-declaration-schema.json",
+  "title": "ActionTypeDeclaration",
+  "description": "The parameters for the action type definition that are provided when the action type is created or updated.",
+  "type": "object",
+  "properties": {
+    "description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionTypeDescription"
+        },
+        {
+          "description": "The description for the action type to be updated."
+        }
+      ]
+    },
+    "executor": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionTypeExecutor"
+        },
+        {
+          "description": "Information about the executor for an action type that was created with any supported integration model."
+        }
+      ]
+    },
+    "id": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionTypeIdentifier"
+        },
+        {
+          "description": "The action category, owner, provider, and version of the action type to be updated."
+        }
+      ]
+    },
+    "inputArtifactDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionTypeArtifactDetails"
+        },
+        {
+          "description": "Details for the artifacts, such as application files, to be worked on by the action. For example, the minimum and maximum number of input artifacts allowed."
+        }
+      ]
+    },
+    "outputArtifactDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionTypeArtifactDetails"
+        },
+        {
+          "description": "Details for the output artifacts, such as a built application, that are the result of the action. For example, the minimum and maximum number of output artifacts allowed."
+        }
+      ]
+    },
+    "permissions": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionTypePermissions"
+        },
+        {
+          "description": "Details identifying the accounts with permissions to use the action type."
+        }
+      ]
+    },
+    "properties": {
+      "description": "The properties of the action type to be updated."
+    },
+    "urls": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionTypeUrls"
+        },
+        {
+          "description": "The links associated with the action type to be updated."
+        }
+      ]
+    }
+  },
+  "required": [
+    "executor",
+    "id",
+    "inputArtifactDetails",
+    "outputArtifactDetails"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "pipelineName": "example-resource",
+  "pipelineVersion": "1.0.0",
+  "stageStates": "example-value",
+  "created": "example-value",
+  "updated": "example-value"
+}

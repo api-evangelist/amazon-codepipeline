@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-artifact-store-type-structure.json",
+  "name": "ArtifactStoreType",
+  "description": "ArtifactStoreType schema from Amazon CodePipeline",
+  "type": "string",
+  "enum": [
+    "S3"
+  ]
+}

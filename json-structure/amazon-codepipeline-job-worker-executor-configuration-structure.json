@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-job-worker-executor-configuration-structure.json",
+  "name": "JobWorkerExecutorConfiguration",
+  "description": "Details about the polling configuration for the <code>JobWorker</code> action engine, or executor.",
+  "type": "object",
+  "properties": {
+    "pollingAccounts": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PollingAccountList"
+        },
+        {
+          "description": "The accounts in which the job worker is configured and might poll for jobs as part of the action execution."
+        }
+      ]
+    },
+    "pollingServicePrincipals": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PollingServicePrincipalList"
+        },
+        {
+          "description": "The service Principals in which the job worker is configured and might poll for jobs as part of the action execution."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-get-action-type-input-structure.json",
+  "name": "GetActionTypeInput",
+  "description": "GetActionTypeInput schema from Amazon CodePipeline",
+  "type": "object",
+  "properties": {
+    "category": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionCategory"
+        },
+        {
+          "description": "<p>Defines what kind of action can be taken in the stage. The following are the valid values:</p> <ul> <li> <p> <code>Source</code> </p> </li> <li> <p> <code>Build</code> </p> </li> <li> <p> <code>Test</code> </p> </li> <li> <p> <code>Deploy</code> </p> </li> <li> <p> <code>Approval</code> </p> </li> <li> <p> <code>Invoke</code> </p> </li> </ul>"
+        }
+      ]
+    },
+    "owner": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionTypeOwner"
+        },
+        {
+          "description": "The creator of an action type that was created with any supported integration model. There are two valid values: <code>AWS</code> and <code>ThirdParty</code>."
+        }
+      ]
+    },
+    "provider": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionProvider"
+        },
+        {
+          "description": "The provider of the action type being called. The provider name is specified when the action type is created."
+        }
+      ]
+    },
+    "version": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Version"
+        },
+        {
+          "description": "A string that describes the action type version."
+        }
+      ]
+    }
+  },
+  "required": [
+    "category",
+    "owner",
+    "provider",
+    "version"
+  ]
+}

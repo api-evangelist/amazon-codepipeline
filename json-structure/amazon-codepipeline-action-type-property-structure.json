@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-action-type-property-structure.json",
+  "name": "ActionTypeProperty",
+  "description": "Represents information about each property specified in the action configuration, such as the description and key name that display for the customer using the action type.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionConfigurationKey"
+        },
+        {
+          "description": "The property name that is displayed to users."
+        }
+      ]
+    },
+    "optional": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "description": "Whether the configuration property is an optional value."
+        }
+      ]
+    },
+    "key": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "description": "Whether the configuration property is a key."
+        }
+      ]
+    },
+    "noEcho": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "description": "Whether to omit the field value entered by the customer in the log. If <code>true</code>, the value is not saved in CloudTrail logs for the action execution."
+        }
+      ]
+    },
+    "queryable": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "description": "Indicates that the property is used with polling. An action type can have up to one queryable property. If it has one, that property must be both required and not secret."
+        }
+      ]
+    },
+    "description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PropertyDescription"
+        },
+        {
+          "description": "The description of the property that is displayed to users."
+        }
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "optional",
+    "key",
+    "noEcho"
+  ]
+}

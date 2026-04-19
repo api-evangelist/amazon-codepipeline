@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-list-action-executions-output-schema.json",
+  "title": "ListActionExecutionsOutput",
+  "description": "ListActionExecutionsOutput schema from Amazon CodePipeline",
+  "type": "object",
+  "properties": {
+    "actionExecutionDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionExecutionDetailList"
+        },
+        {
+          "description": "The details for a list of recent executions, such as action execution ID."
+        }
+      ]
+    },
+    "nextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NextToken"
+        },
+        {
+          "description": "If the amount of returned information is significantly large, an identifier is also returned and can be used in a subsequent <code>ListActionExecutions</code> call to return the next set of action executions in the list."
+        }
+      ]
+    }
+  }
+}

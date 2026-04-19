@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-artifact-name-schema.json",
+  "title": "ArtifactName",
+  "description": "ArtifactName schema from Amazon CodePipeline",
+  "type": "string",
+  "pattern": "[a-zA-Z0-9_\\-]+",
+  "minLength": 1,
+  "maxLength": 100
+}

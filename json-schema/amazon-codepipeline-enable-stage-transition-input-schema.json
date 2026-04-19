@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-enable-stage-transition-input-schema.json",
+  "title": "EnableStageTransitionInput",
+  "description": "Represents the input of an <code>EnableStageTransition</code> action.",
+  "type": "object",
+  "properties": {
+    "pipelineName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PipelineName"
+        },
+        {
+          "description": "The name of the pipeline in which you want to enable the flow of artifacts from one stage to another."
+        }
+      ]
+    },
+    "stageName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StageName"
+        },
+        {
+          "description": "The name of the stage where you want to enable the transition of artifacts, either into the stage (inbound) or from that stage to the next stage (outbound)."
+        }
+      ]
+    },
+    "transitionType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StageTransitionType"
+        },
+        {
+          "description": "Specifies whether artifacts are allowed to enter the stage and be processed by the actions in that stage (inbound) or whether already processed artifacts are allowed to transition to the next stage (outbound)."
+        }
+      ]
+    }
+  },
+  "required": [
+    "pipelineName",
+    "stageName",
+    "transitionType"
+  ]
+}

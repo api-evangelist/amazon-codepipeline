@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-put-third-party-job-failure-result-input-schema.json",
+  "title": "PutThirdPartyJobFailureResultInput",
+  "description": "Represents the input of a <code>PutThirdPartyJobFailureResult</code> action.",
+  "type": "object",
+  "properties": {
+    "jobId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ThirdPartyJobId"
+        },
+        {
+          "description": "The ID of the job that failed. This is the same ID returned from <code>PollForThirdPartyJobs</code>."
+        }
+      ]
+    },
+    "clientToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ClientToken"
+        },
+        {
+          "description": "The clientToken portion of the clientId and clientToken pair used to verify that the calling entity is allowed access to the job and its details."
+        }
+      ]
+    },
+    "failureDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FailureDetails"
+        },
+        {
+          "description": "Represents information about failure details."
+        }
+      ]
+    }
+  },
+  "required": [
+    "jobId",
+    "clientToken",
+    "failureDetails"
+  ]
+}

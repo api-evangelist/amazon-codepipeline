@@ -1,0 +1,7 @@
+{
+  "pipelineName": "example-resource",
+  "stage": "example-value",
+  "action": "example-value",
+  "pipelineArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "pipelineExecutionId": "500123"
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-artifact-detail-schema.json",
+  "title": "ArtifactDetail",
+  "description": "Artifact details for the action execution, such as the artifact location.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ArtifactName"
+        },
+        {
+          "description": "The artifact object name for the action execution."
+        }
+      ]
+    },
+    "s3location": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3Location"
+        },
+        {
+          "description": "The Amazon S3 artifact location for the action execution."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-allowed-accounts-structure.json",
+  "name": "AllowedAccounts",
+  "description": "AllowedAccounts schema from Amazon CodePipeline",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/AllowedAccount"
+  },
+  "minItems": 1,
+  "maxItems": 1000
+}

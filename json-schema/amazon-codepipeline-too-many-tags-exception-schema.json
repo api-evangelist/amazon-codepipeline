@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-too-many-tags-exception-schema.json",
+  "title": "TooManyTagsException",
+  "description": "TooManyTagsException schema from Amazon CodePipeline"
+}

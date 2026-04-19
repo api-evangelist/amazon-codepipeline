@@ -1,0 +1,9 @@
+{
+  "name": "example-resource",
+  "required": "example-value",
+  "key": "example-value",
+  "secret": "example-value",
+  "queryable": "example-value",
+  "description": "Example description",
+  "type": "STANDARD"
+}

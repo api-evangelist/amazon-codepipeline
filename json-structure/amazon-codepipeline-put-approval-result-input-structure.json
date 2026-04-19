@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-put-approval-result-input-structure.json",
+  "name": "PutApprovalResultInput",
+  "description": "Represents the input of a <code>PutApprovalResult</code> action.",
+  "type": "object",
+  "properties": {
+    "pipelineName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PipelineName"
+        },
+        {
+          "description": "The name of the pipeline that contains the action. "
+        }
+      ]
+    },
+    "stageName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StageName"
+        },
+        {
+          "description": "The name of the stage that contains the action."
+        }
+      ]
+    },
+    "actionName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionName"
+        },
+        {
+          "description": "The name of the action for which approval is requested."
+        }
+      ]
+    },
+    "result": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ApprovalResult"
+        },
+        {
+          "description": "Represents information about the result of the approval request."
+        }
+      ]
+    },
+    "token": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ApprovalToken"
+        },
+        {
+          "description": "The system-generated token used to identify a unique approval request. The token for each open approval request can be obtained using the <a>GetPipelineState</a> action. It is used to validate that the approval request corresponding to this token is still valid."
+        }
+      ]
+    }
+  },
+  "required": [
+    "pipelineName",
+    "stageName",
+    "actionName",
+    "result",
+    "token"
+  ]
+}

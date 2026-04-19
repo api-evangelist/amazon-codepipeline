@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-action-type-urls-structure.json",
+  "name": "ActionTypeUrls",
+  "description": "Returns information about URLs for web pages that display to customers as links on the pipeline view, such as an external configuration page for the action type.",
+  "type": "object",
+  "properties": {
+    "configurationUrl": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Url"
+        },
+        {
+          "description": "The URL returned to the CodePipeline console that contains a link to the page where customers can configure the external action."
+        }
+      ]
+    },
+    "entityUrlTemplate": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UrlTemplate"
+        },
+        {
+          "description": "The URL returned to the CodePipeline console that provides a deep link to the resources of the external system, such as a status page. This link is provided as part of the action display in the pipeline."
+        }
+      ]
+    },
+    "executionUrlTemplate": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UrlTemplate"
+        },
+        {
+          "description": "The link to an execution page for the action type in progress. For example, for a CodeDeploy action, this link is shown on the pipeline view page in the CodePipeline console, and it links to a CodeDeploy status page."
+        }
+      ]
+    },
+    "revisionUrlTemplate": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UrlTemplate"
+        },
+        {
+          "description": "The URL returned to the CodePipeline console that contains a link to the page where customers can update or change the configuration of the external action."
+        }
+      ]
+    }
+  }
+}

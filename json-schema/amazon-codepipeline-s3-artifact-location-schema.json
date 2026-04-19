@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-s3-artifact-location-schema.json",
+  "title": "S3ArtifactLocation",
+  "description": "The location of the S3 bucket that contains a revision.",
+  "type": "object",
+  "properties": {
+    "bucketName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3BucketName"
+        },
+        {
+          "description": "The name of the S3 bucket."
+        }
+      ]
+    },
+    "objectKey": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3ObjectKey"
+        },
+        {
+          "description": "The key of the object in the S3 bucket, which uniquely identifies the object in the bucket."
+        }
+      ]
+    }
+  },
+  "required": [
+    "bucketName",
+    "objectKey"
+  ]
+}

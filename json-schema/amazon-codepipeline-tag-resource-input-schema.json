@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-tag-resource-input-schema.json",
+  "title": "TagResourceInput",
+  "description": "TagResourceInput schema from Amazon CodePipeline",
+  "type": "object",
+  "properties": {
+    "resourceArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceArn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the resource you want to add tags to."
+        }
+      ]
+    },
+    "tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagList"
+        },
+        {
+          "description": "The tags you want to modify or add to the resource."
+        }
+      ]
+    }
+  },
+  "required": [
+    "resourceArn",
+    "tags"
+  ]
+}

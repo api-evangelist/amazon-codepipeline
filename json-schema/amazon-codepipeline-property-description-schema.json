@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-property-description-schema.json",
+  "title": "PropertyDescription",
+  "description": "PropertyDescription schema from Amazon CodePipeline",
+  "type": "string",
+  "minLength": 1,
+  "maxLength": 250
+}

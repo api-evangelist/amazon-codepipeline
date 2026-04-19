@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-polling-service-principal-list-schema.json",
+  "title": "PollingServicePrincipalList",
+  "description": "PollingServicePrincipalList schema from Amazon CodePipeline",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/ServicePrincipal"
+  },
+  "minItems": 1,
+  "maxItems": 10
+}

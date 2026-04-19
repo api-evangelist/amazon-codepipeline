@@ -1,0 +1,9 @@
+{
+  "actionTypeId": "500123",
+  "configuration": "example-value",
+  "resolvedConfiguration": "example-value",
+  "roleArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "region": "us-east-1",
+  "inputArtifacts": "example-value",
+  "namespace": "example-resource"
+}

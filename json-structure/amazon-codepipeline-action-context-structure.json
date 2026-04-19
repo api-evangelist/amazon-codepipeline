@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-action-context-structure.json",
+  "name": "ActionContext",
+  "description": "Represents the context of an action in the stage of a pipeline to a job worker.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionName"
+        },
+        {
+          "description": "The name of the action in the context of a job."
+        }
+      ]
+    },
+    "actionExecutionId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionExecutionId"
+        },
+        {
+          "description": "The system-generated unique ID that corresponds to an action's execution."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-job-schema.json",
+  "title": "Job",
+  "description": "Represents information about a job.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JobId"
+        },
+        {
+          "description": "The unique system-generated ID of the job."
+        }
+      ]
+    },
+    "data": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JobData"
+        },
+        {
+          "description": "Other data about a job."
+        }
+      ]
+    },
+    "nonce": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Nonce"
+        },
+        {
+          "description": "A system-generated random number that CodePipeline uses to ensure that the job is being worked on by only one job worker. Use this number in an <a>AcknowledgeJob</a> request."
+        }
+      ]
+    },
+    "accountId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountId"
+        },
+        {
+          "description": "The ID of the Amazon Web Services account to use when performing the job."
+        }
+      ]
+    }
+  }
+}

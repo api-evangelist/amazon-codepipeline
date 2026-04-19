@@ -1,0 +1,11 @@
+{
+  "pipelines": [
+    {
+      "name": "example-resource",
+      "version": 1,
+      "created": "example-value",
+      "updated": "example-value"
+    }
+  ],
+  "nextToken": "example-value"
+}

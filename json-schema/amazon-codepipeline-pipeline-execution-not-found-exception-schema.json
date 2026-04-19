@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-pipeline-execution-not-found-exception-schema.json",
+  "title": "PipelineExecutionNotFoundException",
+  "description": "PipelineExecutionNotFoundException schema from Amazon CodePipeline"
+}

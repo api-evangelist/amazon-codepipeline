@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-get-pipeline-state-input-schema.json",
+  "title": "GetPipelineStateInput",
+  "description": "Represents the input of a <code>GetPipelineState</code> action.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PipelineName"
+        },
+        {
+          "description": "The name of the pipeline about which you want to get information."
+        }
+      ]
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-transition-state-structure.json",
+  "name": "TransitionState",
+  "description": "Represents information about the state of transitions between one stage and another stage.",
+  "type": "object",
+  "properties": {
+    "enabled": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Enabled"
+        },
+        {
+          "description": "Whether the transition between stages is enabled (true) or disabled (false)."
+        }
+      ]
+    },
+    "lastChangedBy": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LastChangedBy"
+        },
+        {
+          "description": "The ID of the user who last changed the transition state."
+        }
+      ]
+    },
+    "lastChangedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LastChangedAt"
+        },
+        {
+          "description": "The timestamp when the transition state was last changed."
+        }
+      ]
+    },
+    "disabledReason": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DisabledReason"
+        },
+        {
+          "description": "The user-specified reason why the transition between two stages of a pipeline was disabled."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-stop-execution-trigger-schema.json",
+  "title": "StopExecutionTrigger",
+  "description": "The interaction that stopped a pipeline execution.",
+  "type": "object",
+  "properties": {
+    "reason": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StopPipelineExecutionReason"
+        },
+        {
+          "description": "The user-specified reason the pipeline was stopped."
+        }
+      ]
+    }
+  }
+}

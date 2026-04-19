@@ -1,0 +1,7 @@
+{
+  "stageName": "example-resource",
+  "inboundExecution": "example-value",
+  "inboundTransitionState": "example-value",
+  "actionStates": "example-value",
+  "latestExecution": "example-value"
+}

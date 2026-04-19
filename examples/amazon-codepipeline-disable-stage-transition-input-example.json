@@ -1,0 +1,6 @@
+{
+  "pipelineName": "example-resource",
+  "stageName": "example-resource",
+  "transitionType": "STANDARD",
+  "reason": "example-value"
+}

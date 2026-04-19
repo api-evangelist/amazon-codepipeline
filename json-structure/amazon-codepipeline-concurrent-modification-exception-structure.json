@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-concurrent-modification-exception-structure.json",
+  "name": "ConcurrentModificationException",
+  "description": "ConcurrentModificationException schema from Amazon CodePipeline"
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-acknowledge-third-party-job-output-schema.json",
+  "title": "AcknowledgeThirdPartyJobOutput",
+  "description": "Represents the output of an AcknowledgeThirdPartyJob action.",
+  "type": "object",
+  "properties": {
+    "status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JobStatus"
+        },
+        {
+          "description": "The status information for the third party job, if any."
+        }
+      ]
+    }
+  }
+}

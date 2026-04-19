@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-blocker-declaration-schema.json",
+  "title": "BlockerDeclaration",
+  "description": "Reserved for future use.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BlockerName"
+        },
+        {
+          "description": "Reserved for future use."
+        }
+      ]
+    },
+    "type": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BlockerType"
+        },
+        {
+          "description": "Reserved for future use."
+        }
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "type"
+  ]
+}

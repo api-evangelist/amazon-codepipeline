@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-failure-details-structure.json",
+  "name": "FailureDetails",
+  "description": "Represents information about failure details.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FailureType"
+        },
+        {
+          "description": "The type of the failure."
+        }
+      ]
+    },
+    "message": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Message"
+        },
+        {
+          "description": "The message about the failure."
+        }
+      ]
+    },
+    "externalExecutionId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ExecutionId"
+        },
+        {
+          "description": "The external ID of the run of the action that failed."
+        }
+      ]
+    }
+  },
+  "required": [
+    "type",
+    "message"
+  ]
+}

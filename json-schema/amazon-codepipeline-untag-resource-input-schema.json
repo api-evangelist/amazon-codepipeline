@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-untag-resource-input-schema.json",
+  "title": "UntagResourceInput",
+  "description": "UntagResourceInput schema from Amazon CodePipeline",
+  "type": "object",
+  "properties": {
+    "resourceArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceArn"
+        },
+        {
+          "description": " The Amazon Resource Name (ARN) of the resource to remove tags from."
+        }
+      ]
+    },
+    "tagKeys": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagKeyList"
+        },
+        {
+          "description": "The list of keys for the tags to be removed from the resource."
+        }
+      ]
+    }
+  },
+  "required": [
+    "resourceArn",
+    "tagKeys"
+  ]
+}

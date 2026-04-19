@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-invalid-approval-token-exception-structure.json",
+  "name": "InvalidApprovalTokenException",
+  "description": "InvalidApprovalTokenException schema from Amazon CodePipeline"
+}

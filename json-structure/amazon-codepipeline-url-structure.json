@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-url-structure.json",
+  "name": "Url",
+  "description": "Url schema from Amazon CodePipeline",
+  "type": "string",
+  "minLength": 1,
+  "maxLength": 2048
+}

@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-webhook-definition-schema.json",
+  "title": "WebhookDefinition",
+  "description": "Represents information about a webhook and its definition.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/WebhookName"
+        },
+        {
+          "description": "The name of the webhook."
+        }
+      ]
+    },
+    "targetPipeline": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PipelineName"
+        },
+        {
+          "description": "The name of the pipeline you want to connect to the webhook."
+        }
+      ]
+    },
+    "targetAction": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionName"
+        },
+        {
+          "description": "The name of the action in a pipeline you want to connect to the webhook. The action must be from the source (first) stage of the pipeline."
+        }
+      ]
+    },
+    "filters": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/WebhookFilters"
+        },
+        {
+          "description": "A list of rules applied to the body/payload sent in the POST request to a webhook URL. All defined rules must pass for the request to be accepted and the pipeline started."
+        }
+      ]
+    },
+    "authentication": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/WebhookAuthenticationType"
+        },
+        {
+          "description": "<p>Supported options are GITHUB_HMAC, IP, and UNAUTHENTICATED.</p> <ul> <li> <p>For information about the authentication scheme implemented by GITHUB_HMAC, see <a href=\"https://developer.github.com/webhooks/securing/\">Securing your webhooks</a> on the GitHub Developer website.</p> </li> <li> <p> IP rejects webhooks trigger requests unless they originate from an IP address in the IP range whitelisted in the authentication configuration.</p> </li> <li> <p> UNAUTHENTICATED accepts all webhook trigger requests regardless of origin.</p> </li> </ul>"
+        }
+      ]
+    },
+    "authenticationConfiguration": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/WebhookAuthConfiguration"
+        },
+        {
+          "description": "Properties that configure the authentication applied to incoming webhook trigger requests. The required properties depend on the authentication type. For GITHUB_HMAC, only the <code>SecretToken </code>property must be set. For IP, only the <code>AllowedIPRange </code>property must be set to a valid CIDR range. For UNAUTHENTICATED, no properties can be set."
+        }
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "targetPipeline",
+    "targetAction",
+    "filters",
+    "authentication",
+    "authenticationConfiguration"
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "pipelineName": "example-resource",
+  "maxResults": "example-value",
+  "nextToken": "example-value"
+}

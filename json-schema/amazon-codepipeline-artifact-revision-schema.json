@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-artifact-revision-schema.json",
+  "title": "ArtifactRevision",
+  "description": "Represents revision details of an artifact. ",
+  "type": "object",
+  "properties": {
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ArtifactName"
+        },
+        {
+          "description": "The name of an artifact. This name might be system-generated, such as \"MyApp\", or defined by the user when an action is created."
+        }
+      ]
+    },
+    "revisionId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Revision"
+        },
+        {
+          "description": "The revision ID of the artifact."
+        }
+      ]
+    },
+    "revisionChangeIdentifier": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RevisionChangeIdentifier"
+        },
+        {
+          "description": "An additional identifier for a revision, such as a commit date or, for artifacts stored in Amazon S3 buckets, the ETag value."
+        }
+      ]
+    },
+    "revisionSummary": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RevisionSummary"
+        },
+        {
+          "description": "Summary information about the most recent revision of the artifact. For GitHub and CodeCommit repositories, the commit message. For Amazon S3 buckets or actions, the user-provided content of a <code>codepipeline-artifact-revision-summary</code> key specified in the object metadata."
+        }
+      ]
+    },
+    "created": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The date and time when the most recent revision of the artifact was created, in timestamp format."
+        }
+      ]
+    },
+    "revisionUrl": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Url"
+        },
+        {
+          "description": "The commit ID for the artifact revision. For artifacts stored in GitHub or CodeCommit repositories, the commit ID is linked to a commit details page."
+        }
+      ]
+    }
+  }
+}

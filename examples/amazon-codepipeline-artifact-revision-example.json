@@ -1,0 +1,8 @@
+{
+  "name": "example-resource",
+  "revisionId": "500123",
+  "revisionChangeIdentifier": "500123",
+  "revisionSummary": "example-value",
+  "created": "example-value",
+  "revisionUrl": "https://example.amazonaws.com"
+}

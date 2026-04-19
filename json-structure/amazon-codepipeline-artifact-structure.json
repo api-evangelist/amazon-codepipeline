@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-artifact-structure.json",
+  "name": "Artifact",
+  "description": "Artifacts are the files that are worked on by actions in the pipeline. See the action configuration for each action for details about artifact parameters. For example, the S3 source action artifact is a file name (or file path), and the files are generally provided as a ZIP file. Example artifact name: SampleApp_Windows.zip",
+  "type": "object",
+  "properties": {
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ArtifactName"
+        },
+        {
+          "description": "The artifact's name."
+        }
+      ]
+    },
+    "revision": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Revision"
+        },
+        {
+          "description": "The artifact's revision ID. Depending on the type of object, this could be a commit ID (GitHub) or a revision ID (Amazon S3)."
+        }
+      ]
+    },
+    "location": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ArtifactLocation"
+        },
+        {
+          "description": "The location of an artifact."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1143 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: Amazon CodePipeline
+  description: 'AWS CodePipeline is a fully managed continuous delivery service that helps you automate your release pipelines for fast and reliable application and infrastructure updates. CodePipeline
+    automates the '
+  tags:
+  - Amazon
+  - AWS
+  - CI/CD
+  - Continuous Delivery
+  - DevOps
+  - Pipeline
+  - Release Automation
+  created: '2026-04-19'
+  modified: '2026-04-19'
+binds:
+- namespace: env
+  keys:
+    AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
+    AWS_REGION: AWS_REGION
+capability:
+  consumes:
+  - type: http
+    namespace: codepipeline
+    baseUri: http://codepipeline.us-east-1.amazonaws.com
+    description: Amazon CodePipeline REST API.
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{AWS_AUTH_TOKEN}}'
+      placement: header
+    resources:
+    - name: ''
+      path: /
+      description: 'Operations for '
+      operations:
+      - name: acknowledgeJob
+        method: POST
+        description: Amazon CodePipeline Acknowledge Job
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: acknowledgeThirdPartyJob
+        method: POST
+        description: Amazon CodePipeline Acknowledge Third Party Job
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: createCustomActionType
+        method: POST
+        description: Amazon CodePipeline Create Custom Action Type
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: createPipeline
+        method: POST
+        description: Amazon CodePipeline Create Pipeline
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: deleteCustomActionType
+        method: POST
+        description: Amazon CodePipeline Delete Custom Action Type
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: deletePipeline
+        method: POST
+        description: Amazon CodePipeline Delete Pipeline
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: deleteWebhook
+        method: POST
+        description: Amazon CodePipeline Delete Webhook
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: deregisterWebhookWithThirdParty
+        method: POST
+        description: Amazon CodePipeline Deregister Webhook with Third Party
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: disableStageTransition
+        method: POST
+        description: Amazon CodePipeline Disable Stage Transition
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: enableStageTransition
+        method: POST
+        description: Amazon CodePipeline Enable Stage Transition
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: getActionType
+        method: POST
+        description: Amazon CodePipeline Get Action Type
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: getJobDetails
+        method: POST
+        description: Amazon CodePipeline Get Job Details
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: getPipeline
+        method: POST
+        description: Amazon CodePipeline Get Pipeline
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: getPipelineExecution
+        method: POST
+        description: Amazon CodePipeline Get Pipeline Execution
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: getPipelineState
+        method: POST
+        description: Amazon CodePipeline Get Pipeline State
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: getThirdPartyJobDetails
+        method: POST
+        description: Amazon CodePipeline Get Third Party Job Details
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: listActionExecutions
+        method: POST
+        description: Amazon CodePipeline List Action Executions
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: listActionTypes
+        method: POST
+        description: Amazon CodePipeline List Action Types
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: listPipelineExecutions
+        method: POST
+        description: Amazon CodePipeline List Pipeline Executions
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: listPipelines
+        method: POST
+        description: Amazon CodePipeline List Pipelines
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: listTagsForResource
+        method: POST
+        description: Amazon CodePipeline List Tags for Resource
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: listWebhooks
+        method: POST
+        description: Amazon CodePipeline List Webhooks
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: pollForJobs
+        method: POST
+        description: Amazon CodePipeline Poll for Jobs
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: pollForThirdPartyJobs
+        method: POST
+        description: Amazon CodePipeline Poll for Third Party Jobs
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: putActionRevision
+        method: POST
+        description: Amazon CodePipeline Put Action Revision
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: putApprovalResult
+        method: POST
+        description: Amazon CodePipeline Put Approval Result
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: putJobFailureResult
+        method: POST
+        description: Amazon CodePipeline Put Job Failure Result
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: putJobSuccessResult
+        method: POST
+        description: Amazon CodePipeline Put Job Success Result
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: putThirdPartyJobFailureResult
+        method: POST
+        description: Amazon CodePipeline Put Third Party Job Failure Result
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: putThirdPartyJobSuccessResult
+        method: POST
+        description: Amazon CodePipeline Put Third Party Job Success Result
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: putWebhook
+        method: POST
+        description: Amazon CodePipeline Put Webhook
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: registerWebhookWithThirdParty
+        method: POST
+        description: Amazon CodePipeline Register Webhook with Third Party
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: retryStageExecution
+        method: POST
+        description: Amazon CodePipeline Retry Stage Execution
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: startPipelineExecution
+        method: POST
+        description: Amazon CodePipeline Start Pipeline Execution
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: stopPipelineExecution
+        method: POST
+        description: Amazon CodePipeline Stop Pipeline Execution
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: tagResource
+        method: POST
+        description: Amazon CodePipeline Tag Resource
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: untagResource
+        method: POST
+        description: Amazon CodePipeline Untag Resource
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: updateActionType
+        method: POST
+        description: Amazon CodePipeline Update Action Type
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: updatePipeline
+        method: POST
+        description: Amazon CodePipeline Update Pipeline
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+  exposes:
+  - type: rest
+    port: 8100
+    namespace: codepipeline-rest
+    resources:
+    - path: /v1/
+      name: ''
+      description: 'REST for '
+      operations:
+      - method: POST
+        name: acknowledgeJob
+        description: Amazon CodePipeline Acknowledge Job
+        call: codepipeline.acknowledgeJob
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: acknowledgeThirdPartyJob
+        description: Amazon CodePipeline Acknowledge Third Party Job
+        call: codepipeline.acknowledgeThirdPartyJob
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: createCustomActionType
+        description: Amazon CodePipeline Create Custom Action Type
+        call: codepipeline.createCustomActionType
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: createPipeline
+        description: Amazon CodePipeline Create Pipeline
+        call: codepipeline.createPipeline
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: deleteCustomActionType
+        description: Amazon CodePipeline Delete Custom Action Type
+        call: codepipeline.deleteCustomActionType
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: deletePipeline
+        description: Amazon CodePipeline Delete Pipeline
+        call: codepipeline.deletePipeline
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: deleteWebhook
+        description: Amazon CodePipeline Delete Webhook
+        call: codepipeline.deleteWebhook
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: deregisterWebhookWithThirdParty
+        description: Amazon CodePipeline Deregister Webhook with Third Party
+        call: codepipeline.deregisterWebhookWithThirdParty
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: disableStageTransition
+        description: Amazon CodePipeline Disable Stage Transition
+        call: codepipeline.disableStageTransition
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: enableStageTransition
+        description: Amazon CodePipeline Enable Stage Transition
+        call: codepipeline.enableStageTransition
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: getActionType
+        description: Amazon CodePipeline Get Action Type
+        call: codepipeline.getActionType
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: getJobDetails
+        description: Amazon CodePipeline Get Job Details
+        call: codepipeline.getJobDetails
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: getPipeline
+        description: Amazon CodePipeline Get Pipeline
+        call: codepipeline.getPipeline
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: getPipelineExecution
+        description: Amazon CodePipeline Get Pipeline Execution
+        call: codepipeline.getPipelineExecution
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: getPipelineState
+        description: Amazon CodePipeline Get Pipeline State
+        call: codepipeline.getPipelineState
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: getThirdPartyJobDetails
+        description: Amazon CodePipeline Get Third Party Job Details
+        call: codepipeline.getThirdPartyJobDetails
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: listActionExecutions
+        description: Amazon CodePipeline List Action Executions
+        call: codepipeline.listActionExecutions
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: listActionTypes
+        description: Amazon CodePipeline List Action Types
+        call: codepipeline.listActionTypes
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: listPipelineExecutions
+        description: Amazon CodePipeline List Pipeline Executions
+        call: codepipeline.listPipelineExecutions
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: listPipelines
+        description: Amazon CodePipeline List Pipelines
+        call: codepipeline.listPipelines
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: listTagsForResource
+        description: Amazon CodePipeline List Tags for Resource
+        call: codepipeline.listTagsForResource
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: listWebhooks
+        description: Amazon CodePipeline List Webhooks
+        call: codepipeline.listWebhooks
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: pollForJobs
+        description: Amazon CodePipeline Poll for Jobs
+        call: codepipeline.pollForJobs
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: pollForThirdPartyJobs
+        description: Amazon CodePipeline Poll for Third Party Jobs
+        call: codepipeline.pollForThirdPartyJobs
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: putActionRevision
+        description: Amazon CodePipeline Put Action Revision
+        call: codepipeline.putActionRevision
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: putApprovalResult
+        description: Amazon CodePipeline Put Approval Result
+        call: codepipeline.putApprovalResult
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: putJobFailureResult
+        description: Amazon CodePipeline Put Job Failure Result
+        call: codepipeline.putJobFailureResult
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: putJobSuccessResult
+        description: Amazon CodePipeline Put Job Success Result
+        call: codepipeline.putJobSuccessResult
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: putThirdPartyJobFailureResult
+        description: Amazon CodePipeline Put Third Party Job Failure Result
+        call: codepipeline.putThirdPartyJobFailureResult
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: putThirdPartyJobSuccessResult
+        description: Amazon CodePipeline Put Third Party Job Success Result
+        call: codepipeline.putThirdPartyJobSuccessResult
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: putWebhook
+        description: Amazon CodePipeline Put Webhook
+        call: codepipeline.putWebhook
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: registerWebhookWithThirdParty
+        description: Amazon CodePipeline Register Webhook with Third Party
+        call: codepipeline.registerWebhookWithThirdParty
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: retryStageExecution
+        description: Amazon CodePipeline Retry Stage Execution
+        call: codepipeline.retryStageExecution
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: startPipelineExecution
+        description: Amazon CodePipeline Start Pipeline Execution
+        call: codepipeline.startPipelineExecution
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: stopPipelineExecution
+        description: Amazon CodePipeline Stop Pipeline Execution
+        call: codepipeline.stopPipelineExecution
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: tagResource
+        description: Amazon CodePipeline Tag Resource
+        call: codepipeline.tagResource
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: untagResource
+        description: Amazon CodePipeline Untag Resource
+        call: codepipeline.untagResource
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: updateActionType
+        description: Amazon CodePipeline Update Action Type
+        call: codepipeline.updateActionType
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: updatePipeline
+        description: Amazon CodePipeline Update Pipeline
+        call: codepipeline.updatePipeline
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9100
+    namespace: codepipeline-mcp
+    transport: http
+    tools:
+    - name: codepipeline-acknowledgeJob
+      description: Amazon CodePipeline Acknowledge Job
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.acknowledgeJob
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-acknowledgeThirdPartyJob
+      description: Amazon CodePipeline Acknowledge Third Party Job
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.acknowledgeThirdPartyJob
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-createCustomActionType
+      description: Amazon CodePipeline Create Custom Action Type
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.createCustomActionType
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-createPipeline
+      description: Amazon CodePipeline Create Pipeline
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.createPipeline
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-deleteCustomActionType
+      description: Amazon CodePipeline Delete Custom Action Type
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.deleteCustomActionType
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-deletePipeline
+      description: Amazon CodePipeline Delete Pipeline
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.deletePipeline
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-deleteWebhook
+      description: Amazon CodePipeline Delete Webhook
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.deleteWebhook
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-deregisterWebhookWithThirdParty
+      description: Amazon CodePipeline Deregister Webhook with Third Party
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.deregisterWebhookWithThirdParty
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-disableStageTransition
+      description: Amazon CodePipeline Disable Stage Transition
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.disableStageTransition
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-enableStageTransition
+      description: Amazon CodePipeline Enable Stage Transition
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.enableStageTransition
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-getActionType
+      description: Amazon CodePipeline Get Action Type
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.getActionType
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-getJobDetails
+      description: Amazon CodePipeline Get Job Details
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.getJobDetails
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-getPipeline
+      description: Amazon CodePipeline Get Pipeline
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.getPipeline
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-getPipelineExecution
+      description: Amazon CodePipeline Get Pipeline Execution
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.getPipelineExecution
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-getPipelineState
+      description: Amazon CodePipeline Get Pipeline State
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.getPipelineState
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-getThirdPartyJobDetails
+      description: Amazon CodePipeline Get Third Party Job Details
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.getThirdPartyJobDetails
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-listActionExecutions
+      description: Amazon CodePipeline List Action Executions
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.listActionExecutions
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-listActionTypes
+      description: Amazon CodePipeline List Action Types
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.listActionTypes
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-listPipelineExecutions
+      description: Amazon CodePipeline List Pipeline Executions
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.listPipelineExecutions
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-listPipelines
+      description: Amazon CodePipeline List Pipelines
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.listPipelines
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-listTagsForResource
+      description: Amazon CodePipeline List Tags for Resource
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.listTagsForResource
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-listWebhooks
+      description: Amazon CodePipeline List Webhooks
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.listWebhooks
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-pollForJobs
+      description: Amazon CodePipeline Poll for Jobs
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.pollForJobs
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-pollForThirdPartyJobs
+      description: Amazon CodePipeline Poll for Third Party Jobs
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.pollForThirdPartyJobs
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-putActionRevision
+      description: Amazon CodePipeline Put Action Revision
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.putActionRevision
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-putApprovalResult
+      description: Amazon CodePipeline Put Approval Result
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.putApprovalResult
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-putJobFailureResult
+      description: Amazon CodePipeline Put Job Failure Result
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.putJobFailureResult
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-putJobSuccessResult
+      description: Amazon CodePipeline Put Job Success Result
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.putJobSuccessResult
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-putThirdPartyJobFailureResult
+      description: Amazon CodePipeline Put Third Party Job Failure Result
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.putThirdPartyJobFailureResult
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-putThirdPartyJobSuccessResult
+      description: Amazon CodePipeline Put Third Party Job Success Result
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.putThirdPartyJobSuccessResult
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-putWebhook
+      description: Amazon CodePipeline Put Webhook
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.putWebhook
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-registerWebhookWithThirdParty
+      description: Amazon CodePipeline Register Webhook with Third Party
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.registerWebhookWithThirdParty
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-retryStageExecution
+      description: Amazon CodePipeline Retry Stage Execution
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.retryStageExecution
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-startPipelineExecution
+      description: Amazon CodePipeline Start Pipeline Execution
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.startPipelineExecution
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-stopPipelineExecution
+      description: Amazon CodePipeline Stop Pipeline Execution
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.stopPipelineExecution
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-tagResource
+      description: Amazon CodePipeline Tag Resource
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.tagResource
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-untagResource
+      description: Amazon CodePipeline Untag Resource
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.untagResource
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-updateActionType
+      description: Amazon CodePipeline Update Action Type
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.updateActionType
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codepipeline-updatePipeline
+      description: Amazon CodePipeline Update Pipeline
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codepipeline.updatePipeline
+      outputParameters:
+      - type: object
+        mapping: $.

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-job-status-schema.json",
+  "title": "JobStatus",
+  "description": "JobStatus schema from Amazon CodePipeline",
+  "type": "string",
+  "enum": [
+    "Created",
+    "Queued",
+    "Dispatched",
+    "InProgress",
+    "TimedOut",
+    "Succeeded",
+    "Failed"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-failure-type-structure.json",
+  "name": "FailureType",
+  "description": "FailureType schema from Amazon CodePipeline",
+  "type": "string",
+  "enum": [
+    "JobFailed",
+    "ConfigurationError",
+    "PermissionError",
+    "RevisionOutOfSync",
+    "RevisionUnavailable",
+    "SystemUnavailable"
+  ]
+}

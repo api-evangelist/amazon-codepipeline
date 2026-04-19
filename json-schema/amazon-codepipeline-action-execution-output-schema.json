@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-action-execution-output-schema.json",
+  "title": "ActionExecutionOutput",
+  "description": "Output details listed for an action execution, such as the action execution result.",
+  "type": "object",
+  "properties": {
+    "outputArtifacts": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ArtifactDetailList"
+        },
+        {
+          "description": "Details of output artifacts of the action that correspond to the action execution."
+        }
+      ]
+    },
+    "executionResult": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionExecutionResult"
+        },
+        {
+          "description": "Execution result information listed in the output details for an action execution."
+        }
+      ]
+    },
+    "outputVariables": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OutputVariablesMap"
+        },
+        {
+          "description": "The outputVariables field shows the key-value pairs that were output as part of that execution."
+        }
+      ]
+    }
+  }
+}

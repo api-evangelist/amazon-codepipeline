@@ -1,0 +1,6 @@
+{
+  "configuration": "example-value",
+  "type": "STANDARD",
+  "policyStatementsTemplate": "example-value",
+  "jobTimeout": "example-value"
+}

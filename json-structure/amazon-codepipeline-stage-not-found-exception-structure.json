@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-stage-not-found-exception-structure.json",
+  "name": "StageNotFoundException",
+  "description": "StageNotFoundException schema from Amazon CodePipeline"
+}

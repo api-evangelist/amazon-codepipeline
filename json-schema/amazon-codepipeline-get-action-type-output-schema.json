@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-get-action-type-output-schema.json",
+  "title": "GetActionTypeOutput",
+  "description": "GetActionTypeOutput schema from Amazon CodePipeline",
+  "type": "object",
+  "properties": {
+    "actionType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionTypeDeclaration"
+        },
+        {
+          "description": "The action type information for the requested action type, such as the action type ID."
+        }
+      ]
+    }
+  }
+}

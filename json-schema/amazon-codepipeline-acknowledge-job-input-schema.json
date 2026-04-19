@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-acknowledge-job-input-schema.json",
+  "title": "AcknowledgeJobInput",
+  "description": "Represents the input of an AcknowledgeJob action.",
+  "type": "object",
+  "properties": {
+    "jobId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JobId"
+        },
+        {
+          "description": "The unique system-generated ID of the job for which you want to confirm receipt."
+        }
+      ]
+    },
+    "nonce": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Nonce"
+        },
+        {
+          "description": "A system-generated random number that CodePipeline uses to ensure that the job is being worked on by only one job worker. Get this number from the response of the <a>PollForJobs</a> request that returned this job."
+        }
+      ]
+    }
+  },
+  "required": [
+    "jobId",
+    "nonce"
+  ]
+}

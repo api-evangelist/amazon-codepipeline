@@ -1,0 +1,138 @@
+vocabulary: 1.0.0
+info:
+  provider: Amazon CodePipeline
+  description: Taxonomy of Amazon CodePipeline APIs.
+  created: '2026-04-19'
+  modified: '2026-04-19'
+operational:
+  apis:
+  - name: Amazon CodePipeline API
+    namespace: codepipeline
+    version: '2015-07-09'
+    baseUrl: https://codepipeline.us-east-1.amazonaws.com
+    status: active
+  resources:
+  - name: ''
+    apis:
+    - Amazon CodePipeline API
+    actions: &id001
+    - AcknowledgeJob
+    - AcknowledgeThirdPartyJob
+    - CreateCustomActionType
+    - CreatePipeline
+    - DeleteCustomActionType
+    - DeletePipeline
+    - DeleteWebhook
+    - DeregisterWebhookWithThirdParty
+    - DisableStageTransition
+    - EnableStageTransition
+    - GetActionType
+    - GetJobDetails
+    - GetPipeline
+    - GetPipelineExecution
+    - GetPipelineState
+    - GetThirdPartyJobDetails
+    - ListActionExecutions
+    - ListActionTypes
+    - ListPipelineExecutions
+    - ListPipelines
+    - ListTagsForResource
+    - ListWebhooks
+    - PollForJobs
+    - PollForThirdPartyJobs
+    - PutActionRevision
+    - PutApprovalResult
+    - PutJobFailureResult
+    - PutJobSuccessResult
+    - PutThirdPartyJobFailureResult
+    - PutThirdPartyJobSuccessResult
+    - PutWebhook
+    - RegisterWebhookWithThirdParty
+    - RetryStageExecution
+    - StartPipelineExecution
+    - StopPipelineExecution
+    - TagResource
+    - UntagResource
+    - UpdateActionType
+    - UpdatePipeline
+  actions:
+  - name: list
+    httpMethods:
+    - GET
+    pattern: read
+  - name: create
+    httpMethods:
+    - POST
+    pattern: write
+  - name: delete
+    httpMethods:
+    - DELETE
+    pattern: destructive
+  - name: get
+    httpMethods:
+    - GET
+    pattern: read
+  - name: update
+    httpMethods:
+    - PUT
+    - PATCH
+    pattern: write
+  schemas:
+    core: []
+  parameters:
+    identifiers:
+    - id
+    - name
+    - arn
+    pagination:
+    - nextToken
+    - maxResults
+  authentication:
+    schemes:
+    - AWS Signature Version 4
+    iamIntegration: true
+capability:
+  workflows:
+  - name: Release Pipeline Automation
+    file: capabilities/amazon-codepipeline-release-pipeline.yaml
+    description: Unified workflow for DevOps and release engineering teams to create and manage delivery pipelines, trigger pipeline executions, monitor pipeline statu
+    toolCount: 14
+    personas: &id002
+    - DevOps Engineer
+    - Release Manager
+    - Platform Engineer
+    domains:
+    - Release Pipeline Automation
+  personas:
+  - id: devops-engineer
+    name: DevOps Engineer
+    description: DevOps Engineer persona.
+    workflows:
+    - Release Pipeline Automation
+  - id: release-manager
+    name: Release Manager
+    description: Release Manager persona.
+    workflows:
+    - Release Pipeline Automation
+  - id: platform-engineer
+    name: Platform Engineer
+    description: Platform Engineer persona.
+    workflows:
+    - Release Pipeline Automation
+  domains:
+  - name: Release Pipeline Automation
+    description: Unified workflow for DevOps and release engineering teams to create and manage delivery pipelines, t
+  namespaces:
+  - type: consumed
+    name: codepipeline
+    port:
+  binds:
+  - AWS_ACCESS_KEY_ID
+  - AWS_SECRET_ACCESS_KEY
+  - AWS_REGION
+crossReference:
+- resource: ''
+  operations: *id001
+  workflows:
+  - Release Pipeline Automation
+  personas: *id002

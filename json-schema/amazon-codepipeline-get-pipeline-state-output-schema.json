@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-get-pipeline-state-output-schema.json",
+  "title": "GetPipelineStateOutput",
+  "description": "Represents the output of a <code>GetPipelineState</code> action.",
+  "type": "object",
+  "properties": {
+    "pipelineName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PipelineName"
+        },
+        {
+          "description": "The name of the pipeline for which you want to get the state."
+        }
+      ]
+    },
+    "pipelineVersion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PipelineVersion"
+        },
+        {
+          "description": "<p>The version number of the pipeline.</p> <note> <p>A newly created pipeline is always assigned a version number of <code>1</code>.</p> </note>"
+        }
+      ]
+    },
+    "stageStates": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StageStateList"
+        },
+        {
+          "description": "A list of the pipeline stage output information, including stage name, state, most recent run details, whether the stage is disabled, and other data."
+        }
+      ]
+    },
+    "created": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The date and time the pipeline was created, in timestamp format."
+        }
+      ]
+    },
+    "updated": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The date and time the pipeline was last updated, in timestamp format."
+        }
+      ]
+    }
+  }
+}

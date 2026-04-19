@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-action-owner-structure.json",
+  "name": "ActionOwner",
+  "description": "ActionOwner schema from Amazon CodePipeline",
+  "type": "string",
+  "enum": [
+    "AWS",
+    "ThirdParty",
+    "Custom"
+  ]
+}

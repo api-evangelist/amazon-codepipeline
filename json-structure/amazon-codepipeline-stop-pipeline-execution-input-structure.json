@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-stop-pipeline-execution-input-structure.json",
+  "name": "StopPipelineExecutionInput",
+  "description": "StopPipelineExecutionInput schema from Amazon CodePipeline",
+  "type": "object",
+  "properties": {
+    "pipelineName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PipelineName"
+        },
+        {
+          "description": "The name of the pipeline to stop."
+        }
+      ]
+    },
+    "pipelineExecutionId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PipelineExecutionId"
+        },
+        {
+          "description": "The ID of the pipeline execution to be stopped in the current stage. Use the <code>GetPipelineState</code> action to retrieve the current pipelineExecutionId."
+        }
+      ]
+    },
+    "abandon": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "description": "<p>Use this option to stop the pipeline execution by abandoning, rather than finishing, in-progress actions.</p> <note> <p>This option can lead to failed or out-of-sequence tasks.</p> </note>"
+        }
+      ]
+    },
+    "reason": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StopPipelineExecutionReason"
+        },
+        {
+          "description": "Use this option to enter comments, such as the reason the pipeline was stopped."
+        }
+      ]
+    }
+  },
+  "required": [
+    "pipelineName",
+    "pipelineExecutionId"
+  ]
+}

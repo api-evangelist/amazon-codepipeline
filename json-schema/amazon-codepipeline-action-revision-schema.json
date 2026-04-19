@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-action-revision-schema.json",
+  "title": "ActionRevision",
+  "description": "Represents information about the version (or revision) of an action.",
+  "type": "object",
+  "properties": {
+    "revisionId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Revision"
+        },
+        {
+          "description": "The system-generated unique ID that identifies the revision number of the action."
+        }
+      ]
+    },
+    "revisionChangeId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RevisionChangeIdentifier"
+        },
+        {
+          "description": "The unique identifier of the change that set the state to this revision (for example, a deployment ID or timestamp)."
+        }
+      ]
+    },
+    "created": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The date and time when the most recent version of the action was created, in timestamp format."
+        }
+      ]
+    }
+  },
+  "required": [
+    "revisionId",
+    "revisionChangeId",
+    "created"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-aws-region-name-structure.json",
+  "name": "AWSRegionName",
+  "description": "AWSRegionName schema from Amazon CodePipeline",
+  "type": "string",
+  "minLength": 4,
+  "maxLength": 30
+}

@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-s3-object-key-structure.json",
+  "name": "S3ObjectKey",
+  "description": "S3ObjectKey schema from Amazon CodePipeline",
+  "type": "string"
+}

@@ -1,84 +1,116 @@
 {
   "@context": {
-    "@vocab": "https://schema.org/",
-    "codepipeline": "https://docs.aws.amazon.com/codepipeline/latest/APIReference/",
-    "aws": "https://aws.amazon.com/",
-    "Pipeline": {
-      "@id": "codepipeline:API_Pipeline",
-      "@context": {
-        "pipelineName": {
-          "@id": "codepipeline:Pipeline/Name",
-          "@type": "xsd:string"
-        },
-        "roleArn": {
-          "@id": "codepipeline:Pipeline/RoleArn",
-          "@type": "xsd:string"
-        },
-        "version": {
-          "@id": "codepipeline:Pipeline/Version",
-          "@type": "xsd:integer"
-        },
-        "pipelineType": {
-          "@id": "codepipeline:Pipeline/PipelineType",
-          "@type": "xsd:string"
-        },
-        "executionMode": {
-          "@id": "codepipeline:Pipeline/ExecutionMode",
-          "@type": "xsd:string"
-        }
-      }
+    "@version": 1.1,
+    "amazon-code-pipeline": "https://amazon-code-pipeline.amazonaws.com/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "Pipeline": "amazon-code-pipeline:Pipeline",
+    "CreatePipelineInput": "amazon-code-pipeline:CreatePipelineInput",
+    "StageDeclaration": "amazon-code-pipeline:StageDeclaration",
+    "ActionDeclaration": "amazon-code-pipeline:ActionDeclaration",
+    "PipelineExecution": "amazon-code-pipeline:PipelineExecution",
+    "PipelineList": "amazon-code-pipeline:PipelineList",
+    "Tag": "amazon-code-pipeline:Tag",
+    "name": "schema:name",
+    "roleArn": {
+      "@id": "amazon-code-pipeline:roleArn",
+      "@type": "xsd:string"
     },
-    "Stage": {
-      "@id": "codepipeline:API_Stage",
-      "@context": {
-        "stageName": {
-          "@id": "codepipeline:Stage/Name",
-          "@type": "xsd:string"
-        },
-        "actions": {
-          "@id": "codepipeline:Stage/Actions",
-          "@container": "@list"
-        }
-      }
+    "stages": {
+      "@id": "amazon-code-pipeline:stages",
+      "@container": "@set",
+      "@type": "xsd:string"
     },
-    "Action": {
-      "@id": "codepipeline:API_Action",
-      "@context": {
-        "actionName": {
-          "@id": "codepipeline:Action/Name",
-          "@type": "xsd:string"
-        },
-        "category": {
-          "@id": "codepipeline:Action/Category",
-          "@type": "xsd:string"
-        },
-        "provider": {
-          "@id": "codepipeline:Action/Provider",
-          "@type": "xsd:string"
-        },
-        "runOrder": {
-          "@id": "codepipeline:Action/RunOrder",
-          "@type": "xsd:integer"
-        }
-      }
+    "version": "schema:version",
+    "pipeline": {
+      "@id": "amazon-code-pipeline:pipeline",
+      "@type": "xsd:string"
     },
-    "PipelineExecution": {
-      "@id": "codepipeline:API_PipelineExecution",
-      "@context": {
-        "pipelineExecutionId": {
-          "@id": "codepipeline:PipelineExecution/Id",
-          "@type": "xsd:string"
-        },
-        "status": {
-          "@id": "codepipeline:PipelineExecution/Status",
-          "@type": "xsd:string"
-        },
-        "statusSummary": {
-          "@id": "codepipeline:PipelineExecution/StatusSummary",
-          "@type": "xsd:string"
-        }
-      }
+    "tags": {
+      "@id": "amazon-code-pipeline:tags",
+      "@container": "@set",
+      "@type": "xsd:string"
     },
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
+    "actions": {
+      "@id": "amazon-code-pipeline:actions",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "actionTypeId": {
+      "@id": "amazon-code-pipeline:actionTypeId",
+      "@type": "xsd:string"
+    },
+    "category": {
+      "@id": "amazon-code-pipeline:category",
+      "@type": "xsd:string"
+    },
+    "owner": {
+      "@id": "amazon-code-pipeline:owner",
+      "@type": "xsd:string"
+    },
+    "provider": {
+      "@id": "amazon-code-pipeline:provider",
+      "@type": "xsd:string"
+    },
+    "configuration": {
+      "@id": "amazon-code-pipeline:configuration",
+      "@type": "xsd:string"
+    },
+    "inputArtifacts": {
+      "@id": "amazon-code-pipeline:inputArtifacts",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "outputArtifacts": {
+      "@id": "amazon-code-pipeline:outputArtifacts",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "pipelineName": {
+      "@id": "amazon-code-pipeline:pipelineName",
+      "@type": "xsd:string"
+    },
+    "pipelineExecutionId": {
+      "@id": "amazon-code-pipeline:pipelineExecutionId",
+      "@type": "xsd:string"
+    },
+    "pipelineVersion": {
+      "@id": "amazon-code-pipeline:pipelineVersion",
+      "@type": "xsd:integer"
+    },
+    "status": {
+      "@id": "amazon-code-pipeline:status",
+      "@type": "xsd:string"
+    },
+    "statusSummary": {
+      "@id": "amazon-code-pipeline:statusSummary",
+      "@type": "xsd:string"
+    },
+    "pipelines": {
+      "@id": "amazon-code-pipeline:pipelines",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "created": {
+      "@id": "amazon-code-pipeline:created",
+      "@type": "xsd:dateTime"
+    },
+    "updated": {
+      "@id": "amazon-code-pipeline:updated",
+      "@type": "xsd:dateTime"
+    },
+    "nextToken": {
+      "@id": "amazon-code-pipeline:nextToken",
+      "@type": "xsd:string"
+    },
+    "key": {
+      "@id": "amazon-code-pipeline:key",
+      "@type": "xsd:string"
+    },
+    "value": {
+      "@id": "amazon-code-pipeline:value",
+      "@type": "xsd:string"
+    }
   }
 }

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-get-third-party-job-details-input-structure.json",
+  "name": "GetThirdPartyJobDetailsInput",
+  "description": "Represents the input of a <code>GetThirdPartyJobDetails</code> action.",
+  "type": "object",
+  "properties": {
+    "jobId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ThirdPartyJobId"
+        },
+        {
+          "description": "The unique system-generated ID used for identifying the job."
+        }
+      ]
+    },
+    "clientToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ClientToken"
+        },
+        {
+          "description": "The clientToken portion of the clientId and clientToken pair used to verify that the calling entity is allowed access to the job and its details."
+        }
+      ]
+    }
+  },
+  "required": [
+    "jobId",
+    "clientToken"
+  ]
+}

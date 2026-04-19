@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-put-webhook-input-schema.json",
+  "title": "PutWebhookInput",
+  "description": "PutWebhookInput schema from Amazon CodePipeline",
+  "type": "object",
+  "properties": {
+    "webhook": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/WebhookDefinition"
+        },
+        {
+          "description": "The detail provided in an input file to create the webhook, such as the webhook name, the pipeline name, and the action name. Give the webhook a unique name that helps you identify it. You might name the webhook after the pipeline and action it targets so that you can easily recognize what it's used for later."
+        }
+      ]
+    },
+    "tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagList"
+        },
+        {
+          "description": "The tags for the webhook."
+        }
+      ]
+    }
+  },
+  "required": [
+    "webhook"
+  ]
+}

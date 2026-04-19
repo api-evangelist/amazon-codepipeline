@@ -1,0 +1,20 @@
+{
+  "name": "example-resource",
+  "actionTypeId": {
+    "category": "Source",
+    "owner": "123456789012",
+    "provider": "500123",
+    "version": "1.0.0"
+  },
+  "configuration": {},
+  "inputArtifacts": [
+    {
+      "name": "example-resource"
+    }
+  ],
+  "outputArtifacts": [
+    {
+      "name": "example-resource"
+    }
+  ]
+}

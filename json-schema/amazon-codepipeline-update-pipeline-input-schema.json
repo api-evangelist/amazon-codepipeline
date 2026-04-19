@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-update-pipeline-input-schema.json",
+  "title": "UpdatePipelineInput",
+  "description": "Represents the input of an <code>UpdatePipeline</code> action.",
+  "type": "object",
+  "properties": {
+    "pipeline": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PipelineDeclaration"
+        },
+        {
+          "description": "The name of the pipeline to be updated."
+        }
+      ]
+    }
+  },
+  "required": [
+    "pipeline"
+  ]
+}

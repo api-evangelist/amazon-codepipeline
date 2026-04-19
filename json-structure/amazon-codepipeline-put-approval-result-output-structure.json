@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-put-approval-result-output-structure.json",
+  "name": "PutApprovalResultOutput",
+  "description": "Represents the output of a <code>PutApprovalResult</code> action.",
+  "type": "object",
+  "properties": {
+    "approvedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The timestamp showing when the approval or rejection was submitted."
+        }
+      ]
+    }
+  }
+}

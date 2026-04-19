@@ -1,0 +1,6 @@
+{
+  "pipelineName": "example-resource",
+  "pipelineExecutionId": "500123",
+  "abandon": "example-value",
+  "reason": "example-value"
+}

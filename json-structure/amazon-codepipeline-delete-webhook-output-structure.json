@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-delete-webhook-output-structure.json",
+  "name": "DeleteWebhookOutput",
+  "description": "DeleteWebhookOutput schema from Amazon CodePipeline",
+  "type": "object",
+  "properties": {}
+}

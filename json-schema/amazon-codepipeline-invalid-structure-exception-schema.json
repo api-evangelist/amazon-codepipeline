@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-schema/amazon-codepipeline-invalid-structure-exception-schema.json",
+  "title": "InvalidStructureException",
+  "description": "InvalidStructureException schema from Amazon CodePipeline"
+}

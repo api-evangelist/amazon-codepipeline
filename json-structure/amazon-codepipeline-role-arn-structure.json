@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-role-arn-structure.json",
+  "name": "RoleArn",
+  "description": "RoleArn schema from Amazon CodePipeline",
+  "type": "string",
+  "pattern": "arn:aws(-[\\w]+)*:iam::[0-9]{12}:role/.*",
+  "maxLength": 1024
+}

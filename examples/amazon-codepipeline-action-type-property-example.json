@@ -1,0 +1,8 @@
+{
+  "name": "example-resource",
+  "optional": "example-value",
+  "key": "example-value",
+  "noEcho": "example-value",
+  "queryable": "example-value",
+  "description": "Example description"
+}

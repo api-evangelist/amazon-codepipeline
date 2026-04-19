@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-execution-details-structure.json",
+  "name": "ExecutionDetails",
+  "description": "The details of the actions taken and results produced on an artifact as it passes through stages in the pipeline.",
+  "type": "object",
+  "properties": {
+    "summary": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ExecutionSummary"
+        },
+        {
+          "description": "The summary of the current status of the actions."
+        }
+      ]
+    },
+    "externalExecutionId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ExecutionId"
+        },
+        {
+          "description": "The system-generated unique ID of this action used to identify this job worker in any external systems, such as CodeDeploy."
+        }
+      ]
+    },
+    "percentComplete": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Percentage"
+        },
+        {
+          "description": "The percentage of work completed on the action, represented on a scale of 0 to 100 percent."
+        }
+      ]
+    }
+  }
+}

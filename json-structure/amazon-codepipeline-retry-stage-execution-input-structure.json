@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-retry-stage-execution-input-structure.json",
+  "name": "RetryStageExecutionInput",
+  "description": "Represents the input of a <code>RetryStageExecution</code> action.",
+  "type": "object",
+  "properties": {
+    "pipelineName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PipelineName"
+        },
+        {
+          "description": "The name of the pipeline that contains the failed stage."
+        }
+      ]
+    },
+    "stageName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StageName"
+        },
+        {
+          "description": "The name of the failed stage to be retried."
+        }
+      ]
+    },
+    "pipelineExecutionId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PipelineExecutionId"
+        },
+        {
+          "description": "The ID of the pipeline execution in the failed stage to be retried. Use the <a>GetPipelineState</a> action to retrieve the current pipelineExecutionId of the failed stage"
+        }
+      ]
+    },
+    "retryMode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StageRetryMode"
+        },
+        {
+          "description": "The scope of the retry attempt. Currently, the only supported value is FAILED_ACTIONS."
+        }
+      ]
+    }
+  },
+  "required": [
+    "pipelineName",
+    "stageName",
+    "pipelineExecutionId",
+    "retryMode"
+  ]
+}

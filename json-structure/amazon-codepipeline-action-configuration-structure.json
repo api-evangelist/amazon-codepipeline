@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-action-configuration-structure.json",
+  "name": "ActionConfiguration",
+  "description": "Represents information about an action configuration.",
+  "type": "object",
+  "properties": {
+    "configuration": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ActionConfigurationMap"
+        },
+        {
+          "description": "The configuration data for the action."
+        }
+      ]
+    }
+  }
+}

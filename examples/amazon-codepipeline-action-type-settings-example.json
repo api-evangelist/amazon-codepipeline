@@ -1,0 +1,6 @@
+{
+  "thirdPartyConfigurationUrl": "https://example.amazonaws.com",
+  "entityUrlTemplate": "https://example.amazonaws.com",
+  "executionUrlTemplate": "https://example.amazonaws.com",
+  "revisionUrlTemplate": "https://example.amazonaws.com"
+}

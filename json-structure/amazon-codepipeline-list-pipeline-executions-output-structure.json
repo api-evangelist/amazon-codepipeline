@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/json-structure/amazon-codepipeline-list-pipeline-executions-output-structure.json",
+  "name": "ListPipelineExecutionsOutput",
+  "description": "Represents the output of a <code>ListPipelineExecutions</code> action.",
+  "type": "object",
+  "properties": {
+    "pipelineExecutionSummaries": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PipelineExecutionSummaryList"
+        },
+        {
+          "description": "A list of executions in the history of a pipeline."
+        }
+      ]
+    },
+    "nextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NextToken"
+        },
+        {
+          "description": "A token that can be used in the next <code>ListPipelineExecutions</code> call. To view all items in the list, continue to call this operation with each subsequent token until no more nextToken values are returned."
+        }
+      ]
+    }
+  }
+}
