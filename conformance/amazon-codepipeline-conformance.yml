@@ -1,0 +1,39 @@
+generated: '2026-06-20'
+method: derived
+source: openapi/amazon-codepipeline-openapi.yml + https://docs.aws.amazon.com/codepipeline/latest/APIReference/
+description: >-
+  Cross-cutting standards conformance for the Amazon CodePipeline API, derived
+  from the OpenAPI and confirmed against the AWS API reference. CodePipeline is
+  an AWS JSON 1.1 (x-amz-json-1.1) protocol service authenticated with AWS
+  Signature Version 4; it does not use OAuth2/OIDC and does not emit RFC 9457
+  problem+json errors.
+standards:
+- id: oauth2
+  conforms: false
+  evidence: Requests are authenticated with AWS Signature Version 4, not OAuth2.
+- id: oidc
+  conforms: false
+- id: aws-sigv4
+  conforms: true
+  evidence: All requests require AWS SigV4 signing per the AWS API reference Common Parameters.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Errors are returned as AWS JSON 1.1 exceptions (application/x-amz-json-1.1), not application/problem+json.
+- id: pagination
+  conforms: true
+  evidence: List operations (e.g. ListPipelines, ListPipelineExecutions) use nextToken/maxResults cursor pagination.
+- id: idempotency
+  conforms: false
+  evidence: No Idempotency-Key header; CreatePipeline is not idempotent and returns PipelineNameInUseException on conflict.
+- id: json-api
+  conforms: false
+- id: fhir-r4
+  conforms: false
+- id: scim2
+  conforms: false
+- id: odata
+  conforms: false
+- id: fapi
+  conforms: false
+- id: psd2
+  conforms: false

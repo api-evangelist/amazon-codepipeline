@@ -14,7 +14,7 @@ tags:
 - Release Automation
 url: https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/apis.yml
 created: '2026-03-16'
-modified: '2026-04-19'
+modified: '2026-06-20'
 specificationVersion: '0.19'
 apis:
 - aid: amazon-codepipeline:amazon-codepipeline-api
@@ -35,7 +35,27 @@ apis:
     url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
   - type: OpenAPI
     url: openapi/amazon-codepipeline-openapi-original.yaml
+  - type: Overlay
+    url: overlays/amazon-codepipeline-openapi-overlay.yaml
 common:
+- url: https://aws.amazon.com/blogs/devops/tag/aws-codepipeline/feed/
+  type: Blog
+- type: Packages
+  url: packages/amazon-codepipeline-packages.yml
+- type: WellKnown
+  url: well-known/amazon-codepipeline-well-known.yml
+- type: SecurityTxt
+  url: well-known/amazon-codepipeline-security.txt
+- type: MCPServer
+  url: mcp/amazon-codepipeline-mcp.yml
+- type: LLMsTxt
+  url: llms/amazon-codepipeline-llms.txt
+- type: Conformance
+  url: conformance/amazon-codepipeline-conformance.yml
+- type: ErrorCatalog
+  url: errors/amazon-codepipeline-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/amazon-codepipeline-lifecycle.yml
 - type: GettingStarted
   url: https://docs.aws.amazon.com/codepipeline
 - type: Pricing

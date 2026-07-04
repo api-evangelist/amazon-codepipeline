@@ -1,0 +1,80 @@
+generated: '2026-06-20'
+method: derived
+format: aws-json-1.1
+source: openapi/amazon-codepipeline-openapi.yml + https://docs.aws.amazon.com/codepipeline/latest/APIReference/CommonErrors.md
+description: >-
+  Error catalog for the Amazon CodePipeline API. Operation-specific entries are
+  derived from the 4xx/5xx responses in our OpenAPI; the common entries are
+  taken verbatim from the AWS CodePipeline Common Error Types reference.
+  CodePipeline returns AWS JSON 1.1 exceptions (an __type / message body), not
+  RFC 9457 problem+json.
+problems:
+- status: 400
+  code: ""
+  title: Bad request
+  source_operation: openapi/amazon-codepipeline-openapi.yml#CreatePipeline
+- status: 409
+  code: PipelineNameInUseException
+  title: Pipeline already exists
+  remediation: Choose a pipeline name that is not already in use in the account and Region.
+  source_operation: openapi/amazon-codepipeline-openapi.yml#CreatePipeline
+- status: 404
+  code: PipelineNotFoundException
+  title: Pipeline not found
+  source_operation: openapi/amazon-codepipeline-openapi.yml#GetPipeline
+- status: 404
+  code: PipelineExecutionNotFoundException
+  title: Execution not found
+  source_operation: openapi/amazon-codepipeline-openapi.yml#GetPipelineExecution
+common:
+- status: 403
+  code: AccessDeniedException
+  title: You don't have permission to perform this action.
+  remediation: Verify that your IAM policy includes the required permissions.
+- status: 403
+  code: ExpiredTokenException
+  title: The security token included in the request has expired.
+  remediation: Request a new security token and try again.
+- status: 403
+  code: IncompleteSignature
+  title: The request signature doesn't conform to AWS standards.
+  remediation: Verify valid AWS credentials, a properly formatted request, and an up-to-date SDK.
+- status: 500
+  code: InternalFailure
+  title: The request can't be processed right now because of an internal server issue.
+  remediation: Try again later; if the problem persists, contact AWS Support.
+- status: 400
+  code: MalformedHttpRequestException
+  title: The request body can't be processed.
+  remediation: Verify the content encoding header matches the compression format used.
+- status: 401
+  code: NotAuthorized
+  title: You don't have permissions to perform this action.
+  remediation: Verify that your IAM policy includes the required permissions.
+- status: 403
+  code: OptInRequired
+  title: Your AWS account needs a subscription for this service.
+  remediation: Verify that you've enabled the service in your account.
+- status: 400
+  code: RequestAbortedException
+  title: The request was aborted before a response could be returned.
+- status: 413
+  code: RequestEntityTooLargeException
+  title: The request entity is too large.
+  remediation: Reduce the size of the request body and try again.
+- status: 408
+  code: RequestTimeoutException
+  title: The request timed out.
+  remediation: Try again.
+- status: 503
+  code: ServiceUnavailable
+  title: The service is temporarily unavailable.
+  remediation: Try again later.
+- status: 400
+  code: ThrottlingException
+  title: Your request rate is too high.
+  remediation: Reduce the frequency of requests; the AWS SDKs retry this automatically.
+- status: 404
+  code: UnknownOperationException
+  title: The action or operation isn't recognized.
+  remediation: Verify the action name and that it is supported by the API version you're using.

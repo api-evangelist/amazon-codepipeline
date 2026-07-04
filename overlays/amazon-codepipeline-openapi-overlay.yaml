@@ -1,0 +1,30 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Amazon CodePipeline
+  version: 1.0.0
+extends: openapi/amazon-codepipeline-openapi.yml
+actions:
+- target: $.info
+  update:
+    x-apievangelist-slug: amazon-codepipeline
+    x-apievangelist-provider: Amazon Web Services
+    x-apievangelist-category: CI/CD
+- target: $.info
+  update:
+    x-apievangelist-tags:
+    - Amazon
+    - AWS
+    - CI/CD
+    - Continuous Delivery
+    - DevOps
+    - Pipeline
+    - Release Automation
+- target: $.servers
+  update:
+  - url: https://codepipeline.us-east-1.amazonaws.com
+    description: Regional endpoint (us-east-1); substitute the region for other AWS Regions.
+- target: $.paths['/'].post
+  update:
+    x-apievangelist-note: >-
+      CodePipeline uses a single POST '/' JSON-RPC style endpoint; the operation
+      is selected by the X-Amz-Target header and body shape rather than by path.

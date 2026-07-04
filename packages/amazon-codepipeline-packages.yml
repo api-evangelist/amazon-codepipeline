@@ -1,0 +1,68 @@
+generated: '2026-06-20'
+method: searched
+source: https://aws.amazon.com/tools/
+description: >-
+  First-party AWS SDK client libraries that provide programmatic access to the
+  Amazon CodePipeline API. AWS ships CodePipeline support inside its per-service
+  modular SDKs (JavaScript v3, Go v2, Rust) and inside its monolithic SDKs
+  (boto3 for Python, aws-sdk-php for PHP). All packages below were verified live
+  in their registries on 2026-06-20.
+packages:
+- language: javascript
+  registry: npm
+  name: "@aws-sdk/client-codepipeline"
+  url: https://www.npmjs.com/package/@aws-sdk/client-codepipeline
+  install: npm install @aws-sdk/client-codepipeline
+  official: true
+  status: 200
+- language: python
+  registry: pypi
+  name: boto3
+  url: https://pypi.org/project/boto3/
+  install: pip install boto3
+  official: true
+  status: 200
+  notes: CodePipeline is exposed via boto3.client('codepipeline').
+- language: java
+  registry: maven-central
+  name: software.amazon.awssdk:codepipeline
+  url: https://repo1.maven.org/maven2/software/amazon/awssdk/codepipeline/
+  install: "implementation 'software.amazon.awssdk:codepipeline'"
+  official: true
+  status: 200
+- language: dotnet
+  registry: nuget
+  name: AWSSDK.CodePipeline
+  url: https://www.nuget.org/packages/AWSSDK.CodePipeline
+  install: dotnet add package AWSSDK.CodePipeline
+  official: true
+  status: 200
+- language: go
+  registry: pkg.go.dev
+  name: github.com/aws/aws-sdk-go-v2/service/codepipeline
+  url: https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/service/codepipeline
+  install: go get github.com/aws/aws-sdk-go-v2/service/codepipeline
+  official: true
+  status: 200
+- language: ruby
+  registry: rubygems
+  name: aws-sdk-codepipeline
+  url: https://rubygems.org/gems/aws-sdk-codepipeline
+  install: gem install aws-sdk-codepipeline
+  official: true
+  status: 200
+- language: php
+  registry: packagist
+  name: aws/aws-sdk-php
+  url: https://packagist.org/packages/aws/aws-sdk-php
+  install: composer require aws/aws-sdk-php
+  official: true
+  status: 200
+  notes: CodePipeline is exposed via the CodePipelineClient in the monolithic PHP SDK.
+- language: rust
+  registry: crates.io
+  name: aws-sdk-codepipeline
+  url: https://crates.io/crates/aws-sdk-codepipeline
+  install: cargo add aws-sdk-codepipeline
+  official: true
+  status: 200

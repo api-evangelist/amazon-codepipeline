@@ -1,0 +1,32 @@
+generated: '2026-06-20'
+method: searched
+source: probed /.well-known/ across the CodePipeline API host, the AWS marketing host, and the docs host
+description: >-
+  Well-known discovery probe results. The CodePipeline API endpoint itself
+  (SigV4-signed, no OAuth/OIDC) exposes no discovery documents. AWS publishes an
+  RFC 9116 security.txt at the corporate root (aws.amazon.com), which is saved
+  verbatim alongside this index.
+hosts:
+- host: https://aws.amazon.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: amazon-codepipeline-security.txt
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://codepipeline.us-east-1.amazonaws.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+- host: https://docs.aws.amazon.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404

@@ -1,0 +1,22 @@
+generated: '2026-06-20'
+method: searched
+source: https://docs.aws.amazon.com/codepipeline/latest/APIReference/ + openapi/amazon-codepipeline-openapi.yml
+description: >-
+  Lifecycle, versioning, and operational-status signals for the Amazon
+  CodePipeline API. CodePipeline uses AWS's date-stamped service API version and
+  selects operations via the X-Amz-Target header. AWS does not publish
+  RFC 8594 Sunset/Deprecation headers for this API, and no CodePipeline-specific
+  public SLA document was found.
+versioning:
+  scheme: aws-service-api-version
+  current: '2015-07-09'
+  docs: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+deprecation:
+  policy_url: null
+  sunset_header: false
+sla:
+  url: null
+  uptime_target: null
+  notes: No CodePipeline-specific SLA published by AWS as of this round.
+status_page: https://health.aws.amazon.com/health/status
+deprecated_operations: []
