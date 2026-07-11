@@ -38,6 +38,14 @@ apis:
   - type: Overlay
     url: overlays/amazon-codepipeline-openapi-overlay.yaml
 common:
+- type: TrustCenter
+  url: security/amazon-codepipeline-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/amazon-codepipeline-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/amazon-codepipeline-domain-security.yml
+- type: Authentication
+  url: authentication/amazon-codepipeline-authentication.yml
 - url: https://aws.amazon.com/blogs/devops/tag/aws-codepipeline/feed/
   type: Blog
 - type: Packages
