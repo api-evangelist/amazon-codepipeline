@@ -38,6 +38,8 @@ apis:
   - type: Overlay
     url: overlays/amazon-codepipeline-openapi-overlay.yaml
 common:
+- type: AgenticAccess
+  url: agentic-access/amazon-codepipeline-agentic-access.yml
 - type: TrustCenter
   url: security/amazon-codepipeline-trust-center.yml
 - type: VulnerabilityDisclosure
