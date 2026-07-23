@@ -1,0 +1,624 @@
+openapi: 3.0.0
+info:
+  version: '2015-07-09'
+  x-release: v4
+  title: 'AWS CodePipeline Executions #X Amz Target=CodePipeline 20150709.UpdatePipeline API'
+  description: <fullname>CodePipeline</fullname> <p> <b>Overview</b> </p> <p>This is the CodePipeline API Reference. This guide provides descriptions of the actions and data types for CodePipeline. Some functionality for your pipeline can only be configured through the API. For more information, see the <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html">CodePipeline User Guide</a>.</p> <p>You can use the CodePipeline API to work with pipelines, stages, actions, and transitions.</p> <p> <i>Pipelines</i> are models of automated release processes. Each pipeline is uniquely named, and consists of stages, actions, and transitions. </p> <p>You can work with pipelines by calling:</p> <ul> <li> <p> <a>CreatePipeline</a>, which creates a uniquely named pipeline.</p> </li> <li> <p> <a>DeletePipeline</a>, which deletes the specified pipeline.</p> </li> <li> <p> <a>GetPipeline</a>, which returns information about the pipeline structure and pipeline metadata, including the pipeline Amazon Resource Name (ARN).</p> </li> <li> <p> <a>GetPipelineExecution</a>, which returns information about a specific execution of a pipeline.</p> </li> <li> <p> <a>GetPipelineState</a>, which returns information about the current state of the stages and actions of a pipeline.</p> </li> <li> <p> <a>ListActionExecutions</a>, which returns action-level details for past executions. The details include full stage and action-level details, including individual action duration, status, any errors that occurred during the execution, and input and output artifact location details.</p> </li> <li> <p> <a>ListPipelines</a>, which gets a summary of all of the pipelines associated with your account.</p> </li> <li> <p> <a>ListPipelineExecutions</a>, which gets a summary of the most recent executions for a pipeline.</p> </li> <li> <p> <a>StartPipelineExecution</a>, which runs the most recent revision of an artifact through the pipeline.</p> </li> <li> <p> <a>StopPipelineExecution</a>, which stops the specified pipeline execution from continuing through the pipeline.</p> </li> <li> <p> <a>UpdatePipeline</a>, which updates a pipeline with edits or changes to the structure of the pipeline.</p> </li> </ul> <p>Pipelines include <i>stages</i>. Each stage contains one or more actions that must complete before the next stage begins. A stage results in success or failure. If a stage fails, the pipeline stops at that stage and remains stopped until either a new version of an artifact appears in the source location, or a user takes action to rerun the most recent artifact through the pipeline. You can call <a>GetPipelineState</a>, which displays the status of a pipeline, including the status of stages in the pipeline, or <a>GetPipeline</a>, which returns the entire structure of the pipeline, including the stages of that pipeline. For more information about the structure of stages and actions, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-structure.html">CodePipeline Pipeline Structure Reference</a>.</p> <p>Pipeline stages include <i>actions</i> that are categorized into categories such as source or build actions performed in a stage of a pipeline. For example, you can use a source action to import artifacts into a pipeline from a source such as Amazon S3. Like stages, you do not work with actions directly in most cases, but you do define and interact with actions when working with pipeline operations such as <a>CreatePipeline</a> and <a>GetPipelineState</a>. Valid action categories are:</p> <ul> <li> <p>Source</p> </li> <li> <p>Build</p> </li> <li> <p>Test</p> </li> <li> <p>Deploy</p> </li> <li> <p>Approval</p> </li> <li> <p>Invoke</p> </li> </ul> <p>Pipelines also include <i>transitions</i>, which allow the transition of artifacts from one stage to the next in a pipeline after the actions in one stage complete.</p> <p>You can work with transitions by calling:</p> <ul> <li> <p> <a>DisableStageTransition</a>, which prevents artifacts from transitioning to the next stage in a pipeline.</p> </li> <li> <p> <a>EnableStageTransition</a>, which enables transition of artifacts between stages in a pipeline. </p> </li> </ul> <p> <b>Using the API to integrate with CodePipeline</b> </p> <p>For third-party integrators or developers who want to create their own integrations with CodePipeline, the expected sequence varies from the standard API user. To integrate with CodePipeline, developers need to work with the following items:</p> <p> <b>Jobs</b>, which are instances of an action. For example, a job for a source action might import a revision of an artifact from a source. </p> <p>You can work with jobs by calling:</p> <ul> <li> <p> <a>AcknowledgeJob</a>, which confirms whether a job worker has received the specified job.</p> </li> <li> <p> <a>GetJobDetails</a>, which returns the details of a job.</p> </li> <li> <p> <a>PollForJobs</a>, which determines whether there are any jobs to act on.</p> </li> <li> <p> <a>PutJobFailureResult</a>, which provides details of a job failure. </p> </li> <li> <p> <a>PutJobSuccessResult</a>, which provides details of a job success.</p> </li> </ul> <p> <b>Third party jobs</b>, which are instances of an action created by a partner action and integrated into CodePipeline. Partner actions are created by members of the Amazon Web Services Partner Network.</p> <p>You can work with third party jobs by calling:</p> <ul> <li> <p> <a>AcknowledgeThirdPartyJob</a>, which confirms whether a job worker has received the specified job.</p> </li> <li> <p> <a>GetThirdPartyJobDetails</a>, which requests the details of a job for a partner action.</p> </li> <li> <p> <a>PollForThirdPartyJobs</a>, which determines whether there are any jobs to act on. </p> </li> <li> <p> <a>PutThirdPartyJobFailureResult</a>, which provides details of a job failure.</p> </li> <li> <p> <a>PutThirdPartyJobSuccessResult</a>, which provides details of a job success.</p> </li> </ul>
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: codepipeline
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/codepipeline-2015-07-09.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://codepipeline.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The CodePipeline multi-region endpoint
+- url: https://codepipeline.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The CodePipeline multi-region endpoint
+- url: http://codepipeline.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The CodePipeline endpoint for China (Beijing) and China (Ningxia)
+- url: https://codepipeline.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The CodePipeline endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=CodePipeline 20150709.UpdatePipeline'
+paths:
+  /#X-Amz-Target=CodePipeline_20150709.UpdatePipeline:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: UpdatePipeline
+      description: Updates a specified pipeline with edits or changes to its structure. Use a JSON file with the pipeline structure and <code>UpdatePipeline</code> to provide the full structure of the pipeline. Updating the pipeline increases the version number of the pipeline by 1.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdatePipelineOutput'
+              examples:
+                UpdatePipeline200Example:
+                  summary: Default UpdatePipeline 200 response
+                  x-microcks-default: true
+                  value:
+                    pipeline: example-value
+        '480':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+              examples:
+                UpdatePipeline480Example:
+                  summary: Default UpdatePipeline 480 response
+                  x-microcks-default: true
+                  value: example-value
+        '481':
+          description: InvalidStageDeclarationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidStageDeclarationException'
+              examples:
+                UpdatePipeline481Example:
+                  summary: Default UpdatePipeline 481 response
+                  x-microcks-default: true
+                  value: example-value
+        '482':
+          description: InvalidActionDeclarationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidActionDeclarationException'
+              examples:
+                UpdatePipeline482Example:
+                  summary: Default UpdatePipeline 482 response
+                  x-microcks-default: true
+                  value: example-value
+        '483':
+          description: InvalidBlockerDeclarationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidBlockerDeclarationException'
+              examples:
+                UpdatePipeline483Example:
+                  summary: Default UpdatePipeline 483 response
+                  x-microcks-default: true
+                  value: example-value
+        '484':
+          description: InvalidStructureException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidStructureException'
+              examples:
+                UpdatePipeline484Example:
+                  summary: Default UpdatePipeline 484 response
+                  x-microcks-default: true
+                  value: example-value
+        '485':
+          description: LimitExceededException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LimitExceededException'
+              examples:
+                UpdatePipeline485Example:
+                  summary: Default UpdatePipeline 485 response
+                  x-microcks-default: true
+                  value: example-value
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdatePipelineInput'
+            examples:
+              UpdatePipelineRequestExample:
+                summary: Default UpdatePipeline request
+                x-microcks-default: true
+                value:
+                  pipeline: example-value
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - CodePipeline_20150709.UpdatePipeline
+      summary: Amazon CodePipeline Update Pipeline
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#X Amz Target=CodePipeline 20150709.UpdatePipeline'
+components:
+  schemas:
+    ActionDeclaration:
+      type: object
+      required:
+      - name
+      - actionTypeId
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/ActionName'
+          - description: The action declaration's name.
+        actionTypeId:
+          allOf:
+          - $ref: '#/components/schemas/ActionTypeId'
+          - description: Specifies the action type and the provider of the action.
+        runOrder:
+          allOf:
+          - $ref: '#/components/schemas/ActionRunOrder'
+          - description: The order in which actions are run.
+        configuration:
+          allOf:
+          - $ref: '#/components/schemas/ActionConfigurationMap'
+          - description: '<p>The action''s configuration. These are key-value pairs that specify input values for an action. For more information, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements">Action Structure Requirements in CodePipeline</a>. For the list of configuration properties for the CloudFormation action type in CodePipeline, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/continuous-delivery-codepipeline-action-reference.html">Configuration Properties Reference</a> in the <i>CloudFormation User Guide</i>. For template snippets with examples, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/continuous-delivery-codepipeline-parameter-override-functions.html">Using Parameter Override Functions with CodePipeline Pipelines</a> in the <i>CloudFormation User Guide</i>.</p> <p>The values can be represented in either JSON or YAML format. For example, the JSON configuration item format is as follows: </p> <p> <i>JSON:</i> </p> <p> <code>"Configuration" : { Key : Value },</code> </p>'
+        outputArtifacts:
+          allOf:
+          - $ref: '#/components/schemas/OutputArtifactList'
+          - description: The name or ID of the result of the action declaration, such as a test or build artifact.
+        inputArtifacts:
+          allOf:
+          - $ref: '#/components/schemas/InputArtifactList'
+          - description: The name or ID of the artifact consumed by the action, such as a test or build artifact.
+        roleArn:
+          allOf:
+          - $ref: '#/components/schemas/RoleArn'
+          - description: The ARN of the IAM service role that performs the declared action. This is assumed through the roleArn for the pipeline.
+        region:
+          allOf:
+          - $ref: '#/components/schemas/AWSRegionName'
+          - description: The action declaration's Amazon Web Services Region, such as us-east-1.
+        namespace:
+          allOf:
+          - $ref: '#/components/schemas/ActionNamespace'
+          - description: The variable namespace associated with the action. All variables produced as output by this action fall under this namespace.
+      description: Represents information about an action declaration.
+    OutputArtifact:
+      type: object
+      required:
+      - name
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/ArtifactName'
+          - description: <p>The name of the output of an artifact, such as "My App".</p> <p>The input artifact of an action must exactly match the output artifact declared in a preceding action, but the input artifact does not have to be the next action in strict sequence from the action that provided the output artifact. Actions in parallel can declare different output artifacts, which are in turn consumed by different following actions.</p> <p>Output artifact names must be unique within a pipeline.</p>
+      description: Represents information about the output of an action.
+    ArtifactStoreType:
+      type: string
+      enum:
+      - S3
+    LimitExceededException: {}
+    ActionName:
+      type: string
+      pattern: '[A-Za-z0-9.@\-_]+'
+      minLength: 1
+      maxLength: 100
+    StageDeclaration:
+      type: object
+      required:
+      - name
+      - actions
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/StageName'
+          - description: The name of the stage.
+        blockers:
+          allOf:
+          - $ref: '#/components/schemas/StageBlockerDeclarationList'
+          - description: Reserved for future use.
+        actions:
+          allOf:
+          - $ref: '#/components/schemas/StageActionDeclarationList'
+          - description: The actions included in a stage.
+      description: Represents information about a stage and its definition.
+    ActionCategory:
+      type: string
+      enum:
+      - Source
+      - Build
+      - Deploy
+      - Test
+      - Invoke
+      - Approval
+    AWSRegionName:
+      type: string
+      minLength: 4
+      maxLength: 30
+    BlockerDeclaration:
+      type: object
+      required:
+      - name
+      - type
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/BlockerName'
+          - description: Reserved for future use.
+        type:
+          allOf:
+          - $ref: '#/components/schemas/BlockerType'
+          - description: Reserved for future use.
+      description: Reserved for future use.
+    ActionConfigurationMap:
+      type: object
+      additionalProperties:
+        $ref: '#/components/schemas/ActionConfigurationValue'
+    ActionRunOrder:
+      type: integer
+      minimum: 1
+      maximum: 999
+    PipelineVersion:
+      type: integer
+      minimum: 1
+    InputArtifactList:
+      type: array
+      items:
+        $ref: '#/components/schemas/InputArtifact'
+    ArtifactStore:
+      type: object
+      required:
+      - type
+      - location
+      properties:
+        type:
+          allOf:
+          - $ref: '#/components/schemas/ArtifactStoreType'
+          - description: The type of the artifact store, such as S3.
+        location:
+          allOf:
+          - $ref: '#/components/schemas/ArtifactStoreLocation'
+          - description: The S3 bucket used for storing the artifacts for a pipeline. You can specify the name of an S3 bucket but not a folder in the bucket. A folder to contain the pipeline artifacts is created for you based on the name of the pipeline. You can use any S3 bucket in the same Amazon Web Services Region as the pipeline to store your pipeline artifacts.
+        encryptionKey:
+          allOf:
+          - $ref: '#/components/schemas/EncryptionKey'
+          - description: The encryption key used to encrypt the data in the artifact store, such as an Amazon Web Services Key Management Service key. If this is undefined, the default key for Amazon S3 is used.
+      description: <p>The S3 bucket where artifacts for the pipeline are stored.</p> <note> <p>You must include either <code>artifactStore</code> or <code>artifactStores</code> in your pipeline, but you cannot use both. If you create a cross-region action in your pipeline, you must use <code>artifactStores</code>.</p> </note>
+    ValidationException: {}
+    InvalidBlockerDeclarationException: {}
+    UpdatePipelineOutput:
+      type: object
+      properties:
+        pipeline:
+          allOf:
+          - $ref: '#/components/schemas/PipelineDeclaration'
+          - description: The structure of the updated pipeline.
+      description: Represents the output of an <code>UpdatePipeline</code> action.
+    ActionOwner:
+      type: string
+      enum:
+      - AWS
+      - ThirdParty
+      - Custom
+    ArtifactStoreMap:
+      type: object
+      additionalProperties:
+        $ref: '#/components/schemas/ArtifactStore'
+    BlockerName:
+      type: string
+      minLength: 1
+      maxLength: 100
+    EncryptionKeyId:
+      type: string
+      minLength: 1
+      maxLength: 400
+    StageBlockerDeclarationList:
+      type: array
+      items:
+        $ref: '#/components/schemas/BlockerDeclaration'
+    PipelineDeclaration:
+      type: object
+      required:
+      - name
+      - roleArn
+      - stages
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/PipelineName'
+          - description: The name of the pipeline.
+        roleArn:
+          allOf:
+          - $ref: '#/components/schemas/RoleArn'
+          - description: The Amazon Resource Name (ARN) for CodePipeline to use to either perform actions with no <code>actionRoleArn</code>, or to use to assume roles for actions with an <code>actionRoleArn</code>.
+        artifactStore:
+          allOf:
+          - $ref: '#/components/schemas/ArtifactStore'
+          - description: <p>Represents information about the S3 bucket where artifacts are stored for the pipeline.</p> <note> <p>You must include either <code>artifactStore</code> or <code>artifactStores</code> in your pipeline, but you cannot use both. If you create a cross-region action in your pipeline, you must use <code>artifactStores</code>.</p> </note>
+        artifactStores:
+          allOf:
+          - $ref: '#/components/schemas/ArtifactStoreMap'
+          - description: <p>A mapping of <code>artifactStore</code> objects and their corresponding Amazon Web Services Regions. There must be an artifact store for the pipeline Region and for each cross-region action in the pipeline.</p> <note> <p>You must include either <code>artifactStore</code> or <code>artifactStores</code> in your pipeline, but you cannot use both. If you create a cross-region action in your pipeline, you must use <code>artifactStores</code>.</p> </note>
+        stages:
+          allOf:
+          - $ref: '#/components/schemas/PipelineStageDeclarationList'
+          - description: The stage in which to perform the action.
+        version:
+          allOf:
+          - $ref: '#/components/schemas/PipelineVersion'
+          - description: The version number of the pipeline. A new pipeline always has a version number of 1. This number is incremented when a pipeline is updated.
+      description: Represents the structure of actions and stages to be performed in the pipeline.
+    EncryptionKeyType:
+      type: string
+      enum:
+      - KMS
+    PipelineName:
+      type: string
+      pattern: '[A-Za-z0-9.@\-_]+'
+      minLength: 1
+      maxLength: 100
+    InputArtifact:
+      type: object
+      required:
+      - name
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/ArtifactName'
+          - description: '<p>The name of the artifact to be worked on (for example, "My App").</p> <p>Artifacts are the files that are worked on by actions in the pipeline. See the action configuration for each action for details about artifact parameters. For example, the S3 source action input artifact is a file name (or file path), and the files are generally provided as a ZIP file. Example artifact name: SampleApp_Windows.zip</p> <p>The input artifact of an action must exactly match the output artifact declared in a preceding action, but the input artifact does not have to be the next action in strict sequence from the action that provided the output artifact. Actions in parallel can declare different output artifacts, which are in turn consumed by different following actions.</p>'
+      description: Represents information about an artifact to be worked on, such as a test or build artifact.
+    Version:
+      type: string
+      pattern: '[0-9A-Za-z_-]+'
+      minLength: 1
+      maxLength: 9
+    StageActionDeclarationList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ActionDeclaration'
+    BlockerType:
+      type: string
+      enum:
+      - Schedule
+    ActionTypeId:
+      type: object
+      required:
+      - category
+      - owner
+      - provider
+      - version
+      properties:
+        category:
+          allOf:
+          - $ref: '#/components/schemas/ActionCategory'
+          - description: <p>A category defines what kind of action can be taken in the stage, and constrains the provider type for the action. Valid categories are limited to one of the following values. </p> <ul> <li> <p>Source</p> </li> <li> <p>Build</p> </li> <li> <p>Test</p> </li> <li> <p>Deploy</p> </li> <li> <p>Invoke</p> </li> <li> <p>Approval</p> </li> </ul>
+        owner:
+          allOf:
+          - $ref: '#/components/schemas/ActionOwner'
+          - description: 'The creator of the action being called. There are three valid values for the <code>Owner</code> field in the action category section within your pipeline structure: <code>AWS</code>, <code>ThirdParty</code>, and <code>Custom</code>. For more information, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#actions-valid-providers">Valid Action Types and Providers in CodePipeline</a>.'
+        provider:
+          allOf:
+          - $ref: '#/components/schemas/ActionProvider'
+          - description: The provider of the service being called by the action. Valid providers are determined by the action category. For example, an action in the Deploy category type might have a provider of CodeDeploy, which would be specified as <code>CodeDeploy</code>. For more information, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#actions-valid-providers">Valid Action Types and Providers in CodePipeline</a>.
+        version:
+          allOf:
+          - $ref: '#/components/schemas/Version'
+          - description: A string that describes the action version.
+      description: Represents information about an action type.
+    UpdatePipelineInput:
+      type: object
+      required:
+      - pipeline
+      title: UpdatePipelineInput
+      properties:
+        pipeline:
+          allOf:
+          - $ref: '#/components/schemas/PipelineDeclaration'
+          - description: The name of the pipeline to be updated.
+      description: Represents the input of an <code>UpdatePipeline</code> action.
+    InvalidActionDeclarationException: {}
+    ActionProvider:
+      type: string
+      pattern: '[0-9A-Za-z_-]+'
+      minLength: 1
+      maxLength: 35
+    EncryptionKey:
+      type: object
+      required:
+      - id
+      - type
+      properties:
+        id:
+          allOf:
+          - $ref: '#/components/schemas/EncryptionKeyId'
+          - description: <p>The ID used to identify the key. For an Amazon Web Services KMS key, you can use the key ID, the key ARN, or the alias ARN.</p> <note> <p>Aliases are recognized only in the account that created the KMS key. For cross-account actions, you can only use the key ID or key ARN to identify the key. Cross-account actions involve using the role from the other account (AccountB), so specifying the key ID will use the key from the other account (AccountB).</p> </note>
+        type:
+          allOf:
+          - $ref: '#/components/schemas/EncryptionKeyType'
+          - description: The type of encryption key, such as an Amazon Web Services KMS key. When creating or updating a pipeline, the value must be set to 'KMS'.
+      description: Represents information about the key used to encrypt data in the artifact store, such as an Amazon Web Services Key Management Service (Key Management Service) key.
+    ActionConfigurationValue:
+      type: string
+      minLength: 1
+      maxLength: 1000
+    StageName:
+      type: string
+      pattern: '[A-Za-z0-9.@\-_]+'
+      minLength: 1
+      maxLength: 100
+    InvalidStageDeclarationException: {}
+    PipelineStageDeclarationList:
+      type: array
+      items:
+        $ref: '#/components/schemas/StageDeclaration'
+    InvalidStructureException: {}
+    OutputArtifactList:
+      type: array
+      items:
+        $ref: '#/components/schemas/OutputArtifact'
+    ArtifactName:
+      type: string
+      pattern: '[a-zA-Z0-9_\-]+'
+      minLength: 1
+      maxLength: 100
+    ArtifactStoreLocation:
+      type: string
+      pattern: '[a-zA-Z0-9\-\.]+'
+      minLength: 3
+      maxLength: 63
+    RoleArn:
+      type: string
+      pattern: arn:aws(-[\w]+)*:iam::[0-9]{12}:role/.*
+      maxLength: 1024
+    ActionNamespace:
+      type: string
+      pattern: '[A-Za-z0-9@\-_]+'
+      minLength: 1
+      maxLength: 100
+  parameters:
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/codepipeline/
+x-hasEquivalentPaths: true
