@@ -3,7 +3,19 @@ name: Amazon CodePipeline
 description: AWS CodePipeline is a fully managed continuous delivery service that helps you automate your release pipelines for fast and reliable application and infrastructure updates. CodePipeline 
   automates the build, test, and deploy phases of your release process every time there is a code change, based on the release model you define.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-codepipeline.png
 tags:
 - Amazon
 - AWS
@@ -17,26 +29,740 @@ created: '2026-03-16'
 modified: '2026-06-20'
 specificationVersion: '0.19'
 apis:
-- aid: amazon-codepipeline:amazon-codepipeline-api
-  name: Amazon CodePipeline API
-  description: The Amazon CodePipeline REST API.
+- aid: amazon-codepipeline:amazon-codepipeline-executions-api
+  name: Amazon CodePipeline Executions API
+  description: Operations for managing pipeline executions
   humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
   baseURL: https://codepipeline.us-east-1.amazonaws.com
   tags:
-  - Amazon
-  - AWS
-  - CI/CD
-  - Continuous Delivery
-  - DevOps
+  - Executions
   properties:
+  - type: OpenAPI
+    url: openapi/amazon-codepipeline-executions-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/codepipeline/
   - type: APIReference
     url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: amazon-codepipeline:amazon-codepipeline-pipelines-api
+  name: Amazon CodePipeline Pipelines API
+  description: Operations for managing CodePipeline pipelines
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - Pipelines
+  properties:
   - type: OpenAPI
-    url: openapi/amazon-codepipeline-openapi-original.yaml
-  - type: Overlay
-    url: overlays/amazon-codepipeline-openapi-overlay.yaml
+    url: openapi/amazon-codepipeline-pipelines-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-acknowledgejob-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.AcknowledgeJob API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.AcknowledgeJob API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.acknowledgejob.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.AcknowledgeJob'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-acknowledgejob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-acknowledgethirdpartyjob-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.AcknowledgeThirdPartyJob API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.AcknowledgeThirdPartyJob API from Amazon CodePipeline — 1
+    operation(s) for #x amz target=codepipeline 20150709.acknowledgethirdpartyjob.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.AcknowledgeThirdPartyJob'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-acknowledgethirdpartyjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-createcustomactiontype-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.CreateCustomActionType API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.CreateCustomActionType API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.createcustomactiontype.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.CreateCustomActionType'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-createcustomactiontype-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-createpipeline-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.CreatePipeline API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.CreatePipeline API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.createpipeline.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.CreatePipeline'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-createpipeline-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-deletecustomactiontype-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.DeleteCustomActionType API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.DeleteCustomActionType API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.deletecustomactiontype.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.DeleteCustomActionType'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-deletecustomactiontype-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-deletepipeline-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.DeletePipeline API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.DeletePipeline API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.deletepipeline.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.DeletePipeline'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-deletepipeline-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-deletewebhook-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.DeleteWebhook API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.DeleteWebhook API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.deletewebhook.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.DeleteWebhook'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-deletewebhook-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-deregisterwebhookwiththirdparty-api
+  name: >-
+    Amazon CodePipeline #X Amz Target=CodePipeline 20150709.DeregisterWebhookWithThirdParty API
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.DeregisterWebhookWithThirdParty API from Amazon CodePipeline
+    — 1 operation(s) for #x amz target=codepipeline 20150709.deregisterwebhookwiththirdparty.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.DeregisterWebhookWithThirdParty'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-deregisterwebhookwiththirdparty-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-disablestagetransition-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.DisableStageTransition API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.DisableStageTransition API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.disablestagetransition.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.DisableStageTransition'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-disablestagetransition-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-enablestagetransition-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.EnableStageTransition API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.EnableStageTransition API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.enablestagetransition.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.EnableStageTransition'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-enablestagetransition-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-getactiontype-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.GetActionType API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.GetActionType API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.getactiontype.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.GetActionType'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-getactiontype-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-getjobdetails-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.GetJobDetails API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.GetJobDetails API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.getjobdetails.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.GetJobDetails'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-getjobdetails-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipeline-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.GetPipeline API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.GetPipeline API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.getpipeline.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.GetPipeline'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipeline-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipelineexecution-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.GetPipelineExecution API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.GetPipelineExecution API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.getpipelineexecution.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.GetPipelineExecution'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipelineexecution-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipelinestate-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.GetPipelineState API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.GetPipelineState API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.getpipelinestate.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.GetPipelineState'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipelinestate-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-getthirdpartyjobdetails-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.GetThirdPartyJobDetails API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.GetThirdPartyJobDetails API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.getthirdpartyjobdetails.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.GetThirdPartyJobDetails'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-getthirdpartyjobdetails-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-listactionexecutions-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.ListActionExecutions API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.ListActionExecutions API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.listactionexecutions.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.ListActionExecutions'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-listactionexecutions-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-listactiontypes-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.ListActionTypes API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.ListActionTypes API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.listactiontypes.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.ListActionTypes'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-listactiontypes-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-listpipelineexecutions-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.ListPipelineExecutions API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.ListPipelineExecutions API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.listpipelineexecutions.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.ListPipelineExecutions'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-listpipelineexecutions-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-listpipelines-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.ListPipelines API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.ListPipelines API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.listpipelines.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.ListPipelines'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-listpipelines-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-listtagsforresource-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.ListTagsForResource API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.ListTagsForResource API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.listtagsforresource.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.ListTagsForResource'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-listtagsforresource-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-listwebhooks-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.ListWebhooks API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.ListWebhooks API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.listwebhooks.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.ListWebhooks'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-listwebhooks-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-pollforjobs-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.PollForJobs API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.PollForJobs API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.pollforjobs.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.PollForJobs'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-pollforjobs-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-pollforthirdpartyjobs-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.PollForThirdPartyJobs API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.PollForThirdPartyJobs API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.pollforthirdpartyjobs.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.PollForThirdPartyJobs'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-pollforthirdpartyjobs-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-putactionrevision-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.PutActionRevision API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.PutActionRevision API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.putactionrevision.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.PutActionRevision'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putactionrevision-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-putapprovalresult-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.PutApprovalResult API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.PutApprovalResult API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.putapprovalresult.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.PutApprovalResult'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putapprovalresult-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-putjobfailureresult-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.PutJobFailureResult API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.PutJobFailureResult API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.putjobfailureresult.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.PutJobFailureResult'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putjobfailureresult-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-putjobsuccessresult-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.PutJobSuccessResult API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.PutJobSuccessResult API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.putjobsuccessresult.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.PutJobSuccessResult'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putjobsuccessresult-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-putthirdpartyjobfailureresult-api
+  name: >-
+    Amazon CodePipeline #X Amz Target=CodePipeline 20150709.PutThirdPartyJobFailureResult API
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.PutThirdPartyJobFailureResult API from Amazon CodePipeline
+    — 1 operation(s) for #x amz target=codepipeline 20150709.putthirdpartyjobfailureresult.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.PutThirdPartyJobFailureResult'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putthirdpartyjobfailureresult-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-putthirdpartyjobsuccessresult-api
+  name: >-
+    Amazon CodePipeline #X Amz Target=CodePipeline 20150709.PutThirdPartyJobSuccessResult API
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.PutThirdPartyJobSuccessResult API from Amazon CodePipeline
+    — 1 operation(s) for #x amz target=codepipeline 20150709.putthirdpartyjobsuccessresult.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.PutThirdPartyJobSuccessResult'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putthirdpartyjobsuccessresult-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-putwebhook-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.PutWebhook API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.PutWebhook API from Amazon CodePipeline — 1 operation(s) for
+    #x amz target=codepipeline 20150709.putwebhook.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.PutWebhook'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putwebhook-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-registerwebhookwiththirdparty-api
+  name: >-
+    Amazon CodePipeline #X Amz Target=CodePipeline 20150709.RegisterWebhookWithThirdParty API
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.RegisterWebhookWithThirdParty API from Amazon CodePipeline
+    — 1 operation(s) for #x amz target=codepipeline 20150709.registerwebhookwiththirdparty.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.RegisterWebhookWithThirdParty'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-registerwebhookwiththirdparty-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-retrystageexecution-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.RetryStageExecution API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.RetryStageExecution API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.retrystageexecution.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.RetryStageExecution'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-retrystageexecution-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-startpipelineexecution-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.StartPipelineExecution API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.StartPipelineExecution API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.startpipelineexecution.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.StartPipelineExecution'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-startpipelineexecution-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-stoppipelineexecution-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.StopPipelineExecution API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.StopPipelineExecution API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.stoppipelineexecution.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.StopPipelineExecution'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-stoppipelineexecution-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-tagresource-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.TagResource API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.TagResource API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.tagresource.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.TagResource'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-tagresource-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-untagresource-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.UntagResource API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.UntagResource API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.untagresource.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.UntagResource'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-untagresource-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-updateactiontype-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.UpdateActionType API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.UpdateActionType API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.updateactiontype.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.UpdateActionType'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-updateactiontype-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+- aid: >-
+    amazon-codepipeline:amazon-codepipeline-x-amz-target-codepipeline-20150709-updatepipeline-api
+  name: 'Amazon CodePipeline #X Amz Target=CodePipeline 20150709.UpdatePipeline API'
+  description: >-
+    The #X Amz Target=CodePipeline 20150709.UpdatePipeline API from Amazon CodePipeline — 1 operation(s)
+    for #x amz target=codepipeline 20150709.updatepipeline.
+  humanURL: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
+  baseURL: https://codepipeline.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=CodePipeline 20150709.UpdatePipeline'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-updatepipeline-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codepipeline/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
 common:
 - type: AgenticAccess
   url: agentic-access/amazon-codepipeline-agentic-access.yml
