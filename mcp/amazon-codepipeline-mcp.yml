@@ -2,12 +2,10 @@ generated: '2026-06-20'
 method: derived
 status: candidate
 source: openapi/amazon-codepipeline-openapi.yml
-description: >-
-  No dedicated first-party hosted MCP server for Amazon CodePipeline was found.
-  AWS ships general-purpose MCP servers via AWS Labs (github.com/awslabs/mcp),
-  but none is CodePipeline-specific. The tool list below is a candidate derived
-  one-to-one from the operations captured in our enhanced OpenAPI, for use as a
-  starting point when standing up an MCP wrapper over the CodePipeline API.
+description: No dedicated first-party hosted MCP server for Amazon CodePipeline was found. AWS ships general-purpose
+  MCP servers via AWS Labs (github.com/awslabs/mcp), but none is CodePipeline-specific. The tool list
+  below is a candidate derived one-to-one from the operations captured in our enhanced OpenAPI, for use
+  as a starting point when standing up an MCP wrapper over the CodePipeline API.
 server:
   name: amazon-codepipeline
   transport: stdio
@@ -30,3 +28,9 @@ tools:
 - name: get_pipeline_execution
   description: Returns information about an execution of a pipeline.
   source_operation: openapi/amazon-codepipeline-openapi.yml#GetPipelineExecution
+deployment:
+  mode: none
+  verified: derived
+  tools: 6
+  checked: '2026-08-12'
+  source: catalog MCP census

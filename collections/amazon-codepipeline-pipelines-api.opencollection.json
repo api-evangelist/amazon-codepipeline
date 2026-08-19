@@ -1,0 +1,86 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AWS CodePipeline Executions Pipelines API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Pipelines",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon CodePipeline Create a New Pipeline",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://codepipeline.{region}.amazonaws.com/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a pipeline with the specified name and structure. A pipeline consists of stages and actions that process code changes."
+        },
+        {
+          "info": {
+            "name": "Amazon CodePipeline Get Pipeline Details",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://codepipeline.{region}.amazonaws.com/getPipeline",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Returns the metadata, structure, stages, and actions of a pipeline."
+        },
+        {
+          "info": {
+            "name": "Amazon CodePipeline List Pipelines",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://codepipeline.{region}.amazonaws.com/listPipelines",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Gets a summary of all of the pipelines associated with your account."
+        },
+        {
+          "info": {
+            "name": "Amazon CodePipeline Delete a Pipeline",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://codepipeline.{region}.amazonaws.com/deletePipeline",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Deletes the specified pipeline."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
