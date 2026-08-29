@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: '2015-07-09'
   x-release: v4
-  title: 'AWS CodePipeline Executions #X Amz Target=CodePipeline 20150709.GetActionType API'
+  title: 'AWS CodePipeline #X Amz Target=CodePipeline 20150709.GetActionType API'
   description: <fullname>CodePipeline</fullname> <p> <b>Overview</b> </p> <p>This is the CodePipeline API Reference. This guide provides descriptions of the actions and data types for CodePipeline. Some functionality for your pipeline can only be configured through the API. For more information, see the <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html">CodePipeline User Guide</a>.</p> <p>You can use the CodePipeline API to work with pipelines, stages, actions, and transitions.</p> <p> <i>Pipelines</i> are models of automated release processes. Each pipeline is uniquely named, and consists of stages, actions, and transitions. </p> <p>You can work with pipelines by calling:</p> <ul> <li> <p> <a>CreatePipeline</a>, which creates a uniquely named pipeline.</p> </li> <li> <p> <a>DeletePipeline</a>, which deletes the specified pipeline.</p> </li> <li> <p> <a>GetPipeline</a>, which returns information about the pipeline structure and pipeline metadata, including the pipeline Amazon Resource Name (ARN).</p> </li> <li> <p> <a>GetPipelineExecution</a>, which returns information about a specific execution of a pipeline.</p> </li> <li> <p> <a>GetPipelineState</a>, which returns information about the current state of the stages and actions of a pipeline.</p> </li> <li> <p> <a>ListActionExecutions</a>, which returns action-level details for past executions. The details include full stage and action-level details, including individual action duration, status, any errors that occurred during the execution, and input and output artifact location details.</p> </li> <li> <p> <a>ListPipelines</a>, which gets a summary of all of the pipelines associated with your account.</p> </li> <li> <p> <a>ListPipelineExecutions</a>, which gets a summary of the most recent executions for a pipeline.</p> </li> <li> <p> <a>StartPipelineExecution</a>, which runs the most recent revision of an artifact through the pipeline.</p> </li> <li> <p> <a>StopPipelineExecution</a>, which stops the specified pipeline execution from continuing through the pipeline.</p> </li> <li> <p> <a>UpdatePipeline</a>, which updates a pipeline with edits or changes to the structure of the pipeline.</p> </li> </ul> <p>Pipelines include <i>stages</i>. Each stage contains one or more actions that must complete before the next stage begins. A stage results in success or failure. If a stage fails, the pipeline stops at that stage and remains stopped until either a new version of an artifact appears in the source location, or a user takes action to rerun the most recent artifact through the pipeline. You can call <a>GetPipelineState</a>, which displays the status of a pipeline, including the status of stages in the pipeline, or <a>GetPipeline</a>, which returns the entire structure of the pipeline, including the stages of that pipeline. For more information about the structure of stages and actions, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-structure.html">CodePipeline Pipeline Structure Reference</a>.</p> <p>Pipeline stages include <i>actions</i> that are categorized into categories such as source or build actions performed in a stage of a pipeline. For example, you can use a source action to import artifacts into a pipeline from a source such as Amazon S3. Like stages, you do not work with actions directly in most cases, but you do define and interact with actions when working with pipeline operations such as <a>CreatePipeline</a> and <a>GetPipelineState</a>. Valid action categories are:</p> <ul> <li> <p>Source</p> </li> <li> <p>Build</p> </li> <li> <p>Test</p> </li> <li> <p>Deploy</p> </li> <li> <p>Approval</p> </li> <li> <p>Invoke</p> </li> </ul> <p>Pipelines also include <i>transitions</i>, which allow the transition of artifacts from one stage to the next in a pipeline after the actions in one stage complete.</p> <p>You can work with transitions by calling:</p> <ul> <li> <p> <a>DisableStageTransition</a>, which prevents artifacts from transitioning to the next stage in a pipeline.</p> </li> <li> <p> <a>EnableStageTransition</a>, which enables transition of artifacts between stages in a pipeline. </p> </li> </ul> <p> <b>Using the API to integrate with CodePipeline</b> </p> <p>For third-party integrators or developers who want to create their own integrations with CodePipeline, the expected sequence varies from the standard API user. To integrate with CodePipeline, developers need to work with the following items:</p> <p> <b>Jobs</b>, which are instances of an action. For example, a job for a source action might import a revision of an artifact from a source. </p> <p>You can work with jobs by calling:</p> <ul> <li> <p> <a>AcknowledgeJob</a>, which confirms whether a job worker has received the specified job.</p> </li> <li> <p> <a>GetJobDetails</a>, which returns the details of a job.</p> </li> <li> <p> <a>PollForJobs</a>, which determines whether there are any jobs to act on.</p> </li> <li> <p> <a>PutJobFailureResult</a>, which provides details of a job failure. </p> </li> <li> <p> <a>PutJobSuccessResult</a>, which provides details of a job success.</p> </li> </ul> <p> <b>Third party jobs</b>, which are instances of an action created by a partner action and integrated into CodePipeline. Partner actions are created by members of the Amazon Web Services Partner Network.</p> <p>You can work with third party jobs by calling:</p> <ul> <li> <p> <a>AcknowledgeThirdPartyJob</a>, which confirms whether a job worker has received the specified job.</p> </li> <li> <p> <a>GetThirdPartyJobDetails</a>, which requests the details of a job for a partner action.</p> </li> <li> <p> <a>PollForThirdPartyJobs</a>, which determines whether there are any jobs to act on. </p> </li> <li> <p> <a>PutThirdPartyJobFailureResult</a>, which provides details of a job failure.</p> </li> <li> <p> <a>PutThirdPartyJobSuccessResult</a>, which provides details of a job success.</p> </li> </ul>
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -23,6 +23,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/codepipeline-2015-07-09.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -196,72 +197,6 @@ components:
       enum:
       - JobWorker
       - Lambda
-    ActionCategory:
-      type: string
-      enum:
-      - Source
-      - Build
-      - Deploy
-      - Test
-      - Invoke
-      - Approval
-    LambdaFunctionArn:
-      type: string
-      pattern: arn:aws(-[\w]+)*:lambda:.+:[0-9]{12}:function:.+
-      minLength: 1
-      maxLength: 140
-    ActionTypeExecutor:
-      type: object
-      required:
-      - configuration
-      - type
-      properties:
-        configuration:
-          allOf:
-          - $ref: '#/components/schemas/ExecutorConfiguration'
-          - description: The action configuration properties for the action type. These properties are specified in the action definition when the action type is created.
-        type:
-          allOf:
-          - $ref: '#/components/schemas/ExecutorType'
-          - description: 'The integration model used to create and update the action type, <code>Lambda</code> or <code>JobWorker</code>. '
-        policyStatementsTemplate:
-          allOf:
-          - $ref: '#/components/schemas/PolicyStatementsTemplate'
-          - description: <p>The policy statement that specifies the permissions in the CodePipeline customer account that are needed to successfully run an action.</p> <p>To grant permission to another account, specify the account ID as the Principal, a domain-style identifier defined by the service, for example <code>codepipeline.amazonaws.com</code>.</p> <note> <p>The size of the passed JSON policy document cannot exceed 2048 characters.</p> </note>
-        jobTimeout:
-          allOf:
-          - $ref: '#/components/schemas/JobTimeout'
-          - description: The timeout in seconds for the job. An action execution can have multiple jobs. This is the timeout for a single job, not the entire action execution.
-      description: The action engine, or executor, for an action type created for a provider, where the action is to be used by customers of the provider. The action engine is associated with the model used to create and update the action, such as the Lambda integration model.
-    AccountId:
-      type: string
-      pattern: '[0-9]{12}'
-    AllowedAccounts:
-      type: array
-      items:
-        $ref: '#/components/schemas/AllowedAccount'
-      minItems: 1
-      maxItems: 1000
-    ActionTypeArtifactDetails:
-      type: object
-      required:
-      - minimumCount
-      - maximumCount
-      properties:
-        minimumCount:
-          allOf:
-          - $ref: '#/components/schemas/MinimumActionTypeArtifactCount'
-          - description: The minimum number of artifacts that can be used with the action type. For example, you should specify a minimum and maximum of zero input artifacts for an action type with a category of <code>source</code>.
-        maximumCount:
-          allOf:
-          - $ref: '#/components/schemas/MaximumActionTypeArtifactCount'
-          - description: The maximum number of artifacts that can be used with the actiontype. For example, you should specify a minimum and maximum of zero input artifacts for an action type with a category of <code>source</code>.
-      description: Information about parameters for artifacts associated with the action type, such as the minimum and maximum artifacts allowed.
-    PolicyStatementsTemplate:
-      type: string
-      minLength: 1
-      maxLength: 2048
-    ValidationException: {}
     ActionTypeIdentifier:
       type: object
       required:
@@ -287,36 +222,74 @@ components:
           - $ref: '#/components/schemas/Version'
           - description: A string that describes the action type version.
       description: Specifies the category, owner, provider, and version of the action type.
-    ActionTypeNotFoundException: {}
     ActionTypeOwner:
       type: string
       pattern: AWS|ThirdParty
-    JobWorkerExecutorConfiguration:
+    ValidationException: {}
+    ActionTypeUrls:
       type: object
       properties:
-        pollingAccounts:
+        configurationUrl:
           allOf:
-          - $ref: '#/components/schemas/PollingAccountList'
-          - description: The accounts in which the job worker is configured and might poll for jobs as part of the action execution.
-        pollingServicePrincipals:
+          - $ref: '#/components/schemas/Url'
+          - description: The URL returned to the CodePipeline console that contains a link to the page where customers can configure the external action.
+        entityUrlTemplate:
           allOf:
-          - $ref: '#/components/schemas/PollingServicePrincipalList'
-          - description: The service Principals in which the job worker is configured and might poll for jobs as part of the action execution.
-      description: Details about the polling configuration for the <code>JobWorker</code> action engine, or executor.
-    JobTimeout:
+          - $ref: '#/components/schemas/UrlTemplate'
+          - description: The URL returned to the CodePipeline console that provides a deep link to the resources of the external system, such as a status page. This link is provided as part of the action display in the pipeline.
+        executionUrlTemplate:
+          allOf:
+          - $ref: '#/components/schemas/UrlTemplate'
+          - description: The link to an execution page for the action type in progress. For example, for a CodeDeploy action, this link is shown on the pipeline view page in the CodePipeline console, and it links to a CodeDeploy status page.
+        revisionUrlTemplate:
+          allOf:
+          - $ref: '#/components/schemas/UrlTemplate'
+          - description: The URL returned to the CodePipeline console that contains a link to the page where customers can update or change the configuration of the external action.
+      description: Returns information about URLs for web pages that display to customers as links on the pipeline view, such as an external configuration page for the action type.
+    ActionProvider:
+      type: string
+      pattern: '[0-9A-Za-z_-]+'
+      minLength: 1
+      maxLength: 35
+    ActionTypeDescription:
+      type: string
+      minLength: 1
+      maxLength: 1024
+    GetActionTypeOutput:
+      type: object
+      properties:
+        actionType:
+          allOf:
+          - $ref: '#/components/schemas/ActionTypeDeclaration'
+          - description: The action type information for the requested action type, such as the action type ID.
+    Version:
+      type: string
+      pattern: '[0-9A-Za-z_-]+'
+      minLength: 1
+      maxLength: 9
+    PollingServicePrincipalList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ServicePrincipal'
+      minItems: 1
+      maxItems: 10
+    ActionCategory:
+      type: string
+      enum:
+      - Source
+      - Build
+      - Deploy
+      - Test
+      - Invoke
+      - Approval
+    MinimumActionTypeArtifactCount:
       type: integer
-      minimum: 60
-      maximum: 43200
-    ActionTypePermissions:
-      type: object
-      required:
-      - allowedAccounts
-      properties:
-        allowedAccounts:
-          allOf:
-          - $ref: '#/components/schemas/AllowedAccounts'
-          - description: A list of Amazon Web Services account IDs with access to use the action type in their pipelines.
-      description: Details identifying the users with permissions to use the action type.
+      minimum: 0
+      maximum: 10
+    UrlTemplate:
+      type: string
+      minLength: 1
+      maxLength: 2048
     GetActionTypeInput:
       type: object
       required:
@@ -342,42 +315,19 @@ components:
           allOf:
           - $ref: '#/components/schemas/Version'
           - description: A string that describes the action type version.
-    ActionTypeUrls:
-      type: object
-      properties:
-        configurationUrl:
-          allOf:
-          - $ref: '#/components/schemas/Url'
-          - description: The URL returned to the CodePipeline console that contains a link to the page where customers can configure the external action.
-        entityUrlTemplate:
-          allOf:
-          - $ref: '#/components/schemas/UrlTemplate'
-          - description: The URL returned to the CodePipeline console that provides a deep link to the resources of the external system, such as a status page. This link is provided as part of the action display in the pipeline.
-        executionUrlTemplate:
-          allOf:
-          - $ref: '#/components/schemas/UrlTemplate'
-          - description: The link to an execution page for the action type in progress. For example, for a CodeDeploy action, this link is shown on the pipeline view page in the CodePipeline console, and it links to a CodeDeploy status page.
-        revisionUrlTemplate:
-          allOf:
-          - $ref: '#/components/schemas/UrlTemplate'
-          - description: The URL returned to the CodePipeline console that contains a link to the page where customers can update or change the configuration of the external action.
-      description: Returns information about URLs for web pages that display to customers as links on the pipeline view, such as an external configuration page for the action type.
-    Version:
+    PollingAccountList:
+      type: array
+      items:
+        $ref: '#/components/schemas/AccountId'
+      minItems: 1
+      maxItems: 1000
+    AllowedAccount:
       type: string
-      pattern: '[0-9A-Za-z_-]+'
-      minLength: 1
-      maxLength: 9
-    Url:
+      pattern: '[0-9]{12}|\*'
+    PolicyStatementsTemplate:
       type: string
       minLength: 1
       maxLength: 2048
-    GetActionTypeOutput:
-      type: object
-      properties:
-        actionType:
-          allOf:
-          - $ref: '#/components/schemas/ActionTypeDeclaration'
-          - description: The action type information for the requested action type, such as the action type ID.
     ExecutorConfiguration:
       type: object
       properties:
@@ -390,9 +340,56 @@ components:
           - $ref: '#/components/schemas/JobWorkerExecutorConfiguration'
           - description: Details about the <code>JobWorker</code> executor of the action type.
       description: The action engine, or executor, related to the supported integration model used to create and update the action type. The available executor types are <code>Lambda</code> and <code>JobWorker</code>.
-    AllowedAccount:
+    ActionTypeArtifactDetails:
+      type: object
+      required:
+      - minimumCount
+      - maximumCount
+      properties:
+        minimumCount:
+          allOf:
+          - $ref: '#/components/schemas/MinimumActionTypeArtifactCount'
+          - description: The minimum number of artifacts that can be used with the action type. For example, you should specify a minimum and maximum of zero input artifacts for an action type with a category of <code>source</code>.
+        maximumCount:
+          allOf:
+          - $ref: '#/components/schemas/MaximumActionTypeArtifactCount'
+          - description: The maximum number of artifacts that can be used with the actiontype. For example, you should specify a minimum and maximum of zero input artifacts for an action type with a category of <code>source</code>.
+      description: Information about parameters for artifacts associated with the action type, such as the minimum and maximum artifacts allowed.
+    ActionTypeNotFoundException: {}
+    LambdaFunctionArn:
       type: string
-      pattern: '[0-9]{12}|\*'
+      pattern: arn:aws(-[\w]+)*:lambda:.+:[0-9]{12}:function:.+
+      minLength: 1
+      maxLength: 140
+    AllowedAccounts:
+      type: array
+      items:
+        $ref: '#/components/schemas/AllowedAccount'
+      minItems: 1
+      maxItems: 1000
+    AccountId:
+      type: string
+      pattern: '[0-9]{12}'
+    Url:
+      type: string
+      minLength: 1
+      maxLength: 2048
+    JobWorkerExecutorConfiguration:
+      type: object
+      properties:
+        pollingAccounts:
+          allOf:
+          - $ref: '#/components/schemas/PollingAccountList'
+          - description: The accounts in which the job worker is configured and might poll for jobs as part of the action execution.
+        pollingServicePrincipals:
+          allOf:
+          - $ref: '#/components/schemas/PollingServicePrincipalList'
+          - description: The service Principals in which the job worker is configured and might poll for jobs as part of the action execution.
+      description: Details about the polling configuration for the <code>JobWorker</code> action engine, or executor.
+    MaximumActionTypeArtifactCount:
+      type: integer
+      minimum: 0
+      maximum: 10
     LambdaExecutorConfiguration:
       type: object
       required:
@@ -403,33 +400,6 @@ components:
           - $ref: '#/components/schemas/LambdaFunctionArn'
           - description: The ARN of the Lambda function used by the action engine.
       description: Details about the configuration for the <code>Lambda</code> action engine, or executor.
-    ActionProvider:
-      type: string
-      pattern: '[0-9A-Za-z_-]+'
-      minLength: 1
-      maxLength: 35
-    ActionTypeDescription:
-      type: string
-      minLength: 1
-      maxLength: 1024
-    MaximumActionTypeArtifactCount:
-      type: integer
-      minimum: 0
-      maximum: 10
-    PollingAccountList:
-      type: array
-      items:
-        $ref: '#/components/schemas/AccountId'
-      minItems: 1
-      maxItems: 1000
-    ServicePrincipal:
-      type: string
-      minLength: 1
-      maxLength: 128
-    UrlTemplate:
-      type: string
-      minLength: 1
-      maxLength: 2048
     ActionTypeDeclaration:
       type: object
       required:
@@ -469,43 +439,56 @@ components:
           - $ref: '#/components/schemas/ActionTypeUrls'
           - description: The links associated with the action type to be updated.
       description: The parameters for the action type definition that are provided when the action type is created or updated.
-    PollingServicePrincipalList:
-      type: array
-      items:
-        $ref: '#/components/schemas/ServicePrincipal'
-      minItems: 1
-      maxItems: 10
-    MinimumActionTypeArtifactCount:
+    ActionTypeExecutor:
+      type: object
+      required:
+      - configuration
+      - type
+      properties:
+        configuration:
+          allOf:
+          - $ref: '#/components/schemas/ExecutorConfiguration'
+          - description: The action configuration properties for the action type. These properties are specified in the action definition when the action type is created.
+        type:
+          allOf:
+          - $ref: '#/components/schemas/ExecutorType'
+          - description: 'The integration model used to create and update the action type, <code>Lambda</code> or <code>JobWorker</code>. '
+        policyStatementsTemplate:
+          allOf:
+          - $ref: '#/components/schemas/PolicyStatementsTemplate'
+          - description: <p>The policy statement that specifies the permissions in the CodePipeline customer account that are needed to successfully run an action.</p> <p>To grant permission to another account, specify the account ID as the Principal, a domain-style identifier defined by the service, for example <code>codepipeline.amazonaws.com</code>.</p> <note> <p>The size of the passed JSON policy document cannot exceed 2048 characters.</p> </note>
+        jobTimeout:
+          allOf:
+          - $ref: '#/components/schemas/JobTimeout'
+          - description: The timeout in seconds for the job. An action execution can have multiple jobs. This is the timeout for a single job, not the entire action execution.
+      description: The action engine, or executor, for an action type created for a provider, where the action is to be used by customers of the provider. The action engine is associated with the model used to create and update the action, such as the Lambda integration model.
+    ActionTypePermissions:
+      type: object
+      required:
+      - allowedAccounts
+      properties:
+        allowedAccounts:
+          allOf:
+          - $ref: '#/components/schemas/AllowedAccounts'
+          - description: A list of Amazon Web Services account IDs with access to use the action type in their pipelines.
+      description: Details identifying the users with permissions to use the action type.
+    JobTimeout:
       type: integer
-      minimum: 0
-      maximum: 10
+      minimum: 60
+      maximum: 43200
+    ServicePrincipal:
+      type: string
+      minLength: 1
+      maxLength: 128
   parameters:
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Security-Token:
       name: X-Amz-Security-Token
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -516,8 +499,26 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Algorithm:
       name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string

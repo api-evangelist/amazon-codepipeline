@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: '2015-07-09'
   x-release: v4
-  title: 'AWS CodePipeline Executions #X Amz Target=CodePipeline 20150709.GetPipelineState API'
+  title: 'AWS CodePipeline #X Amz Target=CodePipeline 20150709.GetPipelineState API'
   description: <fullname>CodePipeline</fullname> <p> <b>Overview</b> </p> <p>This is the CodePipeline API Reference. This guide provides descriptions of the actions and data types for CodePipeline. Some functionality for your pipeline can only be configured through the API. For more information, see the <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html">CodePipeline User Guide</a>.</p> <p>You can use the CodePipeline API to work with pipelines, stages, actions, and transitions.</p> <p> <i>Pipelines</i> are models of automated release processes. Each pipeline is uniquely named, and consists of stages, actions, and transitions. </p> <p>You can work with pipelines by calling:</p> <ul> <li> <p> <a>CreatePipeline</a>, which creates a uniquely named pipeline.</p> </li> <li> <p> <a>DeletePipeline</a>, which deletes the specified pipeline.</p> </li> <li> <p> <a>GetPipeline</a>, which returns information about the pipeline structure and pipeline metadata, including the pipeline Amazon Resource Name (ARN).</p> </li> <li> <p> <a>GetPipelineExecution</a>, which returns information about a specific execution of a pipeline.</p> </li> <li> <p> <a>GetPipelineState</a>, which returns information about the current state of the stages and actions of a pipeline.</p> </li> <li> <p> <a>ListActionExecutions</a>, which returns action-level details for past executions. The details include full stage and action-level details, including individual action duration, status, any errors that occurred during the execution, and input and output artifact location details.</p> </li> <li> <p> <a>ListPipelines</a>, which gets a summary of all of the pipelines associated with your account.</p> </li> <li> <p> <a>ListPipelineExecutions</a>, which gets a summary of the most recent executions for a pipeline.</p> </li> <li> <p> <a>StartPipelineExecution</a>, which runs the most recent revision of an artifact through the pipeline.</p> </li> <li> <p> <a>StopPipelineExecution</a>, which stops the specified pipeline execution from continuing through the pipeline.</p> </li> <li> <p> <a>UpdatePipeline</a>, which updates a pipeline with edits or changes to the structure of the pipeline.</p> </li> </ul> <p>Pipelines include <i>stages</i>. Each stage contains one or more actions that must complete before the next stage begins. A stage results in success or failure. If a stage fails, the pipeline stops at that stage and remains stopped until either a new version of an artifact appears in the source location, or a user takes action to rerun the most recent artifact through the pipeline. You can call <a>GetPipelineState</a>, which displays the status of a pipeline, including the status of stages in the pipeline, or <a>GetPipeline</a>, which returns the entire structure of the pipeline, including the stages of that pipeline. For more information about the structure of stages and actions, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-structure.html">CodePipeline Pipeline Structure Reference</a>.</p> <p>Pipeline stages include <i>actions</i> that are categorized into categories such as source or build actions performed in a stage of a pipeline. For example, you can use a source action to import artifacts into a pipeline from a source such as Amazon S3. Like stages, you do not work with actions directly in most cases, but you do define and interact with actions when working with pipeline operations such as <a>CreatePipeline</a> and <a>GetPipelineState</a>. Valid action categories are:</p> <ul> <li> <p>Source</p> </li> <li> <p>Build</p> </li> <li> <p>Test</p> </li> <li> <p>Deploy</p> </li> <li> <p>Approval</p> </li> <li> <p>Invoke</p> </li> </ul> <p>Pipelines also include <i>transitions</i>, which allow the transition of artifacts from one stage to the next in a pipeline after the actions in one stage complete.</p> <p>You can work with transitions by calling:</p> <ul> <li> <p> <a>DisableStageTransition</a>, which prevents artifacts from transitioning to the next stage in a pipeline.</p> </li> <li> <p> <a>EnableStageTransition</a>, which enables transition of artifacts between stages in a pipeline. </p> </li> </ul> <p> <b>Using the API to integrate with CodePipeline</b> </p> <p>For third-party integrators or developers who want to create their own integrations with CodePipeline, the expected sequence varies from the standard API user. To integrate with CodePipeline, developers need to work with the following items:</p> <p> <b>Jobs</b>, which are instances of an action. For example, a job for a source action might import a revision of an artifact from a source. </p> <p>You can work with jobs by calling:</p> <ul> <li> <p> <a>AcknowledgeJob</a>, which confirms whether a job worker has received the specified job.</p> </li> <li> <p> <a>GetJobDetails</a>, which returns the details of a job.</p> </li> <li> <p> <a>PollForJobs</a>, which determines whether there are any jobs to act on.</p> </li> <li> <p> <a>PutJobFailureResult</a>, which provides details of a job failure. </p> </li> <li> <p> <a>PutJobSuccessResult</a>, which provides details of a job success.</p> </li> </ul> <p> <b>Third party jobs</b>, which are instances of an action created by a partner action and integrated into CodePipeline. Partner actions are created by members of the Amazon Web Services Partner Network.</p> <p>You can work with third party jobs by calling:</p> <ul> <li> <p> <a>AcknowledgeThirdPartyJob</a>, which confirms whether a job worker has received the specified job.</p> </li> <li> <p> <a>GetThirdPartyJobDetails</a>, which requests the details of a job for a partner action.</p> </li> <li> <p> <a>PollForThirdPartyJobs</a>, which determines whether there are any jobs to act on. </p> </li> <li> <p> <a>PutThirdPartyJobFailureResult</a>, which provides details of a job failure.</p> </li> <li> <p> <a>PutThirdPartyJobSuccessResult</a>, which provides details of a job success.</p> </li> </ul>
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -23,6 +23,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/codepipeline-2015-07-09.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -192,6 +193,17 @@ paths:
       - '#X Amz Target=CodePipeline 20150709.GetPipelineState'
 components:
   schemas:
+    ActionStateList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ActionState'
+    ValidationException: {}
+    Revision:
+      type: string
+      minLength: 1
+      maxLength: 1500
+    Enabled:
+      type: boolean
     GetPipelineStateInput:
       type: object
       required:
@@ -203,74 +215,81 @@ components:
           - $ref: '#/components/schemas/PipelineName'
           - description: The name of the pipeline about which you want to get information.
       description: Represents the input of a <code>GetPipelineState</code> action.
-    ActionName:
+    ExecutionId:
       type: string
-      pattern: '[A-Za-z0-9.@\-_]+'
       minLength: 1
-      maxLength: 100
+      maxLength: 1500
     DisabledReason:
       type: string
       pattern: '[a-zA-Z0-9!@ \(\)\.\*\?\-]+'
       minLength: 1
       maxLength: 300
+    ActionExecutionStatus:
+      type: string
+      enum:
+      - InProgress
+      - Abandoned
+      - Succeeded
+      - Failed
+    StageName:
+      type: string
+      pattern: '[A-Za-z0-9.@\-_]+'
+      minLength: 1
+      maxLength: 100
+    StageExecutionStatus:
+      type: string
+      enum:
+      - Cancelled
+      - InProgress
+      - Failed
+      - Stopped
+      - Stopping
+      - Succeeded
+    PipelineExecutionId:
+      type: string
+      pattern: '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'
+    PipelineNotFoundException: {}
+    ActionExecutionToken:
+      type: string
+    ExecutionSummary:
+      type: string
+      minLength: 1
+      maxLength: 2048
+    StageExecution:
+      type: object
+      required:
+      - pipelineExecutionId
+      - status
+      properties:
+        pipelineExecutionId:
+          allOf:
+          - $ref: '#/components/schemas/PipelineExecutionId'
+          - description: The ID of the pipeline execution associated with the stage.
+        status:
+          allOf:
+          - $ref: '#/components/schemas/StageExecutionStatus'
+          - description: <p>The status of the stage, or for a completed stage, the last status of the stage.</p> <note> <p>A status of cancelled means that the pipeline’s definition was updated before the stage execution could be completed.</p> </note>
+      description: Represents information about the run of a stage.
+    RevisionChangeIdentifier:
+      type: string
+      minLength: 1
+      maxLength: 100
     Message:
       type: string
       minLength: 1
       maxLength: 5000
-    PipelineVersion:
-      type: integer
-      minimum: 1
-    Revision:
+    Timestamp:
       type: string
+      format: date-time
+    StageStateList:
+      type: array
+      items:
+        $ref: '#/components/schemas/StageState'
+    PipelineName:
+      type: string
+      pattern: '[A-Za-z0-9.@\-_]+'
       minLength: 1
-      maxLength: 1500
-    ValidationException: {}
-    StageState:
-      type: object
-      properties:
-        stageName:
-          allOf:
-          - $ref: '#/components/schemas/StageName'
-          - description: The name of the stage.
-        inboundExecution:
-          $ref: '#/components/schemas/StageExecution'
-        inboundTransitionState:
-          allOf:
-          - $ref: '#/components/schemas/TransitionState'
-          - description: The state of the inbound transition, which is either enabled or disabled.
-        actionStates:
-          allOf:
-          - $ref: '#/components/schemas/ActionStateList'
-          - description: The state of the stage.
-        latestExecution:
-          allOf:
-          - $ref: '#/components/schemas/StageExecution'
-          - description: Information about the latest execution in the stage, including its ID and status.
-      description: Represents information about the state of the stage.
-    LastChangedBy:
-      type: string
-    Enabled:
-      type: boolean
-    ActionRevision:
-      type: object
-      required:
-      - revisionId
-      - revisionChangeId
-      - created
-      properties:
-        revisionId:
-          allOf:
-          - $ref: '#/components/schemas/Revision'
-          - description: The system-generated unique ID that identifies the revision number of the action.
-        revisionChangeId:
-          allOf:
-          - $ref: '#/components/schemas/RevisionChangeIdentifier'
-          - description: The unique identifier of the change that set the state to this revision (for example, a deployment ID or timestamp).
-        created:
-          allOf:
-          - $ref: '#/components/schemas/Timestamp'
-          - description: The date and time when the most recent version of the action was created, in timestamp format.
-      description: Represents information about the version (or revision) of an action.
+      maxLength: 100
     ActionExecution:
       type: object
       properties:
@@ -315,77 +334,91 @@ components:
           - $ref: '#/components/schemas/ErrorDetails'
           - description: The details of an error returned by a URL external to Amazon Web Services.
       description: Represents information about the run of an action.
-    GetPipelineStateOutput:
+    StageState:
       type: object
       properties:
-        pipelineName:
+        stageName:
           allOf:
-          - $ref: '#/components/schemas/PipelineName'
-          - description: The name of the pipeline for which you want to get the state.
-        pipelineVersion:
+          - $ref: '#/components/schemas/StageName'
+          - description: The name of the stage.
+        inboundExecution:
+          $ref: '#/components/schemas/StageExecution'
+        inboundTransitionState:
           allOf:
-          - $ref: '#/components/schemas/PipelineVersion'
-          - description: <p>The version number of the pipeline.</p> <note> <p>A newly created pipeline is always assigned a version number of <code>1</code>.</p> </note>
-        stageStates:
+          - $ref: '#/components/schemas/TransitionState'
+          - description: The state of the inbound transition, which is either enabled or disabled.
+        actionStates:
           allOf:
-          - $ref: '#/components/schemas/StageStateList'
-          - description: A list of the pipeline stage output information, including stage name, state, most recent run details, whether the stage is disabled, and other data.
-        created:
+          - $ref: '#/components/schemas/ActionStateList'
+          - description: The state of the stage.
+        latestExecution:
           allOf:
-          - $ref: '#/components/schemas/Timestamp'
-          - description: The date and time the pipeline was created, in timestamp format.
-        updated:
-          allOf:
-          - $ref: '#/components/schemas/Timestamp'
-          - description: The date and time the pipeline was last updated, in timestamp format.
-      description: Represents the output of a <code>GetPipelineState</code> action.
-    ActionExecutionToken:
+          - $ref: '#/components/schemas/StageExecution'
+          - description: Information about the latest execution in the stage, including its ID and status.
+      description: Represents information about the state of the stage.
+    ActionExecutionId:
       type: string
-    LastUpdatedBy:
+    Code:
       type: string
-    PipelineName:
+    PipelineVersion:
+      type: integer
+      minimum: 1
+    ActionName:
       type: string
       pattern: '[A-Za-z0-9.@\-_]+'
       minLength: 1
       maxLength: 100
-    ExecutionSummary:
+    LastChangedAt:
       type: string
-      minLength: 1
-      maxLength: 2048
+      format: date-time
+    TransitionState:
+      type: object
+      properties:
+        enabled:
+          allOf:
+          - $ref: '#/components/schemas/Enabled'
+          - description: Whether the transition between stages is enabled (true) or disabled (false).
+        lastChangedBy:
+          allOf:
+          - $ref: '#/components/schemas/LastChangedBy'
+          - description: The ID of the user who last changed the transition state.
+        lastChangedAt:
+          allOf:
+          - $ref: '#/components/schemas/LastChangedAt'
+          - description: The timestamp when the transition state was last changed.
+        disabledReason:
+          allOf:
+          - $ref: '#/components/schemas/DisabledReason'
+          - description: The user-specified reason why the transition between two stages of a pipeline was disabled.
+      description: Represents information about the state of transitions between one stage and another stage.
+    Percentage:
+      type: integer
+      minimum: 0
+      maximum: 100
+    ActionRevision:
+      type: object
+      required:
+      - revisionId
+      - revisionChangeId
+      - created
+      properties:
+        revisionId:
+          allOf:
+          - $ref: '#/components/schemas/Revision'
+          - description: The system-generated unique ID that identifies the revision number of the action.
+        revisionChangeId:
+          allOf:
+          - $ref: '#/components/schemas/RevisionChangeIdentifier'
+          - description: The unique identifier of the change that set the state to this revision (for example, a deployment ID or timestamp).
+        created:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The date and time when the most recent version of the action was created, in timestamp format.
+      description: Represents information about the version (or revision) of an action.
     Url:
       type: string
       minLength: 1
       maxLength: 2048
-    StageExecution:
-      type: object
-      required:
-      - pipelineExecutionId
-      - status
-      properties:
-        pipelineExecutionId:
-          allOf:
-          - $ref: '#/components/schemas/PipelineExecutionId'
-          - description: The ID of the pipeline execution associated with the stage.
-        status:
-          allOf:
-          - $ref: '#/components/schemas/StageExecutionStatus'
-          - description: <p>The status of the stage, or for a completed stage, the last status of the stage.</p> <note> <p>A status of cancelled means that the pipeline’s definition was updated before the stage execution could be completed.</p> </note>
-      description: Represents information about the run of a stage.
-    PipelineExecutionId:
-      type: string
-      pattern: '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'
-    ExecutionId:
-      type: string
-      minLength: 1
-      maxLength: 1500
-    ActionExecutionStatus:
-      type: string
-      enum:
-      - InProgress
-      - Abandoned
-      - Succeeded
-      - Failed
-    PipelineNotFoundException: {}
     ErrorDetails:
       type: object
       properties:
@@ -398,27 +431,8 @@ components:
           - $ref: '#/components/schemas/Message'
           - description: The text of the error message.
       description: Represents information about an error in CodePipeline.
-    Percentage:
-      type: integer
-      minimum: 0
-      maximum: 100
-    StageName:
+    LastChangedBy:
       type: string
-      pattern: '[A-Za-z0-9.@\-_]+'
-      minLength: 1
-      maxLength: 100
-    ActionStateList:
-      type: array
-      items:
-        $ref: '#/components/schemas/ActionState'
-    StageStateList:
-      type: array
-      items:
-        $ref: '#/components/schemas/StageState'
-    RevisionChangeIdentifier:
-      type: string
-      minLength: 1
-      maxLength: 100
     ActionState:
       type: object
       properties:
@@ -443,72 +457,41 @@ components:
           - $ref: '#/components/schemas/Url'
           - description: A URL link for more information about the revision, such as a commit details page.
       description: Represents information about the state of an action.
-    Timestamp:
+    LastUpdatedBy:
       type: string
-      format: date-time
-    LastChangedAt:
-      type: string
-      format: date-time
-    ActionExecutionId:
-      type: string
-    Code:
-      type: string
-    StageExecutionStatus:
-      type: string
-      enum:
-      - Cancelled
-      - InProgress
-      - Failed
-      - Stopped
-      - Stopping
-      - Succeeded
-    TransitionState:
+    GetPipelineStateOutput:
       type: object
       properties:
-        enabled:
+        pipelineName:
           allOf:
-          - $ref: '#/components/schemas/Enabled'
-          - description: Whether the transition between stages is enabled (true) or disabled (false).
-        lastChangedBy:
+          - $ref: '#/components/schemas/PipelineName'
+          - description: The name of the pipeline for which you want to get the state.
+        pipelineVersion:
           allOf:
-          - $ref: '#/components/schemas/LastChangedBy'
-          - description: The ID of the user who last changed the transition state.
-        lastChangedAt:
+          - $ref: '#/components/schemas/PipelineVersion'
+          - description: <p>The version number of the pipeline.</p> <note> <p>A newly created pipeline is always assigned a version number of <code>1</code>.</p> </note>
+        stageStates:
           allOf:
-          - $ref: '#/components/schemas/LastChangedAt'
-          - description: The timestamp when the transition state was last changed.
-        disabledReason:
+          - $ref: '#/components/schemas/StageStateList'
+          - description: A list of the pipeline stage output information, including stage name, state, most recent run details, whether the stage is disabled, and other data.
+        created:
           allOf:
-          - $ref: '#/components/schemas/DisabledReason'
-          - description: The user-specified reason why the transition between two stages of a pipeline was disabled.
-      description: Represents information about the state of transitions between one stage and another stage.
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The date and time the pipeline was created, in timestamp format.
+        updated:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The date and time the pipeline was last updated, in timestamp format.
+      description: Represents the output of a <code>GetPipelineState</code> action.
   parameters:
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Security-Token:
       name: X-Amz-Security-Token
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -519,8 +502,26 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Algorithm:
       name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
