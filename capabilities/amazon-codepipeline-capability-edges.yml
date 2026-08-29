@@ -1,0 +1,229 @@
+slug: amazon-codepipeline
+provider: Amazon CodePipeline
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 21
+edges:
+- tag: '#X Amz Target=CodePipeline 20150709.CreatePipeline'
+  spec_file: amazon-codepipeline-x-amz-target-codepipeline-20150709-createpipeline-api-openapi.yml
+  capability_id: BC-4210.10
+  capability_id_l1: BC-4210
+  capability_name: Continuous Integration Management
+  confidence: 0.85
+  evidence: '''CreatePipeline  Amazon CodePipeline Create Pipeline''; schemas StageDeclaration, ArtifactStore,
+    InputArtifact'
+  reason: Creates the release pipeline with stages and artefact stores — build/artefact pipeline definition,
+    i.e. continuous integration management.
+- tag: '#X Amz Target=CodePipeline 20150709.DeletePipeline'
+  spec_file: amazon-codepipeline-x-amz-target-codepipeline-20150709-deletepipeline-api-openapi.yml
+  capability_id: BC-4210.10
+  capability_id_l1: BC-4210
+  capability_name: Continuous Integration Management
+  confidence: 0.8
+  evidence: '''DeletePipeline  Amazon CodePipeline Delete Pipeline''; ''DeletePipeline, which deletes
+    the specified pipeline'''
+  reason: Lifecycle management of automated release/build pipelines maps to continuous integration management.
+- tag: '#X Amz Target=CodePipeline 20150709.RetryStageExecution'
+  spec_file: amazon-codepipeline-x-amz-target-codepipeline-20150709-retrystageexecution-api-openapi.yml
+  capability_id: BC-4210
+  capability_id_l1: BC-4210
+  capability_name: Software Release & Deployment Management
+  confidence: 0.8
+  evidence: 'RetryStageExecution  Amazon CodePipeline Retry Stage Execution; schemas: PipelineExecutionId,
+    StageRetryMode'
+  reason: Retrying a failed stage of an automated release pipeline is operation of the CI/CD release process;
+    maps to Software Release & Deployment Management at L1, with no single sub-capability clearly indicated
+    (CI vs deployment orchestration).
+- tag: '#X Amz Target=CodePipeline 20150709.StartPipelineExecution'
+  spec_file: amazon-codepipeline-x-amz-target-codepipeline-20150709-startpipelineexecution-api-openapi.yml
+  capability_id: BC-4210
+  capability_id_l1: BC-4210
+  capability_name: Software Release & Deployment Management
+  confidence: 0.8
+  evidence: StartPipelineExecution  Amazon CodePipeline Start Pipeline Execution
+  reason: Triggering an execution of an automated release pipeline ("Pipelines are models of automated
+    release processes") is release/deployment pipeline management; L2 ambiguous between CI and deployment
+    orchestration.
+- tag: '#X Amz Target=CodePipeline 20150709.StopPipelineExecution'
+  spec_file: amazon-codepipeline-x-amz-target-codepipeline-20150709-stoppipelineexecution-api-openapi.yml
+  capability_id: BC-4210
+  capability_id_l1: BC-4210
+  capability_name: Software Release & Deployment Management
+  confidence: 0.8
+  evidence: StopPipelineExecution  Amazon CodePipeline Stop Pipeline Execution; StopPipelineExecutionReason
+  reason: Halting a running release pipeline execution is control of the automated build/test/deploy release
+    process.
+- tag: '#X Amz Target=CodePipeline 20150709.UpdatePipeline'
+  spec_file: amazon-codepipeline-x-amz-target-codepipeline-20150709-updatepipeline-api-openapi.yml
+  capability_id: BC-4210
+  capability_id_l1: BC-4210
+  capability_name: Software Release & Deployment Management
+  confidence: 0.8
+  evidence: 'UpdatePipeline  Amazon CodePipeline Update Pipeline; schemas: StageDeclaration, ArtifactStore,
+    ActionRunOrder'
+  reason: Editing the definition (stages, actions, artifact store) of an automated release pipeline is
+    release/deployment pipeline management.
+- tag: Executions
+  spec_file: amazon-codepipeline-executions-api-openapi.yml
+  capability_id: BC-4210
+  capability_id_l1: BC-4210
+  capability_name: Software Release & Deployment Management
+  confidence: 0.8
+  evidence: StartPipelineExecution  Amazon CodePipeline Start a Pipeline Execution; GetPipelineExecution  Amazon
+    CodePipeline Get Pipeline Execution Details
+  reason: Starting and inspecting executions of automated release pipelines — core CI/CD release execution,
+    mapped at L1 as the evidence spans build/test/deploy stages.
+- tag: Pipelines
+  spec_file: amazon-codepipeline-pipelines-api-openapi.yml
+  capability_id: BC-4210
+  capability_id_l1: BC-4210
+  capability_name: Software Release & Deployment Management
+  confidence: 0.8
+  evidence: 'CreatePipeline  Amazon CodePipeline Create a New Pipeline; schemas: StageDeclaration, ActionDeclaration'
+  reason: CRUD over release pipelines that 'automate the build, test, and deploy phases of your release
+    process' — Software Release & Deployment Management at L1.
+- tag: '#X Amz Target=CodePipeline 20150709.GetPipeline'
+  spec_file: amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipeline-api-openapi.yml
+  capability_id: BC-4210.10
+  capability_id_l1: BC-4210
+  capability_name: Continuous Integration Management
+  confidence: 0.78
+  evidence: 'GetPipeline  Amazon CodePipeline Get Pipeline; schemas: StageDeclaration, PipelineStageDeclarationList,
+    ArtifactStore, PipelineVersion'
+  reason: Retrieves the structure of an automated release pipeline (stages, actions, artefact store) —
+    build/artefact pipeline definition in a managed continuous delivery service.
+- tag: '#X Amz Target=CodePipeline 20150709.ListPipelines'
+  spec_file: amazon-codepipeline-x-amz-target-codepipeline-20150709-listpipelines-api-openapi.yml
+  capability_id: BC-4210.10
+  capability_id_l1: BC-4210
+  capability_name: Continuous Integration Management
+  confidence: 0.75
+  evidence: '"ListPipelines  Amazon CodePipeline List Pipelines"; "Pipelines are models of automated release
+    processes"; schema PipelineSummary'
+  reason: Lists CI/CD release pipelines in a managed continuous-delivery service; this is build/release
+    pipeline stewardship, closest to Continuous Integration Management within Software Release & Deployment
+    Management.
+- tag: '#X Amz Target=CodePipeline 20150709.GetPipelineExecution'
+  spec_file: amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipelineexecution-api-openapi.yml
+  capability_id: BC-4210.10
+  capability_id_l1: BC-4210
+  capability_name: Continuous Integration Management
+  confidence: 0.72
+  evidence: 'GetPipelineExecution  Amazon CodePipeline Get Pipeline Execution; schemas: PipelineExecution,
+    PipelineExecutionStatus, ArtifactRevision'
+  reason: Reports on a run of an automated release pipeline including artefact revisions and execution
+    status — CI/CD pipeline execution visibility.
+- tag: '#X Amz Target=CodePipeline 20150709.GetPipelineState'
+  spec_file: amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipelinestate-api-openapi.yml
+  capability_id: BC-4210.10
+  capability_id_l1: BC-4210
+  capability_name: Continuous Integration Management
+  confidence: 0.72
+  evidence: 'GetPipelineState  Amazon CodePipeline Get Pipeline State; schemas: StageState, TransitionState,
+    StageExecutionStatus'
+  reason: Returns current stage and transition state of a release pipeline — CI/CD pipeline status, part
+    of managing the automated build/test/deploy pipeline.
+- tag: '#X Amz Target=CodePipeline 20150709.ListActionExecutions'
+  spec_file: amazon-codepipeline-x-amz-target-codepipeline-20150709-listactionexecutions-api-openapi.yml
+  capability_id: BC-4210.10
+  capability_id_l1: BC-4210
+  capability_name: Continuous Integration Management
+  confidence: 0.72
+  evidence: 'ListActionExecutions  Amazon CodePipeline List Action Executions; schemas: ActionExecutionFilter,
+    ArtifactDetail, PipelineExecutionId'
+  reason: Lists executions of pipeline actions with artefact details — execution history of the automated
+    build/test/deploy pipeline, i.e. CI/CD pipeline management.
+- tag: '#X Amz Target=CodePipeline 20150709.ListPipelineExecutions'
+  spec_file: amazon-codepipeline-x-amz-target-codepipeline-20150709-listpipelineexecutions-api-openapi.yml
+  capability_id: BC-4210.10
+  capability_id_l1: BC-4210
+  capability_name: Continuous Integration Management
+  confidence: 0.72
+  evidence: 'ListPipelineExecutions  Amazon CodePipeline List Pipeline Executions; schemas: PipelineExecutionSummary,
+    SourceRevision, ExecutionTrigger'
+  reason: Lists past runs of a release pipeline with source revisions and triggers — CI/CD pipeline execution
+    history in a continuous delivery service.
+- tag: '#X Amz Target=CodePipeline 20150709.CreateCustomActionType'
+  spec_file: amazon-codepipeline-x-amz-target-codepipeline-20150709-createcustomactiontype-api-openapi.yml
+  capability_id: BC-4210.10
+  capability_id_l1: BC-4210
+  capability_name: Continuous Integration Management
+  confidence: 0.7
+  evidence: '''CreateCustomActionType  Amazon CodePipeline Create Custom Action Type''; schemas ActionTypeSettings,
+    ArtifactDetails'
+  reason: Defines custom pipeline action types (build/test/deploy stages) with artefact details — extension
+    of the CI/CD pipeline definition.
+- tag: '#X Amz Target=CodePipeline 20150709.DisableStageTransition'
+  spec_file: amazon-codepipeline-x-amz-target-codepipeline-20150709-disablestagetransition-api-openapi.yml
+  capability_id: BC-4210.10
+  capability_id_l1: BC-4210
+  capability_name: Continuous Integration Management
+  confidence: 0.7
+  evidence: 'DisableStageTransition  Amazon CodePipeline Disable Stage Transition; schemas: PipelineName,
+    StageTransitionType, DisabledReason'
+  reason: Controls whether artefacts move between stages of an automated release pipeline in a 'fully
+    managed continuous delivery service'. That is pipeline policy control in CI/CD; assigned to Continuous
+    Integration Management with moderate confidence since it could equally be read as deployment gating/change
+    authorisation.
+- tag: '#X Amz Target=CodePipeline 20150709.EnableStageTransition'
+  spec_file: amazon-codepipeline-x-amz-target-codepipeline-20150709-enablestagetransition-api-openapi.yml
+  capability_id: BC-4210.10
+  capability_id_l1: BC-4210
+  capability_name: Continuous Integration Management
+  confidence: 0.7
+  evidence: 'EnableStageTransition  Amazon CodePipeline Enable Stage Transition; schemas: EnableStageTransitionInput,
+    PipelineName, StageTransitionType'
+  reason: Re-enables movement between stages of an automated build/test/deploy pipeline — CI/CD pipeline
+    control. L2 Continuous Integration Management at moderate confidence because gating could also be
+    read as deployment authorisation.
+- tag: '#X Amz Target=CodePipeline 20150709.GetActionType'
+  spec_file: amazon-codepipeline-x-amz-target-codepipeline-20150709-getactiontype-api-openapi.yml
+  capability_id: BC-4210.10
+  capability_id_l1: BC-4210
+  capability_name: Continuous Integration Management
+  confidence: 0.7
+  evidence: 'GetActionType  Amazon CodePipeline Get Action Type; schemas: ActionTypeDeclaration, ExecutorConfiguration,
+    ActionTypeArtifactDetails'
+  reason: Retrieves the declaration of a pipeline action type (executor, artefact counts, permissions)
+    used to compose release pipelines — build/deploy pipeline definition in a continuous delivery service,
+    not any business-domain 'action'.
+- tag: '#X Amz Target=CodePipeline 20150709.GetJobDetails'
+  spec_file: amazon-codepipeline-x-amz-target-codepipeline-20150709-getjobdetails-api-openapi.yml
+  capability_id: BC-4210.10
+  capability_id_l1: BC-4210
+  capability_name: Continuous Integration Management
+  confidence: 0.7
+  evidence: 'GetJobDetails  Amazon CodePipeline Get Job Details; schemas: JobDetails, ArtifactList, PipelineExecutionId,
+    ActionConfiguration'
+  reason: Returns details of a pipeline job for an action worker, including pipeline execution id and
+    input artefacts. This is CI/CD pipeline job execution, not HR jobs or batch scheduling in a business
+    sense.
+- tag: '#X Amz Target=CodePipeline 20150709.ListActionTypes'
+  spec_file: amazon-codepipeline-x-amz-target-codepipeline-20150709-listactiontypes-api-openapi.yml
+  capability_id: BC-4210.10
+  capability_id_l1: BC-4210
+  capability_name: Continuous Integration Management
+  confidence: 0.7
+  evidence: 'ListActionTypes  Amazon CodePipeline List Action Types; schemas: ActionTypeList, ActionCategory,
+    ArtifactDetails, ActionConfigurationProperty'
+  reason: Enumerates available pipeline action types (build, test, deploy categories) available for composing
+    release pipelines — CI/CD pipeline configuration metadata.
+- tag: '#X Amz Target=CodePipeline 20150709.UpdateActionType'
+  spec_file: amazon-codepipeline-x-amz-target-codepipeline-20150709-updateactiontype-api-openapi.yml
+  capability_id: BC-4210
+  capability_id_l1: BC-4210
+  capability_name: Software Release & Deployment Management
+  confidence: 0.7
+  evidence: 'UpdateActionType  Amazon CodePipeline Update Action Type; schemas: ActionTypeDeclaration,
+    ExecutorConfiguration, LambdaExecutorConfiguration'
+  reason: Defines/updates the action types executable within release pipelines — configuration of the
+    CI/CD pipeline machinery; L1 only as the specific sub-capability is not pinned down.

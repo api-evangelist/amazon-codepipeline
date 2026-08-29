@@ -702,6 +702,9 @@ apis:
       - type: APIReference
         url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
 common:
+  - type: CapabilityMap
+    url: capabilities/amazon-codepipeline-capability-edges.yml
+    name: Amazon CodePipeline Business Capability Map
   - type: Overlay
     url: overlays/amazon-codepipeline-openapi-overlay.yaml
   - type: AgenticAccess
