@@ -194,7 +194,7 @@ apis:
     baseURL: https://codepipeline.us-east-1.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=CodePipeline 20150709.DeregisterWebhookWithThirdParty'
+    - '#X Amz Target=CodePipeline 20150709.DeregisterWebhookWithThirdParty'
     properties:
       - type: OpenAPI
         url: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-deregisterwebhookwiththirdparty-api-openapi.yml
@@ -531,7 +531,7 @@ apis:
     baseURL: https://codepipeline.us-east-1.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=CodePipeline 20150709.PutThirdPartyJobFailureResult'
+    - '#X Amz Target=CodePipeline 20150709.PutThirdPartyJobFailureResult'
     properties:
       - type: OpenAPI
         url: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putthirdpartyjobfailureresult-api-openapi.yml
@@ -548,7 +548,7 @@ apis:
     baseURL: https://codepipeline.us-east-1.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=CodePipeline 20150709.PutThirdPartyJobSuccessResult'
+    - '#X Amz Target=CodePipeline 20150709.PutThirdPartyJobSuccessResult'
     properties:
       - type: OpenAPI
         url: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putthirdpartyjobsuccessresult-api-openapi.yml
@@ -581,7 +581,7 @@ apis:
     baseURL: https://codepipeline.us-east-1.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=CodePipeline 20150709.RegisterWebhookWithThirdParty'
+    - '#X Amz Target=CodePipeline 20150709.RegisterWebhookWithThirdParty'
     properties:
       - type: OpenAPI
         url: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-registerwebhookwiththirdparty-api-openapi.yml
