@@ -38,6 +38,15 @@ tags:
 - Continuous Delivery
 - Developer Tools
 - DevOps
+- Pipelines
+- Release Automation
+tags_raw:
+- Amazon
+- AWS
+- CI/CD
+- Continuous Delivery
+- Developer Tools
+- DevOps
 - Pipeline
 - Release Automation
 url: https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/apis.yml
