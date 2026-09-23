@@ -201,6 +201,46 @@ paths:
         dispatcher: FALLBACK
 components:
   schemas:
+    Pipeline:
+      type: object
+      properties:
+        name:
+          type: string
+          description: The name of the pipeline.
+        roleArn:
+          type: string
+          description: The ARN of the IAM role used by the pipeline.
+        stages:
+          type: array
+          items:
+            $ref: '#/components/schemas/StageDeclaration'
+        version:
+          type: integer
+          description: The version number of the pipeline.
+    StageDeclaration:
+      type: object
+      required:
+      - name
+      - actions
+      properties:
+        name:
+          type: string
+          description: The name of the stage.
+        actions:
+          type: array
+          items:
+            $ref: '#/components/schemas/ActionDeclaration'
+    CreatePipelineInput:
+      type: object
+      required:
+      - pipeline
+      properties:
+        pipeline:
+          $ref: '#/components/schemas/Pipeline'
+        tags:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tag'
     Tag:
       type: object
       properties:
@@ -253,35 +293,6 @@ components:
             properties:
               name:
                 type: string
-    Pipeline:
-      type: object
-      properties:
-        name:
-          type: string
-          description: The name of the pipeline.
-        roleArn:
-          type: string
-          description: The ARN of the IAM role used by the pipeline.
-        stages:
-          type: array
-          items:
-            $ref: '#/components/schemas/StageDeclaration'
-        version:
-          type: integer
-          description: The version number of the pipeline.
-    StageDeclaration:
-      type: object
-      required:
-      - name
-      - actions
-      properties:
-        name:
-          type: string
-          description: The name of the stage.
-        actions:
-          type: array
-          items:
-            $ref: '#/components/schemas/ActionDeclaration'
     PipelineList:
       type: object
       properties:
@@ -302,14 +313,3 @@ components:
                 format: date-time
         nextToken:
           type: string
-    CreatePipelineInput:
-      type: object
-      required:
-      - pipeline
-      properties:
-        pipeline:
-          $ref: '#/components/schemas/Pipeline'
-        tags:
-          type: array
-          items:
-            $ref: '#/components/schemas/Tag'

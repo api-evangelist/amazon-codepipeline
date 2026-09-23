@@ -2,8 +2,13 @@ openapi: 3.2.0
 info:
   version: '2015-07-09'
   x-release: v4
-  title: 'AWS CodePipeline #X Amz Target=CodePipeline 20150709.GetJobDetails API'
-  description: <fullname>CodePipeline</fullname> <p> <b>Overview</b> </p> <p>This is the CodePipeline API Reference. This guide provides descriptions of the actions and data types for CodePipeline. Some functionality for your pipeline can only be configured through the API. For more information, see the <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html">CodePipeline User Guide</a>.</p> <p>You can use the CodePipeline API to work with pipelines, stages, actions, and transitions.</p> <p> <i>Pipelines</i> are models of automated release processes. Each pipeline is uniquely named, and consists of stages, actions, and transitions. </p> <p>You can work with pipelines by calling:</p> <ul> <li> <p> <a>CreatePipeline</a>, which creates a uniquely named pipeline.</p> </li> <li> <p> <a>DeletePipeline</a>, which deletes the specified pipeline.</p> </li> <li> <p> <a>GetPipeline</a>, which returns information about the pipeline structure and pipeline metadata, including the pipeline Amazon Resource Name (ARN).</p> </li> <li> <p> <a>GetPipelineExecution</a>, which returns information about a specific execution of a pipeline.</p> </li> <li> <p> <a>GetPipelineState</a>, which returns information about the current state of the stages and actions of a pipeline.</p> </li> <li> <p> <a>ListActionExecutions</a>, which returns action-level details for past executions. The details include full stage and action-level details, including individual action duration, status, any errors that occurred during the execution, and input and output artifact location details.</p> </li> <li> <p> <a>ListPipelines</a>, which gets a summary of all of the pipelines associated with your account.</p> </li> <li> <p> <a>ListPipelineExecutions</a>, which gets a summary of the most recent executions for a pipeline.</p> </li> <li> <p> <a>StartPipelineExecution</a>, which runs the most recent revision of an artifact through the pipeline.</p> </li> <li> <p> <a>StopPipelineExecution</a>, which stops the specified pipeline execution from continuing through the pipeline.</p> </li> <li> <p> <a>UpdatePipeline</a>, which updates a pipeline with edits or changes to the structure of the pipeline.</p> </li> </ul> <p>Pipelines include <i>stages</i>. Each stage contains one or more actions that must complete before the next stage begins. A stage results in success or failure. If a stage fails, the pipeline stops at that stage and remains stopped until either a new version of an artifact appears in the source location, or a user takes action to rerun the most recent artifact through the pipeline. You can call <a>GetPipelineState</a>, which displays the status of a pipeline, including the status of stages in the pipeline, or <a>GetPipeline</a>, which returns the entire structure of the pipeline, including the stages of that pipeline. For more information about the structure of stages and actions, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-structure.html">CodePipeline Pipeline Structure Reference</a>.</p> <p>Pipeline stages include <i>actions</i> that are categorized into categories such as source or build actions performed in a stage of a pipeline. For example, you can use a source action to import artifacts into a pipeline from a source such as Amazon S3. Like stages, you do not work with actions directly in most cases, but you do define and interact with actions when working with pipeline operations such as <a>CreatePipeline</a> and <a>GetPipelineState</a>. Valid action categories are:</p> <ul> <li> <p>Source</p> </li> <li> <p>Build</p> </li> <li> <p>Test</p> </li> <li> <p>Deploy</p> </li> <li> <p>Approval</p> </li> <li> <p>Invoke</p> </li> </ul> <p>Pipelines also include <i>transitions</i>, which allow the transition of artifacts from one stage to the next in a pipeline after the actions in one stage complete.</p> <p>You can work with transitions by calling:</p> <ul> <li> <p> <a>DisableStageTransition</a>, which prevents artifacts from transitioning to the next stage in a pipeline.</p> </li> <li> <p> <a>EnableStageTransition</a>, which enables transition of artifacts between stages in a pipeline. </p> </li> </ul> <p> <b>Using the API to integrate with CodePipeline</b> </p> <p>For third-party integrators or developers who want to create their own integrations with CodePipeline, the expected sequence varies from the standard API user. To integrate with CodePipeline, developers need to work with the following items:</p> <p> <b>Jobs</b>, which are instances of an action. For example, a job for a source action might import a revision of an artifact from a source. </p> <p>You can work with jobs by calling:</p> <ul> <li> <p> <a>AcknowledgeJob</a>, which confirms whether a job worker has received the specified job.</p> </li> <li> <p> <a>GetJobDetails</a>, which returns the details of a job.</p> </li> <li> <p> <a>PollForJobs</a>, which determines whether there are any jobs to act on.</p> </li> <li> <p> <a>PutJobFailureResult</a>, which provides details of a job failure. </p> </li> <li> <p> <a>PutJobSuccessResult</a>, which provides details of a job success.</p> </li> </ul> <p> <b>Third party jobs</b>, which are instances of an action created by a partner action and integrated into CodePipeline. Partner actions are created by members of the Amazon Web Services Partner Network.</p> <p>You can work with third party jobs by calling:</p> <ul> <li> <p> <a>AcknowledgeThirdPartyJob</a>, which confirms whether a job worker has received the specified job.</p> </li> <li> <p> <a>GetThirdPartyJobDetails</a>, which requests the details of a job for a partner action.</p> </li> <li> <p> <a>PollForThirdPartyJobs</a>, which determines whether there are any jobs to act on. </p> </li> <li> <p> <a>PutThirdPartyJobFailureResult</a>, which provides details of a job failure.</p> </li> <li> <p> <a>PutThirdPartyJobSuccessResult</a>, which provides details of a job success.</p> </li> </ul>
+  title: 'AWS CodePipeline #X Amz Target=CodePipeline…'
+  description: 'CodePipeline
+
+    Overview
+
+
+    This is the CodePipeline API Reference.'
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
     backgroundColor: '#FFFFFF'
@@ -125,7 +130,10 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: GetJobDetails
-      description: <p>Returns information about a job. Used for custom actions only.</p> <important> <p>When this API is called, CodePipeline returns temporary credentials for the S3 bucket used to store artifacts for the pipeline, if the action requires access to that S3 bucket for input or output artifacts. This API also returns any secret values defined for the action.</p> </important>
+      description: 'Returns information about a job. Used for custom actions only.
+
+
+        When this API is called, CodePipeline returns temporary credentials for the S3 bucket used to store artifacts for the pipeline, if the action requires access to that S3 bucket for input or output artifacts. This API also returns any secret values defined for the action.'
       responses:
         '200':
           description: Success
@@ -193,11 +201,62 @@ components:
       type: string
       enum:
       - KMS
-    ValidationException: {}
-    Revision:
+    ActionOwner:
       type: string
-      minLength: 1
-      maxLength: 1500
+      enum:
+      - AWS
+      - ThirdParty
+      - Custom
+    PipelineContext:
+      type: object
+      properties:
+        pipelineName:
+          allOf:
+          - $ref: '#/components/schemas/PipelineName'
+          - description: The name of the pipeline. This is a user-specified value. Pipeline names must be unique across all pipeline names under an Amazon Web Services account.
+        stage:
+          allOf:
+          - $ref: '#/components/schemas/StageContext'
+          - description: The stage of the pipeline.
+        action:
+          allOf:
+          - $ref: '#/components/schemas/ActionContext'
+          - description: The context of an action to a job worker in the stage of a pipeline.
+        pipelineArn:
+          allOf:
+          - $ref: '#/components/schemas/PipelineArn'
+          - description: The Amazon Resource Name (ARN) of the pipeline.
+        pipelineExecutionId:
+          allOf:
+          - $ref: '#/components/schemas/PipelineExecutionId'
+          - description: The execution ID of the pipeline.
+      description: <p>Represents information about a pipeline to a job worker.</p> <note> <p>PipelineContext contains <code>pipelineArn</code> and <code>pipelineExecutionId</code> for custom action jobs. The <code>pipelineArn</code> and <code>pipelineExecutionId</code> fields are not populated for ThirdParty action jobs.</p> </note>
+    EncryptionKey:
+      type: object
+      required:
+      - id
+      - type
+      properties:
+        id:
+          allOf:
+          - $ref: '#/components/schemas/EncryptionKeyId'
+          - description: <p>The ID used to identify the key. For an Amazon Web Services KMS key, you can use the key ID, the key ARN, or the alias ARN.</p> <note> <p>Aliases are recognized only in the account that created the KMS key. For cross-account actions, you can only use the key ID or key ARN to identify the key. Cross-account actions involve using the role from the other account (AccountB), so specifying the key ID will use the key from the other account (AccountB).</p> </note>
+        type:
+          allOf:
+          - $ref: '#/components/schemas/EncryptionKeyType'
+          - description: The type of encryption key, such as an Amazon Web Services KMS key. When creating or updating a pipeline, the value must be set to 'KMS'.
+      description: Represents information about the key used to encrypt data in the artifact store, such as an Amazon Web Services Key Management Service (Key Management Service) key.
+    AccountId:
+      type: string
+      pattern: '[0-9]{12}'
+    StageContext:
+      type: object
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/StageName'
+          - description: The name of the stage.
+      description: Represents information about a stage to a job worker.
     ActionConfiguration:
       type: object
       properties:
@@ -206,29 +265,26 @@ components:
           - $ref: '#/components/schemas/ActionConfigurationMap'
           - description: The configuration data for the action.
       description: Represents information about an action configuration.
-    ActionProvider:
-      type: string
-      pattern: '[0-9A-Za-z_-]+'
-      minLength: 1
-      maxLength: 35
-    PipelineArn:
-      type: string
-      pattern: arn:aws(-[\w]+)*:codepipeline:.+:[0-9]{12}:.+
-    GetJobDetailsOutput:
+    JobDetails:
       type: object
       properties:
-        jobDetails:
+        id:
           allOf:
-          - $ref: '#/components/schemas/JobDetails'
-          - description: <p>The details of the job.</p> <note> <p>If AWSSessionCredentials is used, a long-running job can call <code>GetJobDetails</code> again to obtain new credentials.</p> </note>
-      description: Represents the output of a <code>GetJobDetails</code> action.
-    S3ObjectKey:
-      type: string
-    StageName:
-      type: string
-      pattern: '[A-Za-z0-9.@\-_]+'
-      minLength: 1
-      maxLength: 100
+          - $ref: '#/components/schemas/JobId'
+          - description: The unique system-generated ID of the job.
+        data:
+          allOf:
+          - $ref: '#/components/schemas/JobData'
+          - description: 'Represents other information about a job required for a job worker to complete the job. '
+        accountId:
+          allOf:
+          - $ref: '#/components/schemas/AccountId'
+          - description: The Amazon Web Services account ID associated with the job.
+      description: Represents information about the details of a job.
+    ArtifactList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Artifact'
     S3ArtifactLocation:
       type: object
       required:
@@ -244,32 +300,61 @@ components:
           - $ref: '#/components/schemas/S3ObjectKey'
           - description: The key of the object in the S3 bucket, which uniquely identifies the object in the bucket.
       description: The location of the S3 bucket that contains a revision.
-    AWSSessionCredentials:
-      type: object
-      required:
-      - accessKeyId
-      - secretAccessKey
-      - sessionToken
-      properties:
-        accessKeyId:
-          allOf:
-          - $ref: '#/components/schemas/AccessKeyId'
-          - description: The access key for the session.
-        secretAccessKey:
-          allOf:
-          - $ref: '#/components/schemas/SecretAccessKey'
-          - description: The secret access key for the session.
-        sessionToken:
-          allOf:
-          - $ref: '#/components/schemas/SessionToken'
-          - description: The token for the session.
-      description: Represents an Amazon Web Services session credentials object. These credentials are temporary credentials that are issued by Amazon Web Services Secure Token Service (STS). They can be used to access input and output artifacts in the S3 bucket used to store artifact for the pipeline in CodePipeline.
-    Version:
+    ArtifactName:
       type: string
-      pattern: '[0-9A-Za-z_-]+'
+      pattern: '[a-zA-Z0-9_\-]+'
       minLength: 1
-      maxLength: 9
-    JobNotFoundException: {}
+      maxLength: 100
+    AccessKeyId:
+      type: string
+      format: password
+    EncryptionKeyId:
+      type: string
+      minLength: 1
+      maxLength: 400
+    ArtifactLocation:
+      type: object
+      properties:
+        type:
+          allOf:
+          - $ref: '#/components/schemas/ArtifactLocationType'
+          - description: The type of artifact in the location.
+        s3Location:
+          allOf:
+          - $ref: '#/components/schemas/S3ArtifactLocation'
+          - description: The S3 bucket that contains the artifact.
+      description: Represents information about the location of an artifact.
+    ValidationException: {}
+    ActionName:
+      type: string
+      pattern: '[A-Za-z0-9.@\-_]+'
+      minLength: 1
+      maxLength: 100
+    S3ObjectKey:
+      type: string
+    Artifact:
+      type: object
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/ArtifactName'
+          - description: The artifact's name.
+        revision:
+          allOf:
+          - $ref: '#/components/schemas/Revision'
+          - description: The artifact's revision ID. Depending on the type of object, this could be a commit ID (GitHub) or a revision ID (Amazon S3).
+        location:
+          allOf:
+          - $ref: '#/components/schemas/ArtifactLocation'
+          - description: The location of an artifact.
+      description: 'Artifacts are the files that are worked on by actions in the pipeline. See the action configuration for each action for details about artifact parameters. For example, the S3 source action artifact is a file name (or file path), and the files are generally provided as a ZIP file. Example artifact name: SampleApp_Windows.zip'
+    JobId:
+      type: string
+      pattern: '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'
+    ActionConfigurationValue:
+      type: string
+      minLength: 1
+      maxLength: 1000
     ActionTypeId:
       type: object
       required:
@@ -295,39 +380,12 @@ components:
           - $ref: '#/components/schemas/Version'
           - description: A string that describes the action version.
       description: Represents information about an action type.
-    ArtifactLocation:
-      type: object
-      properties:
-        type:
-          allOf:
-          - $ref: '#/components/schemas/ArtifactLocationType'
-          - description: The type of artifact in the location.
-        s3Location:
-          allOf:
-          - $ref: '#/components/schemas/S3ArtifactLocation'
-          - description: The S3 bucket that contains the artifact.
-      description: Represents information about the location of an artifact.
+    SecretAccessKey:
+      type: string
+      format: password
     PipelineExecutionId:
       type: string
       pattern: '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'
-    EncryptionKeyId:
-      type: string
-      minLength: 1
-      maxLength: 400
-    ActionCategory:
-      type: string
-      enum:
-      - Source
-      - Build
-      - Deploy
-      - Test
-      - Invoke
-      - Approval
-    SessionToken:
-      type: string
-      format: password
-    S3BucketName:
-      type: string
     ActionContext:
       type: object
       properties:
@@ -344,21 +402,35 @@ components:
       type: string
       enum:
       - S3
-    EncryptionKey:
+    GetJobDetailsInput:
       type: object
       required:
-      - id
-      - type
+      - jobId
+      title: GetJobDetailsInput
       properties:
-        id:
+        jobId:
           allOf:
-          - $ref: '#/components/schemas/EncryptionKeyId'
-          - description: <p>The ID used to identify the key. For an Amazon Web Services KMS key, you can use the key ID, the key ARN, or the alias ARN.</p> <note> <p>Aliases are recognized only in the account that created the KMS key. For cross-account actions, you can only use the key ID or key ARN to identify the key. Cross-account actions involve using the role from the other account (AccountB), so specifying the key ID will use the key from the other account (AccountB).</p> </note>
-        type:
-          allOf:
-          - $ref: '#/components/schemas/EncryptionKeyType'
-          - description: The type of encryption key, such as an Amazon Web Services KMS key. When creating or updating a pipeline, the value must be set to 'KMS'.
-      description: Represents information about the key used to encrypt data in the artifact store, such as an Amazon Web Services Key Management Service (Key Management Service) key.
+          - $ref: '#/components/schemas/JobId'
+          - description: The unique system-generated ID for the job.
+      description: Represents the input of a <code>GetJobDetails</code> action.
+    ActionExecutionId:
+      type: string
+    JobNotFoundException: {}
+    ActionConfigurationMap:
+      type: object
+      additionalProperties:
+        $ref: '#/components/schemas/ActionConfigurationValue'
+    StageName:
+      type: string
+      pattern: '[A-Za-z0-9.@\-_]+'
+      minLength: 1
+      maxLength: 100
+    S3BucketName:
+      type: string
+    Revision:
+      type: string
+      minLength: 1
+      maxLength: 1500
     JobData:
       type: object
       properties:
@@ -395,135 +467,71 @@ components:
           - $ref: '#/components/schemas/EncryptionKey'
           - description: 'Represents information about the key used to encrypt data in the artifact store, such as an KMS key. '
       description: Represents other information about a job required for a job worker to complete the job.
-    ArtifactName:
-      type: string
-      pattern: '[a-zA-Z0-9_\-]+'
-      minLength: 1
-      maxLength: 100
-    Artifact:
-      type: object
-      properties:
-        name:
-          allOf:
-          - $ref: '#/components/schemas/ArtifactName'
-          - description: The artifact's name.
-        revision:
-          allOf:
-          - $ref: '#/components/schemas/Revision'
-          - description: The artifact's revision ID. Depending on the type of object, this could be a commit ID (GitHub) or a revision ID (Amazon S3).
-        location:
-          allOf:
-          - $ref: '#/components/schemas/ArtifactLocation'
-          - description: The location of an artifact.
-      description: 'Artifacts are the files that are worked on by actions in the pipeline. See the action configuration for each action for details about artifact parameters. For example, the S3 source action artifact is a file name (or file path), and the files are generally provided as a ZIP file. Example artifact name: SampleApp_Windows.zip'
-    PipelineContext:
-      type: object
-      properties:
-        pipelineName:
-          allOf:
-          - $ref: '#/components/schemas/PipelineName'
-          - description: The name of the pipeline. This is a user-specified value. Pipeline names must be unique across all pipeline names under an Amazon Web Services account.
-        stage:
-          allOf:
-          - $ref: '#/components/schemas/StageContext'
-          - description: The stage of the pipeline.
-        action:
-          allOf:
-          - $ref: '#/components/schemas/ActionContext'
-          - description: The context of an action to a job worker in the stage of a pipeline.
-        pipelineArn:
-          allOf:
-          - $ref: '#/components/schemas/PipelineArn'
-          - description: The Amazon Resource Name (ARN) of the pipeline.
-        pipelineExecutionId:
-          allOf:
-          - $ref: '#/components/schemas/PipelineExecutionId'
-          - description: The execution ID of the pipeline.
-      description: <p>Represents information about a pipeline to a job worker.</p> <note> <p>PipelineContext contains <code>pipelineArn</code> and <code>pipelineExecutionId</code> for custom action jobs. The <code>pipelineArn</code> and <code>pipelineExecutionId</code> fields are not populated for ThirdParty action jobs.</p> </note>
-    StageContext:
-      type: object
-      properties:
-        name:
-          allOf:
-          - $ref: '#/components/schemas/StageName'
-          - description: The name of the stage.
-      description: Represents information about a stage to a job worker.
     PipelineName:
       type: string
       pattern: '[A-Za-z0-9.@\-_]+'
       minLength: 1
       maxLength: 100
-    ActionExecutionId:
+    ActionProvider:
       type: string
-    ActionConfigurationMap:
-      type: object
-      additionalProperties:
-        $ref: '#/components/schemas/ActionConfigurationValue'
+      pattern: '[0-9A-Za-z_-]+'
+      minLength: 1
+      maxLength: 35
     ContinuationToken:
       type: string
       minLength: 1
       maxLength: 2048
-    ActionName:
-      type: string
-      pattern: '[A-Za-z0-9.@\-_]+'
-      minLength: 1
-      maxLength: 100
-    SecretAccessKey:
-      type: string
-      format: password
-    JobId:
-      type: string
-      pattern: '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'
-    JobDetails:
-      type: object
-      properties:
-        id:
-          allOf:
-          - $ref: '#/components/schemas/JobId'
-          - description: The unique system-generated ID of the job.
-        data:
-          allOf:
-          - $ref: '#/components/schemas/JobData'
-          - description: 'Represents other information about a job required for a job worker to complete the job. '
-        accountId:
-          allOf:
-          - $ref: '#/components/schemas/AccountId'
-          - description: The Amazon Web Services account ID associated with the job.
-      description: Represents information about the details of a job.
-    ActionConfigurationValue:
-      type: string
-      minLength: 1
-      maxLength: 1000
-    ArtifactList:
-      type: array
-      items:
-        $ref: '#/components/schemas/Artifact'
-    AccountId:
-      type: string
-      pattern: '[0-9]{12}'
-    AccessKeyId:
-      type: string
-      format: password
-    GetJobDetailsInput:
+    AWSSessionCredentials:
       type: object
       required:
-      - jobId
-      title: GetJobDetailsInput
+      - accessKeyId
+      - secretAccessKey
+      - sessionToken
       properties:
-        jobId:
+        accessKeyId:
           allOf:
-          - $ref: '#/components/schemas/JobId'
-          - description: The unique system-generated ID for the job.
-      description: Represents the input of a <code>GetJobDetails</code> action.
-    ActionOwner:
+          - $ref: '#/components/schemas/AccessKeyId'
+          - description: The access key for the session.
+        secretAccessKey:
+          allOf:
+          - $ref: '#/components/schemas/SecretAccessKey'
+          - description: The secret access key for the session.
+        sessionToken:
+          allOf:
+          - $ref: '#/components/schemas/SessionToken'
+          - description: The token for the session.
+      description: Represents an Amazon Web Services session credentials object. These credentials are temporary credentials that are issued by Amazon Web Services Secure Token Service (STS). They can be used to access input and output artifacts in the S3 bucket used to store artifact for the pipeline in CodePipeline.
+    SessionToken:
+      type: string
+      format: password
+    ActionCategory:
       type: string
       enum:
-      - AWS
-      - ThirdParty
-      - Custom
+      - Source
+      - Build
+      - Deploy
+      - Test
+      - Invoke
+      - Approval
+    Version:
+      type: string
+      pattern: '[0-9A-Za-z_-]+'
+      minLength: 1
+      maxLength: 9
+    PipelineArn:
+      type: string
+      pattern: arn:aws(-[\w]+)*:codepipeline:.+:[0-9]{12}:.+
+    GetJobDetailsOutput:
+      type: object
+      properties:
+        jobDetails:
+          allOf:
+          - $ref: '#/components/schemas/JobDetails'
+          - description: <p>The details of the job.</p> <note> <p>If AWSSessionCredentials is used, a long-running job can call <code>GetJobDetails</code> again to obtain new credentials.</p> </note>
+      description: Represents the output of a <code>GetJobDetails</code> action.
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
@@ -534,26 +542,26 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Credential:
       name: X-Amz-Credential
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Algorithm:
       name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
       in: header
       schema:
         type: string

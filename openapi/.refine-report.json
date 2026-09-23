@@ -131,7 +131,8 @@
     "amazon-codepipeline-openapi-original.yaml: declared missing tag: #X Amz Target=CodePipeline 20150709.UntagResource",
     "amazon-codepipeline-openapi-original.yaml: declared missing tag: #X Amz Target=CodePipeline 20150709.UpdateActionType",
     "amazon-codepipeline-openapi-original.yaml: declared missing tag: #X Amz Target=CodePipeline 20150709.UpdatePipeline",
-    "amazon-codepipeline-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0"
+    "amazon-codepipeline-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
   ],
   "skipped": [
     "amazon-codepipeline-executions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
