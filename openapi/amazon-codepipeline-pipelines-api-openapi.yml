@@ -201,6 +201,44 @@ paths:
         dispatcher: FALLBACK
 components:
   schemas:
+    CreatePipelineInput:
+      type: object
+      required:
+      - pipeline
+      properties:
+        pipeline:
+          $ref: '#/components/schemas/Pipeline'
+        tags:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tag'
+    Tag:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          type: string
+    PipelineList:
+      type: object
+      properties:
+        pipelines:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              version:
+                type: integer
+              created:
+                type: string
+                format: date-time
+              updated:
+                type: string
+                format: date-time
+        nextToken:
+          type: string
     Pipeline:
       type: object
       properties:
@@ -230,24 +268,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ActionDeclaration'
-    CreatePipelineInput:
-      type: object
-      required:
-      - pipeline
-      properties:
-        pipeline:
-          $ref: '#/components/schemas/Pipeline'
-        tags:
-          type: array
-          items:
-            $ref: '#/components/schemas/Tag'
-    Tag:
-      type: object
-      properties:
-        key:
-          type: string
-        value:
-          type: string
     ActionDeclaration:
       type: object
       required:
@@ -293,23 +313,3 @@ components:
             properties:
               name:
                 type: string
-    PipelineList:
-      type: object
-      properties:
-        pipelines:
-          type: array
-          items:
-            type: object
-            properties:
-              name:
-                type: string
-              version:
-                type: integer
-              created:
-                type: string
-                format: date-time
-              updated:
-                type: string
-                format: date-time
-        nextToken:
-          type: string
