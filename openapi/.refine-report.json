@@ -9,9 +9,7 @@
     "amazon-codepipeline-executions-api-openapi.yml",
     "amazon-codepipeline-pipelines-api-openapi.yml"
   ],
-  "archived": [
-    "deleted 39 superseded output(s) from the previous generation"
-  ],
+  "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
@@ -58,50 +56,11 @@
     "amazon-codepipeline-openapi-original.yaml: tagged paths POST /#X-Amz-Target=CodePipeline_20150709.UpdatePipeline -> AWS CodePipeline",
     "amazon-codepipeline-openapi-original.yaml: declared missing tag: AWS CodePipeline",
     "amazon-codepipeline-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "superseded outputs removed: amazon-codepipeline-x-amz-target-codepipeline-20150709-acknowledgejob-api-openapi.yml, amazon-codepipeline-x-amz-target-codepipeline-20150709-acknowledgethirdpartyjob-api-openapi.yml, amazon-codepipeline-x-amz-target-codepipeline-20150709-createcustomactiontype-api-openapi.yml, amazon-codepipeline-x-amz-target-codepipeline-20150709-createpipeline-api-openapi.yml, amazon-codepipeline-x-amz-target-codepipeline-20150709-deletecustomactiontype-api-openapi.yml \u2026",
-    "apis.yml register: written (+1 apis, 3 total)"
+    "apis.yml register: already-registered"
   ],
   "skipped": [
+    "amazon-codepipeline-aws-codepipeline-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "amazon-codepipeline-executions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-pipelines-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-acknowledgejob-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-acknowledgethirdpartyjob-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-createcustomactiontype-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-createpipeline-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-deletecustomactiontype-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-deletepipeline-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-deletewebhook-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-deregisterwebhookwiththirdparty-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-disablestagetransition-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-enablestagetransition-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-getactiontype-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-getjobdetails-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipeline-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipelineexecution-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipelinestate-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-getthirdpartyjobdetails-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-listactionexecutions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-listactiontypes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-listpipelineexecutions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-listpipelines-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-listtagsforresource-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-listwebhooks-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-pollforjobs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-pollforthirdpartyjobs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-putactionrevision-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-putapprovalresult-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-putjobfailureresult-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-putjobsuccessresult-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-putthirdpartyjobfailureresult-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-putthirdpartyjobsuccessresult-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-putwebhook-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-registerwebhookwiththirdparty-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-retrystageexecution-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-startpipelineexecution-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-stoppipelineexecution-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-tagresource-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-untagresource-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-updateactiontype-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-codepipeline-x-amz-target-codepipeline-20150709-updatepipeline-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+    "amazon-codepipeline-pipelines-api-openapi.yml: previously refined output, superseded by openapi/_original/"
   ]
 }
