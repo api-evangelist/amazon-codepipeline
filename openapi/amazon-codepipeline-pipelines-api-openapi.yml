@@ -201,17 +201,6 @@ paths:
         dispatcher: FALLBACK
 components:
   schemas:
-    CreatePipelineInput:
-      type: object
-      required:
-      - pipeline
-      properties:
-        pipeline:
-          $ref: '#/components/schemas/Pipeline'
-        tags:
-          type: array
-          items:
-            $ref: '#/components/schemas/Tag'
     ActionDeclaration:
       type: object
       required:
@@ -257,22 +246,19 @@ components:
             properties:
               name:
                 type: string
-    Pipeline:
+    StageDeclaration:
       type: object
+      required:
+      - name
+      - actions
       properties:
         name:
           type: string
-          description: The name of the pipeline.
-        roleArn:
-          type: string
-          description: The ARN of the IAM role used by the pipeline.
-        stages:
+          description: The name of the stage.
+        actions:
           type: array
           items:
-            $ref: '#/components/schemas/StageDeclaration'
-        version:
-          type: integer
-          description: The version number of the pipeline.
+            $ref: '#/components/schemas/ActionDeclaration'
     PipelineList:
       type: object
       properties:
@@ -300,16 +286,30 @@ components:
           type: string
         value:
           type: string
-    StageDeclaration:
+    CreatePipelineInput:
       type: object
       required:
-      - name
-      - actions
+      - pipeline
+      properties:
+        pipeline:
+          $ref: '#/components/schemas/Pipeline'
+        tags:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tag'
+    Pipeline:
+      type: object
       properties:
         name:
           type: string
-          description: The name of the stage.
-        actions:
+          description: The name of the pipeline.
+        roleArn:
+          type: string
+          description: The ARN of the IAM role used by the pipeline.
+        stages:
           type: array
           items:
-            $ref: '#/components/schemas/ActionDeclaration'
+            $ref: '#/components/schemas/StageDeclaration'
+        version:
+          type: integer
+          description: The version number of the pipeline.
