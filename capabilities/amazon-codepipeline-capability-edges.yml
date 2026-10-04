@@ -11,7 +11,7 @@ capability_model:
   attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
     CC BY 4.0
   notice: NOTICE
-edge_count: 21
+edge_count: 22
 edges:
 - tag: '#X Amz Target=CodePipeline 20150709.CreatePipeline'
   spec_file: amazon-codepipeline-x-amz-target-codepipeline-20150709-createpipeline-api-openapi.yml
@@ -152,6 +152,17 @@ edges:
     SourceRevision, ExecutionTrigger'
   reason: Lists past runs of a release pipeline with source revisions and triggers — CI/CD pipeline execution
     history in a continuous delivery service.
+- tag: AWS CodePipeline
+  spec_file: amazon-codepipeline-aws-codepipeline-api-openapi.yml
+  capability_id: BC-4210.10
+  capability_id_l1: BC-4210
+  capability_name: Continuous Integration Management
+  confidence: 0.72
+  evidence: 'CreatePipeline, DisableStageTransition, EnableStageTransition; vendor: "automates the build,
+    test, and deploy phases of your release process"'
+  reason: The surface defines and operates release pipelines with stages, actions and jobs — continuous
+    integration/delivery pipeline management. Sub-capability is ambiguous between CI pipeline management
+    and deployment orchestration, so confidence is held below 0.8.
 - tag: '#X Amz Target=CodePipeline 20150709.CreateCustomActionType'
   spec_file: amazon-codepipeline-x-amz-target-codepipeline-20150709-createcustomactiontype-api-openapi.yml
   capability_id: BC-4210.10
