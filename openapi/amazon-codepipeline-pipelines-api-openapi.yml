@@ -201,6 +201,73 @@ paths:
         dispatcher: FALLBACK
 components:
   schemas:
+    PipelineList:
+      type: object
+      properties:
+        pipelines:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              version:
+                type: integer
+              created:
+                type: string
+                format: date-time
+              updated:
+                type: string
+                format: date-time
+        nextToken:
+          type: string
+    CreatePipelineInput:
+      type: object
+      required:
+      - pipeline
+      properties:
+        pipeline:
+          $ref: '#/components/schemas/Pipeline'
+        tags:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tag'
+    StageDeclaration:
+      type: object
+      required:
+      - name
+      - actions
+      properties:
+        name:
+          type: string
+          description: The name of the stage.
+        actions:
+          type: array
+          items:
+            $ref: '#/components/schemas/ActionDeclaration'
+    Pipeline:
+      type: object
+      properties:
+        name:
+          type: string
+          description: The name of the pipeline.
+        roleArn:
+          type: string
+          description: The ARN of the IAM role used by the pipeline.
+        stages:
+          type: array
+          items:
+            $ref: '#/components/schemas/StageDeclaration'
+        version:
+          type: integer
+          description: The version number of the pipeline.
+    Tag:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          type: string
     ActionDeclaration:
       type: object
       required:
@@ -246,70 +313,3 @@ components:
             properties:
               name:
                 type: string
-    StageDeclaration:
-      type: object
-      required:
-      - name
-      - actions
-      properties:
-        name:
-          type: string
-          description: The name of the stage.
-        actions:
-          type: array
-          items:
-            $ref: '#/components/schemas/ActionDeclaration'
-    PipelineList:
-      type: object
-      properties:
-        pipelines:
-          type: array
-          items:
-            type: object
-            properties:
-              name:
-                type: string
-              version:
-                type: integer
-              created:
-                type: string
-                format: date-time
-              updated:
-                type: string
-                format: date-time
-        nextToken:
-          type: string
-    Tag:
-      type: object
-      properties:
-        key:
-          type: string
-        value:
-          type: string
-    CreatePipelineInput:
-      type: object
-      required:
-      - pipeline
-      properties:
-        pipeline:
-          $ref: '#/components/schemas/Pipeline'
-        tags:
-          type: array
-          items:
-            $ref: '#/components/schemas/Tag'
-    Pipeline:
-      type: object
-      properties:
-        name:
-          type: string
-          description: The name of the pipeline.
-        roleArn:
-          type: string
-          description: The ARN of the IAM role used by the pipeline.
-        stages:
-          type: array
-          items:
-            $ref: '#/components/schemas/StageDeclaration'
-        version:
-          type: integer
-          description: The version number of the pipeline.
