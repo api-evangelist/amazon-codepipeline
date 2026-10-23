@@ -100,6 +100,8 @@ apis:
   - type: APIReference
     url: https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html
 common:
+- type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/amazon-codepipeline/overview
 - type: Website
   url: https://aws.amazon.com/codepipeline/
 - type: CapabilityMap
