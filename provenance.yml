@@ -12,6 +12,9 @@ artifacts:
   capabilities/amazon-codepipeline-capability-edges.yml:
     method: unknown
     evidence: no authorship recorded
+  collections/amazon-codepipeline-aws-codepipeline-api.postman_collection.json:
+    method: derived
+    evidence: openapi/amazon-codepipeline-aws-codepipeline-api
   collections/amazon-codepipeline-executions-api.opencollection.json:
     method: derived
     evidence: openapi/amazon-codepipeline-executions-api
@@ -25,239 +28,239 @@ artifacts:
     method: derived
     evidence: openapi/amazon-codepipeline-pipelines-api
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-acknowledgejob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-acknowledgejob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-acknowledgejob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-acknowledgejob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-acknowledgethirdpartyjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-acknowledgethirdpartyjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-acknowledgethirdpartyjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-acknowledgethirdpartyjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-createcustomactiontype-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-createcustomactiontype-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-createcustomactiontype-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-createcustomactiontype-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-createpipeline-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-createpipeline-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-createpipeline-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-createpipeline-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-deletecustomactiontype-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-deletecustomactiontype-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-deletecustomactiontype-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-deletecustomactiontype-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-deletepipeline-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-deletepipeline-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-deletepipeline-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-deletepipeline-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-deletewebhook-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-deletewebhook-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-deletewebhook-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-deletewebhook-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-deregisterwebhookwiththirdparty-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-deregisterwebhookwiththirdparty-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-deregisterwebhookwiththirdparty-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-deregisterwebhookwiththirdparty-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-disablestagetransition-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-disablestagetransition-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-disablestagetransition-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-disablestagetransition-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-enablestagetransition-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-enablestagetransition-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-enablestagetransition-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-enablestagetransition-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-getactiontype-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-getactiontype-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-getactiontype-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-getactiontype-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-getjobdetails-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-getjobdetails-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-getjobdetails-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-getjobdetails-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipeline-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipeline-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipeline-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipeline-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipelineexecution-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipelineexecution-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipelineexecution-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipelineexecution-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipelinestate-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipelinestate-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipelinestate-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipelinestate-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-getthirdpartyjobdetails-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-getthirdpartyjobdetails-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-getthirdpartyjobdetails-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-getthirdpartyjobdetails-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-listactionexecutions-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-listactionexecutions-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-listactionexecutions-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-listactionexecutions-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-listactiontypes-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-listactiontypes-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-listactiontypes-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-listactiontypes-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-listpipelineexecutions-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-listpipelineexecutions-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-listpipelineexecutions-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-listpipelineexecutions-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-listpipelines-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-listpipelines-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-listpipelines-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-listpipelines-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-listtagsforresource-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-listtagsforresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-listtagsforresource-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-listtagsforresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-listwebhooks-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-listwebhooks-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-listwebhooks-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-listwebhooks-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-pollforjobs-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-pollforjobs-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-pollforjobs-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-pollforjobs-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-pollforthirdpartyjobs-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-pollforthirdpartyjobs-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-pollforthirdpartyjobs-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-pollforthirdpartyjobs-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-putactionrevision-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putactionrevision-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-putactionrevision-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putactionrevision-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-putapprovalresult-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putapprovalresult-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-putapprovalresult-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putapprovalresult-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-putjobfailureresult-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putjobfailureresult-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-putjobfailureresult-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putjobfailureresult-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-putjobsuccessresult-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putjobsuccessresult-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-putjobsuccessresult-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putjobsuccessresult-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-putthirdpartyjobfailureresult-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putthirdpartyjobfailureresult-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-putthirdpartyjobfailureresult-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putthirdpartyjobfailureresult-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-putthirdpartyjobsuccessresult-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putthirdpartyjobsuccessresult-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-putthirdpartyjobsuccessresult-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putthirdpartyjobsuccessresult-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-putwebhook-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putwebhook-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-putwebhook-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putwebhook-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-registerwebhookwiththirdparty-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-registerwebhookwiththirdparty-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-registerwebhookwiththirdparty-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-registerwebhookwiththirdparty-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-retrystageexecution-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-retrystageexecution-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-retrystageexecution-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-retrystageexecution-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-startpipelineexecution-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-startpipelineexecution-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-startpipelineexecution-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-startpipelineexecution-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-stoppipelineexecution-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-stoppipelineexecution-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-stoppipelineexecution-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-stoppipelineexecution-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-tagresource-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-tagresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-tagresource-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-tagresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-untagresource-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-untagresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-untagresource-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-untagresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-updateactiontype-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-updateactiontype-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-updateactiontype-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-updateactiontype-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-updatepipeline-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-updatepipeline-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-codepipeline-x-amz-target-codepipeline-20150709-updatepipeline-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-updatepipeline-api
+    method: unknown
+    evidence: no authorship recorded
   conformance/amazon-codepipeline-conformance.yml:
     method: derived
     evidence: declared in the artifact
@@ -3096,127 +3099,7 @@ artifacts:
   json-structure/amazon-codepipeline-webhook-url-structure.json:
     method: unknown
     evidence: no authorship recorded
-  kin/checks-2026-09-24T161608.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T125852.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T133943.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T143147.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T154045.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-26T215308.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T094438.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T103455.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T123021.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T132314.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T140727.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-28T221322.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-29T213958.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-29T230545.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-30T203505.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-30T220315.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-31T223420.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-01T063623.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-01T210448.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-01T222808.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-02T211804.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-02T224043.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-03T161828.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-03T174231.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-04T062714.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-04T212454.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-04T224856.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T055819.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T072335.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T144739.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T195450.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T211839.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-06T011047.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-06T211804.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-06T224210.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-07T200636.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-07T213054.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-08T214843.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-08T232836.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-10T204815.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-10T222408.yml:
+  kin/checks-2026-10-11T110117.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-12T062655.yml:
@@ -3300,6 +3183,21 @@ artifacts:
   kin/score-2026-09-24T161608.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-25T210408.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-25T232841.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-03T000835.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-03T024842.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-11T110117.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
   lifecycle/amazon-codepipeline-lifecycle.yml:
     method: searched
     evidence: declared in the artifact
@@ -3317,132 +3215,18 @@ artifacts:
     method: harvested
     evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
       to the provider's source is unverified
+  openapi/amazon-codepipeline-aws-codepipeline-api-openapi.yml:
+    method: derived
+    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
   openapi/amazon-codepipeline-executions-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
   openapi/amazon-codepipeline-pipelines-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-acknowledgejob-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-acknowledgethirdpartyjob-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-createcustomactiontype-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-createpipeline-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-deletecustomactiontype-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-deletepipeline-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-deletewebhook-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-deregisterwebhookwiththirdparty-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-disablestagetransition-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-enablestagetransition-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-getactiontype-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-getjobdetails-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipeline-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipelineexecution-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipelinestate-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-getthirdpartyjobdetails-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-listactionexecutions-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-listactiontypes-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-listpipelineexecutions-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-listpipelines-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-listtagsforresource-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-listwebhooks-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-pollforjobs-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-pollforthirdpartyjobs-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putactionrevision-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putapprovalresult-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putjobfailureresult-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putjobsuccessresult-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putthirdpartyjobfailureresult-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putthirdpartyjobsuccessresult-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-putwebhook-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-registerwebhookwiththirdparty-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-retrystageexecution-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-startpipelineexecution-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-stoppipelineexecution-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-tagresource-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-untagresource-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-updateactiontype-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-codepipeline-x-amz-target-codepipeline-20150709-updatepipeline-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
   overlays/amazon-codepipeline-openapi-overlay.yaml:
-    method: unknown
-    evidence: no authorship recorded
+    method: derived
+    evidence: an API Evangelist overlay (title) over the provider's contract
   packages/amazon-codepipeline-packages.yml:
     method: searched
     evidence: declared in the artifact
