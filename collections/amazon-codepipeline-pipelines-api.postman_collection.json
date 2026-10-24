@@ -1,39 +1,26 @@
 {
+  "info": {
+    "_postman_id": "5bddd787-d893-484f-832f-095ebd511e09",
+    "name": "Amazon CodePipeline Pipelines API",
+    "description": "Amazon CodePipeline is a fully managed continuous delivery service that helps you automate your release pipelines for fast and reliable application and infrastructure updates. The API enables programmatic management of pipelines, stages, actions, and pipeline executions.\n\nContact Support:\n Name: Amazon Web Services",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-21T20:12:15.000Z",
+    "updatedAt": "2026-10-21T20:12:16.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-5bddd787-d893-484f-832f-095ebd511e09"
+  },
   "item": [
     {
-      "id": "effae1db-079f-4477-9b88-2d800864a669",
-      "name": "Pipelines",
-      "description": {
-        "content": "Operations for managing CodePipeline pipelines",
-        "type": "text/plain"
-      },
+      "name": "/",
       "item": [
         {
-          "id": "c6dcd03e-89fa-4227-ad3a-e8dabb792a2a",
           "name": "Amazon CodePipeline Create a New Pipeline",
+          "id": "0719736e-1112-4823-a61e-b8e0119f8909",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
-            "name": "Amazon CodePipeline Create a New Pipeline",
-            "description": {
-              "content": "Creates a pipeline with the specified name and structure. A pipeline consists of stages and actions that process code changes.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                ""
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
-                  "type": "any",
-                  "value": "{{region}}",
-                  "key": "region"
-                }
-              ]
-            },
+            "method": "POST",
             "header": [
               {
                 "key": "Content-Type",
@@ -44,197 +31,161 @@
                 "value": "application/json"
               }
             ],
-            "method": "POST",
-            "auth": null,
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"pipeline\": {\n    \"name\": \"<string>\",\n    \"roleArn\": \"<string>\",\n    \"stages\": [\n      {\n        \"name\": \"<string>\",\n        \"actions\": [\n          {\n            \"name\": \"<string>\",\n            \"actionTypeId\": {\n              \"category\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"owner\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"provider\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"version\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            \"configuration\": {\n              \"key_0\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"key_1\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"key_2\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            \"inputArtifacts\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"outputArtifacts\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"name\": \"<string>\",\n            \"actionTypeId\": {\n              \"category\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"owner\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"provider\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"version\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            \"configuration\": {\n              \"key_0\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"key_1\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            \"inputArtifacts\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"outputArtifacts\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ]\n      },\n      {\n        \"name\": \"<string>\",\n        \"actions\": [\n          {\n            \"name\": \"<string>\",\n            \"actionTypeId\": {\n              \"category\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"owner\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"provider\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"version\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            \"configuration\": {\n              \"key_0\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"key_1\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            \"inputArtifacts\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"outputArtifacts\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"name\": \"<string>\",\n            \"actionTypeId\": {\n              \"category\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"owner\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"provider\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"version\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            \"configuration\": {\n              \"key_0\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"key_1\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"key_2\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            \"inputArtifacts\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"outputArtifacts\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ]\n      }\n    ],\n    \"version\": \"<integer>\"\n  },\n  \"tags\": [\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}"
-            }
+              "raw": "{\n  \"pipeline\": {\n    \"name\": \"<string>\",\n    \"roleArn\": \"<string>\",\n    \"stages\": [\n      {\n        \"name\": \"<string>\",\n        \"actions\": [\n          {\n            \"name\": \"<string>\",\n            \"actionTypeId\": {\n              \"category\": \"Test\",\n              \"owner\": \"<string>\",\n              \"provider\": \"<string>\",\n              \"version\": \"<string>\"\n            },\n            \"configuration\": {\n              \"pariatur_9b9\": \"<string>\",\n              \"Duis__6c\": \"<string>\"\n            },\n            \"inputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ],\n            \"outputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ]\n          },\n          {\n            \"name\": \"<string>\",\n            \"actionTypeId\": {\n              \"category\": \"Approval\",\n              \"owner\": \"<string>\",\n              \"provider\": \"<string>\",\n              \"version\": \"<string>\"\n            },\n            \"configuration\": {\n              \"laboris_2\": \"<string>\",\n              \"Excepteura16\": \"<string>\"\n            },\n            \"inputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ],\n            \"outputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ]\n          }\n        ]\n      },\n      {\n        \"name\": \"<string>\",\n        \"actions\": [\n          {\n            \"name\": \"<string>\",\n            \"actionTypeId\": {\n              \"category\": \"Test\",\n              \"owner\": \"<string>\",\n              \"provider\": \"<string>\",\n              \"version\": \"<string>\"\n            },\n            \"configuration\": {\n              \"quisb\": \"<string>\",\n              \"velit_f\": \"<string>\"\n            },\n            \"inputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ],\n            \"outputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ]\n          },\n          {\n            \"name\": \"<string>\",\n            \"actionTypeId\": {\n              \"category\": \"Test\",\n              \"owner\": \"<string>\",\n              \"provider\": \"<string>\",\n              \"version\": \"<string>\"\n            },\n            \"configuration\": {\n              \"cupidatat734\": \"<string>\",\n              \"sint733\": \"<string>\",\n              \"sint_57\": \"<string>\"\n            },\n            \"inputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ],\n            \"outputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ]\n          }\n        ]\n      }\n    ],\n    \"version\": \"<integer>\"\n  },\n  \"tags\": [\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            },
+            "description": "Creates a pipeline with the specified name and structure. A pipeline consists of stages and actions that process code changes."
           },
           "response": [
             {
-              "id": "6e6246f4-fd05-47eb-b998-f67328e5a784",
+              "id": "224d8015-e89f-48d4-8b1f-56f926eb6381",
               "name": "Pipeline created successfully",
               "originalRequest": {
-                "url": {
-                  "path": [
-                    ""
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
-                      "type": "any",
-                      "value": "{{region}}",
-                      "key": "region"
-                    }
-                  ]
-                },
+                "method": "POST",
                 "header": [
                   {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<API Key>"
+                    "key": "Content-Type",
+                    "value": "application/x-amz-json-1.1"
                   },
                   {
                     "key": "Accept",
                     "value": "application/json"
                   }
                 ],
-                "method": "POST",
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"pipeline\": {\n    \"name\": \"example-resource\",\n    \"roleArn\": \"arn:aws:service:us-east-1:123456789012:resource/example\",\n    \"stages\": [\n      {}\n    ],\n    \"version\": 1\n  },\n  \"tags\": [\n    {\n      \"key\": \"example-value\",\n      \"value\": \"example-value\"\n    }\n  ]\n}"
+                  "raw": "{\n  \"pipeline\": {\n    \"name\": \"<string>\",\n    \"roleArn\": \"<string>\",\n    \"stages\": [\n      {\n        \"name\": \"<string>\",\n        \"actions\": [\n          {\n            \"name\": \"<string>\",\n            \"actionTypeId\": {\n              \"category\": \"Test\",\n              \"owner\": \"<string>\",\n              \"provider\": \"<string>\",\n              \"version\": \"<string>\"\n            },\n            \"configuration\": {\n              \"pariatur_9b9\": \"<string>\",\n              \"Duis__6c\": \"<string>\"\n            },\n            \"inputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ],\n            \"outputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ]\n          },\n          {\n            \"name\": \"<string>\",\n            \"actionTypeId\": {\n              \"category\": \"Approval\",\n              \"owner\": \"<string>\",\n              \"provider\": \"<string>\",\n              \"version\": \"<string>\"\n            },\n            \"configuration\": {\n              \"laboris_2\": \"<string>\",\n              \"Excepteura16\": \"<string>\"\n            },\n            \"inputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ],\n            \"outputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ]\n          }\n        ]\n      },\n      {\n        \"name\": \"<string>\",\n        \"actions\": [\n          {\n            \"name\": \"<string>\",\n            \"actionTypeId\": {\n              \"category\": \"Test\",\n              \"owner\": \"<string>\",\n              \"provider\": \"<string>\",\n              \"version\": \"<string>\"\n            },\n            \"configuration\": {\n              \"quisb\": \"<string>\",\n              \"velit_f\": \"<string>\"\n            },\n            \"inputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ],\n            \"outputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ]\n          },\n          {\n            \"name\": \"<string>\",\n            \"actionTypeId\": {\n              \"category\": \"Test\",\n              \"owner\": \"<string>\",\n              \"provider\": \"<string>\",\n              \"version\": \"<string>\"\n            },\n            \"configuration\": {\n              \"cupidatat734\": \"<string>\",\n              \"sint733\": \"<string>\",\n              \"sint_57\": \"<string>\"\n            },\n            \"inputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ],\n            \"outputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ]\n          }\n        ]\n      }\n    ],\n    \"version\": \"<integer>\"\n  },\n  \"tags\": [\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ]
                 }
               },
               "status": "OK",
               "code": 200,
+              "_postman_previewlanguage": "json",
               "header": [
                 {
                   "key": "Content-Type",
                   "value": "application/json"
                 }
               ],
-              "body": "{\n  \"name\": \"example-resource\",\n  \"roleArn\": \"arn:aws:service:us-east-1:123456789012:resource/example\",\n  \"stages\": [\n    {\n      \"name\": \"example-resource\",\n      \"actions\": []\n    }\n  ],\n  \"version\": 1\n}",
               "cookie": [],
-              "_postman_previewlanguage": "json"
+              "responseTime": null,
+              "body": "{\n  \"name\": \"<string>\",\n  \"roleArn\": \"<string>\",\n  \"stages\": [\n    {\n      \"name\": \"<string>\",\n      \"actions\": [\n        {\n          \"name\": \"<string>\",\n          \"actionTypeId\": {\n            \"category\": \"Deploy\",\n            \"owner\": \"<string>\",\n            \"provider\": \"<string>\",\n            \"version\": \"<string>\"\n          },\n          \"configuration\": {\n            \"Excepteur5f\": \"<string>\",\n            \"ex356\": \"<string>\"\n          },\n          \"inputArtifacts\": [\n            {\n              \"name\": \"<string>\"\n            },\n            {\n              \"name\": \"<string>\"\n            }\n          ],\n          \"outputArtifacts\": [\n            {\n              \"name\": \"<string>\"\n            },\n            {\n              \"name\": \"<string>\"\n            }\n          ]\n        },\n        {\n          \"name\": \"<string>\",\n          \"actionTypeId\": {\n            \"category\": \"Test\",\n            \"owner\": \"<string>\",\n            \"provider\": \"<string>\",\n            \"version\": \"<string>\"\n          },\n          \"configuration\": {\n            \"eu33f\": \"<string>\",\n            \"aliquip8a\": \"<string>\",\n            \"ut_4\": \"<string>\"\n          },\n          \"inputArtifacts\": [\n            {\n              \"name\": \"<string>\"\n            },\n            {\n              \"name\": \"<string>\"\n            }\n          ],\n          \"outputArtifacts\": [\n            {\n              \"name\": \"<string>\"\n            },\n            {\n              \"name\": \"<string>\"\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"name\": \"<string>\",\n      \"actions\": [\n        {\n          \"name\": \"<string>\",\n          \"actionTypeId\": {\n            \"category\": \"Test\",\n            \"owner\": \"<string>\",\n            \"provider\": \"<string>\",\n            \"version\": \"<string>\"\n          },\n          \"configuration\": {\n            \"magna3\": \"<string>\"\n          },\n          \"inputArtifacts\": [\n            {\n              \"name\": \"<string>\"\n            },\n            {\n              \"name\": \"<string>\"\n            }\n          ],\n          \"outputArtifacts\": [\n            {\n              \"name\": \"<string>\"\n            },\n            {\n              \"name\": \"<string>\"\n            }\n          ]\n        },\n        {\n          \"name\": \"<string>\",\n          \"actionTypeId\": {\n            \"category\": \"Source\",\n            \"owner\": \"<string>\",\n            \"provider\": \"<string>\",\n            \"version\": \"<string>\"\n          },\n          \"configuration\": {\n            \"Duis713\": \"<string>\",\n            \"elit2c9\": \"<string>\"\n          },\n          \"inputArtifacts\": [\n            {\n              \"name\": \"<string>\"\n            },\n            {\n              \"name\": \"<string>\"\n            }\n          ],\n          \"outputArtifacts\": [\n            {\n              \"name\": \"<string>\"\n            },\n            {\n              \"name\": \"<string>\"\n            }\n          ]\n        }\n      ]\n    }\n  ],\n  \"version\": \"<integer>\"\n}",
+              "createdAt": "2026-10-21T20:12:16.000Z",
+              "updatedAt": "2026-10-21T20:12:16.000Z",
+              "uid": "35240-224d8015-e89f-48d4-8b1f-56f926eb6381"
             },
             {
-              "id": "cbb72486-e1c9-49f4-9721-de18cd0a20ad",
+              "id": "43f54e4d-69e7-42bf-8309-dc4271d52b78",
               "name": "Bad request",
               "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-amz-json-1.1"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"pipeline\": {\n    \"name\": \"<string>\",\n    \"roleArn\": \"<string>\",\n    \"stages\": [\n      {\n        \"name\": \"<string>\",\n        \"actions\": [\n          {\n            \"name\": \"<string>\",\n            \"actionTypeId\": {\n              \"category\": \"Test\",\n              \"owner\": \"<string>\",\n              \"provider\": \"<string>\",\n              \"version\": \"<string>\"\n            },\n            \"configuration\": {\n              \"pariatur_9b9\": \"<string>\",\n              \"Duis__6c\": \"<string>\"\n            },\n            \"inputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ],\n            \"outputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ]\n          },\n          {\n            \"name\": \"<string>\",\n            \"actionTypeId\": {\n              \"category\": \"Approval\",\n              \"owner\": \"<string>\",\n              \"provider\": \"<string>\",\n              \"version\": \"<string>\"\n            },\n            \"configuration\": {\n              \"laboris_2\": \"<string>\",\n              \"Excepteura16\": \"<string>\"\n            },\n            \"inputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ],\n            \"outputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ]\n          }\n        ]\n      },\n      {\n        \"name\": \"<string>\",\n        \"actions\": [\n          {\n            \"name\": \"<string>\",\n            \"actionTypeId\": {\n              \"category\": \"Test\",\n              \"owner\": \"<string>\",\n              \"provider\": \"<string>\",\n              \"version\": \"<string>\"\n            },\n            \"configuration\": {\n              \"quisb\": \"<string>\",\n              \"velit_f\": \"<string>\"\n            },\n            \"inputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ],\n            \"outputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ]\n          },\n          {\n            \"name\": \"<string>\",\n            \"actionTypeId\": {\n              \"category\": \"Test\",\n              \"owner\": \"<string>\",\n              \"provider\": \"<string>\",\n              \"version\": \"<string>\"\n            },\n            \"configuration\": {\n              \"cupidatat734\": \"<string>\",\n              \"sint733\": \"<string>\",\n              \"sint_57\": \"<string>\"\n            },\n            \"inputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ],\n            \"outputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ]\n          }\n        ]\n      }\n    ],\n    \"version\": \"<integer>\"\n  },\n  \"tags\": [\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}"
+                },
                 "url": {
-                  "path": [
-                    ""
-                  ],
+                  "raw": "{{baseUrl}}/",
                   "host": [
                     "{{baseUrl}}"
                   ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
-                      "type": "any",
-                      "value": "{{region}}",
-                      "key": "region"
-                    }
+                  "path": [
+                    ""
                   ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<API Key>"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"pipeline\": {\n    \"name\": \"example-resource\",\n    \"roleArn\": \"arn:aws:service:us-east-1:123456789012:resource/example\",\n    \"stages\": [\n      {}\n    ],\n    \"version\": 1\n  },\n  \"tags\": [\n    {\n      \"key\": \"example-value\",\n      \"value\": \"example-value\"\n    }\n  ]\n}"
                 }
               },
               "status": "Bad Request",
               "code": 400,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
+              "_postman_previewlanguage": "text",
+              "header": [],
               "cookie": [],
-              "_postman_previewlanguage": "text"
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-10-21T20:12:16.000Z",
+              "updatedAt": "2026-10-21T20:12:16.000Z",
+              "uid": "35240-43f54e4d-69e7-42bf-8309-dc4271d52b78"
             },
             {
-              "id": "f1ea5335-bf57-40bc-b406-a25143be6ef2",
+              "id": "726ae60d-5fea-4b6f-a90b-e5abba49e978",
               "name": "Pipeline already exists",
               "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-amz-json-1.1"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"pipeline\": {\n    \"name\": \"<string>\",\n    \"roleArn\": \"<string>\",\n    \"stages\": [\n      {\n        \"name\": \"<string>\",\n        \"actions\": [\n          {\n            \"name\": \"<string>\",\n            \"actionTypeId\": {\n              \"category\": \"Test\",\n              \"owner\": \"<string>\",\n              \"provider\": \"<string>\",\n              \"version\": \"<string>\"\n            },\n            \"configuration\": {\n              \"pariatur_9b9\": \"<string>\",\n              \"Duis__6c\": \"<string>\"\n            },\n            \"inputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ],\n            \"outputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ]\n          },\n          {\n            \"name\": \"<string>\",\n            \"actionTypeId\": {\n              \"category\": \"Approval\",\n              \"owner\": \"<string>\",\n              \"provider\": \"<string>\",\n              \"version\": \"<string>\"\n            },\n            \"configuration\": {\n              \"laboris_2\": \"<string>\",\n              \"Excepteura16\": \"<string>\"\n            },\n            \"inputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ],\n            \"outputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ]\n          }\n        ]\n      },\n      {\n        \"name\": \"<string>\",\n        \"actions\": [\n          {\n            \"name\": \"<string>\",\n            \"actionTypeId\": {\n              \"category\": \"Test\",\n              \"owner\": \"<string>\",\n              \"provider\": \"<string>\",\n              \"version\": \"<string>\"\n            },\n            \"configuration\": {\n              \"quisb\": \"<string>\",\n              \"velit_f\": \"<string>\"\n            },\n            \"inputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ],\n            \"outputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ]\n          },\n          {\n            \"name\": \"<string>\",\n            \"actionTypeId\": {\n              \"category\": \"Test\",\n              \"owner\": \"<string>\",\n              \"provider\": \"<string>\",\n              \"version\": \"<string>\"\n            },\n            \"configuration\": {\n              \"cupidatat734\": \"<string>\",\n              \"sint733\": \"<string>\",\n              \"sint_57\": \"<string>\"\n            },\n            \"inputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ],\n            \"outputArtifacts\": [\n              {\n                \"name\": \"<string>\"\n              },\n              {\n                \"name\": \"<string>\"\n              }\n            ]\n          }\n        ]\n      }\n    ],\n    \"version\": \"<integer>\"\n  },\n  \"tags\": [\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}"
+                },
                 "url": {
-                  "path": [
-                    ""
-                  ],
+                  "raw": "{{baseUrl}}/",
                   "host": [
                     "{{baseUrl}}"
                   ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
-                      "type": "any",
-                      "value": "{{region}}",
-                      "key": "region"
-                    }
+                  "path": [
+                    ""
                   ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<API Key>"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"pipeline\": {\n    \"name\": \"example-resource\",\n    \"roleArn\": \"arn:aws:service:us-east-1:123456789012:resource/example\",\n    \"stages\": [\n      {}\n    ],\n    \"version\": 1\n  },\n  \"tags\": [\n    {\n      \"key\": \"example-value\",\n      \"value\": \"example-value\"\n    }\n  ]\n}"
                 }
               },
               "status": "Conflict",
               "code": 409,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
+              "_postman_previewlanguage": "text",
+              "header": [],
               "cookie": [],
-              "_postman_previewlanguage": "text"
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-10-21T20:12:16.000Z",
+              "updatedAt": "2026-10-21T20:12:16.000Z",
+              "uid": "35240-726ae60d-5fea-4b6f-a90b-e5abba49e978"
             }
           ],
-          "event": [],
+          "createdAt": "2026-10-21T20:12:16.000Z",
+          "updatedAt": "2026-10-21T20:12:16.000Z",
+          "uid": "35240-0719736e-1112-4823-a61e-b8e0119f8909"
+        }
+      ],
+      "id": "783e94bd-1af0-4420-8e03-acdb208890c9",
+      "createdAt": "2026-10-21T20:12:16.000Z",
+      "updatedAt": "2026-10-21T20:12:16.000Z",
+      "uid": "35240-783e94bd-1af0-4420-8e03-acdb208890c9"
+    },
+    {
+      "name": "getPipeline",
+      "item": [
+        {
+          "name": "Amazon CodePipeline Get Pipeline Details",
+          "id": "148617ee-64f4-458c-9441-8058fddcc395",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "ac978914-d2a7-48e2-8952-2d5eec6be773",
-          "name": "Amazon CodePipeline Get Pipeline Details",
+          },
           "request": {
-            "name": "Amazon CodePipeline Get Pipeline Details",
-            "description": {
-              "content": "Returns the metadata, structure, stages, and actions of a pipeline.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "getPipeline"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
-                  "type": "any",
-                  "value": "{{region}}",
-                  "key": "region"
-                }
-              ]
-            },
+            "method": "POST",
             "header": [
               {
                 "key": "Content-Type",
@@ -245,148 +196,125 @@
                 "value": "application/json"
               }
             ],
-            "method": "POST",
-            "auth": null,
             "body": {
               "mode": "raw",
               "raw": "{\n  \"name\": \"<string>\",\n  \"version\": \"<integer>\"\n}"
-            }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/getPipeline",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getPipeline"
+              ]
+            },
+            "description": "Returns the metadata, structure, stages, and actions of a pipeline."
           },
           "response": [
             {
-              "id": "4d76244f-d9e6-4f21-b1ba-b798124fddc0",
+              "id": "74afc9a5-d3c0-449e-8ab6-a084bf143d01",
               "name": "Successful response",
               "originalRequest": {
-                "url": {
-                  "path": [
-                    "getPipeline"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
-                      "type": "any",
-                      "value": "{{region}}",
-                      "key": "region"
-                    }
-                  ]
-                },
+                "method": "POST",
                 "header": [
                   {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<API Key>"
+                    "key": "Content-Type",
+                    "value": "application/x-amz-json-1.1"
                   },
                   {
                     "key": "Accept",
                     "value": "application/json"
                   }
                 ],
-                "method": "POST",
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"name\": \"example-resource\",\n  \"version\": 1\n}"
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"version\": \"<integer>\"\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/getPipeline",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "getPipeline"
+                  ]
                 }
               },
               "status": "OK",
               "code": 200,
+              "_postman_previewlanguage": "json",
               "header": [
                 {
                   "key": "Content-Type",
                   "value": "application/json"
                 }
               ],
-              "body": "{\n  \"name\": \"example-resource\",\n  \"roleArn\": \"arn:aws:service:us-east-1:123456789012:resource/example\",\n  \"stages\": [\n    {\n      \"name\": \"example-resource\",\n      \"actions\": []\n    }\n  ],\n  \"version\": 1\n}",
               "cookie": [],
-              "_postman_previewlanguage": "json"
+              "responseTime": null,
+              "body": "{\n  \"name\": \"<string>\",\n  \"roleArn\": \"<string>\",\n  \"stages\": [\n    {\n      \"name\": \"<string>\",\n      \"actions\": [\n        {\n          \"name\": \"<string>\",\n          \"actionTypeId\": {\n            \"category\": \"Deploy\",\n            \"owner\": \"<string>\",\n            \"provider\": \"<string>\",\n            \"version\": \"<string>\"\n          },\n          \"configuration\": {\n            \"Excepteur5f\": \"<string>\",\n            \"ex356\": \"<string>\"\n          },\n          \"inputArtifacts\": [\n            {\n              \"name\": \"<string>\"\n            },\n            {\n              \"name\": \"<string>\"\n            }\n          ],\n          \"outputArtifacts\": [\n            {\n              \"name\": \"<string>\"\n            },\n            {\n              \"name\": \"<string>\"\n            }\n          ]\n        },\n        {\n          \"name\": \"<string>\",\n          \"actionTypeId\": {\n            \"category\": \"Test\",\n            \"owner\": \"<string>\",\n            \"provider\": \"<string>\",\n            \"version\": \"<string>\"\n          },\n          \"configuration\": {\n            \"eu33f\": \"<string>\",\n            \"aliquip8a\": \"<string>\",\n            \"ut_4\": \"<string>\"\n          },\n          \"inputArtifacts\": [\n            {\n              \"name\": \"<string>\"\n            },\n            {\n              \"name\": \"<string>\"\n            }\n          ],\n          \"outputArtifacts\": [\n            {\n              \"name\": \"<string>\"\n            },\n            {\n              \"name\": \"<string>\"\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"name\": \"<string>\",\n      \"actions\": [\n        {\n          \"name\": \"<string>\",\n          \"actionTypeId\": {\n            \"category\": \"Test\",\n            \"owner\": \"<string>\",\n            \"provider\": \"<string>\",\n            \"version\": \"<string>\"\n          },\n          \"configuration\": {\n            \"magna3\": \"<string>\"\n          },\n          \"inputArtifacts\": [\n            {\n              \"name\": \"<string>\"\n            },\n            {\n              \"name\": \"<string>\"\n            }\n          ],\n          \"outputArtifacts\": [\n            {\n              \"name\": \"<string>\"\n            },\n            {\n              \"name\": \"<string>\"\n            }\n          ]\n        },\n        {\n          \"name\": \"<string>\",\n          \"actionTypeId\": {\n            \"category\": \"Source\",\n            \"owner\": \"<string>\",\n            \"provider\": \"<string>\",\n            \"version\": \"<string>\"\n          },\n          \"configuration\": {\n            \"Duis713\": \"<string>\",\n            \"elit2c9\": \"<string>\"\n          },\n          \"inputArtifacts\": [\n            {\n              \"name\": \"<string>\"\n            },\n            {\n              \"name\": \"<string>\"\n            }\n          ],\n          \"outputArtifacts\": [\n            {\n              \"name\": \"<string>\"\n            },\n            {\n              \"name\": \"<string>\"\n            }\n          ]\n        }\n      ]\n    }\n  ],\n  \"version\": \"<integer>\"\n}",
+              "createdAt": "2026-10-21T20:12:16.000Z",
+              "updatedAt": "2026-10-21T20:12:16.000Z",
+              "uid": "35240-74afc9a5-d3c0-449e-8ab6-a084bf143d01"
             },
             {
-              "id": "a504c9cc-8e39-41e9-88f2-e4c59d77e19c",
+              "id": "409443f7-638c-4ed6-8c0c-866b7f291c5e",
               "name": "Pipeline not found",
               "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-amz-json-1.1"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"version\": \"<integer>\"\n}"
+                },
                 "url": {
-                  "path": [
-                    "getPipeline"
-                  ],
+                  "raw": "{{baseUrl}}/getPipeline",
                   "host": [
                     "{{baseUrl}}"
                   ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
-                      "type": "any",
-                      "value": "{{region}}",
-                      "key": "region"
-                    }
+                  "path": [
+                    "getPipeline"
                   ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<API Key>"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"name\": \"example-resource\",\n  \"version\": 1\n}"
                 }
               },
               "status": "Not Found",
               "code": 404,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
+              "_postman_previewlanguage": "text",
+              "header": [],
               "cookie": [],
-              "_postman_previewlanguage": "text"
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-10-21T20:12:16.000Z",
+              "updatedAt": "2026-10-21T20:12:16.000Z",
+              "uid": "35240-409443f7-638c-4ed6-8c0c-866b7f291c5e"
             }
           ],
-          "event": [],
+          "createdAt": "2026-10-21T20:12:16.000Z",
+          "updatedAt": "2026-10-21T20:12:16.000Z",
+          "uid": "35240-148617ee-64f4-458c-9441-8058fddcc395"
+        }
+      ],
+      "id": "d99aa032-e900-4e56-9743-8fd5f112bc36",
+      "createdAt": "2026-10-21T20:12:16.000Z",
+      "updatedAt": "2026-10-21T20:12:16.000Z",
+      "uid": "35240-d99aa032-e900-4e56-9743-8fd5f112bc36"
+    },
+    {
+      "name": "listPipelines",
+      "item": [
+        {
+          "name": "Amazon CodePipeline List Pipelines",
+          "id": "4e88d3e1-7b42-442d-bfd8-6154ee2273f6",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "7bf7bd1a-d380-4cab-a848-17c6bac80334",
-          "name": "Amazon CodePipeline List Pipelines",
+          },
           "request": {
-            "name": "Amazon CodePipeline List Pipelines",
-            "description": {
-              "content": "Gets a summary of all of the pipelines associated with your account.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "listPipelines"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
-                  "type": "any",
-                  "value": "{{region}}",
-                  "key": "region"
-                }
-              ]
-            },
+            "method": "POST",
             "header": [
               {
                 "key": "Content-Type",
@@ -397,262 +325,199 @@
                 "value": "application/json"
               }
             ],
-            "method": "POST",
-            "auth": null,
             "body": {
               "mode": "raw",
               "raw": "{\n  \"nextToken\": \"<string>\",\n  \"maxResults\": \"<integer>\"\n}"
-            }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/listPipelines",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "listPipelines"
+              ]
+            },
+            "description": "Gets a summary of all of the pipelines associated with your account."
           },
           "response": [
             {
-              "id": "f030d65e-720c-49ec-b4a9-74a20d6b3984",
+              "id": "1b2697bf-204a-4405-96a4-f14420d12245",
               "name": "Successful response",
               "originalRequest": {
-                "url": {
-                  "path": [
-                    "listPipelines"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
-                      "type": "any",
-                      "value": "{{region}}",
-                      "key": "region"
-                    }
-                  ]
-                },
+                "method": "POST",
                 "header": [
                   {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<API Key>"
+                    "key": "Content-Type",
+                    "value": "application/x-amz-json-1.1"
                   },
                   {
                     "key": "Accept",
                     "value": "application/json"
                   }
                 ],
-                "method": "POST",
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"nextToken\": \"example-value\",\n  \"maxResults\": 1\n}"
+                  "raw": "{\n  \"nextToken\": \"<string>\",\n  \"maxResults\": \"<integer>\"\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/listPipelines",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "listPipelines"
+                  ]
                 }
               },
               "status": "OK",
               "code": 200,
+              "_postman_previewlanguage": "json",
               "header": [
                 {
                   "key": "Content-Type",
                   "value": "application/json"
                 }
               ],
-              "body": "{\n  \"pipelines\": [\n    {\n      \"name\": \"example-resource\",\n      \"version\": 1,\n      \"created\": \"example-value\",\n      \"updated\": \"example-value\"\n    }\n  ],\n  \"nextToken\": \"example-value\"\n}",
               "cookie": [],
-              "_postman_previewlanguage": "json"
+              "responseTime": null,
+              "body": "{\n  \"pipelines\": [\n    {\n      \"name\": \"<string>\",\n      \"version\": \"<integer>\",\n      \"created\": \"<dateTime>\",\n      \"updated\": \"<dateTime>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"version\": \"<integer>\",\n      \"created\": \"<dateTime>\",\n      \"updated\": \"<dateTime>\"\n    }\n  ],\n  \"nextToken\": \"<string>\"\n}",
+              "createdAt": "2026-10-21T20:12:16.000Z",
+              "updatedAt": "2026-10-21T20:12:16.000Z",
+              "uid": "35240-1b2697bf-204a-4405-96a4-f14420d12245"
             }
           ],
-          "event": [],
+          "createdAt": "2026-10-21T20:12:16.000Z",
+          "updatedAt": "2026-10-21T20:12:16.000Z",
+          "uid": "35240-4e88d3e1-7b42-442d-bfd8-6154ee2273f6"
+        }
+      ],
+      "id": "52d80ecf-d70a-4b8d-84f2-2c988c884cd6",
+      "createdAt": "2026-10-21T20:12:16.000Z",
+      "updatedAt": "2026-10-21T20:12:16.000Z",
+      "uid": "35240-52d80ecf-d70a-4b8d-84f2-2c988c884cd6"
+    },
+    {
+      "name": "deletePipeline",
+      "item": [
+        {
+          "name": "Amazon CodePipeline Delete a Pipeline",
+          "id": "46d3b20e-93b3-4d06-8c83-b4be4815d543",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "41647869-b86c-4918-bb78-703950849d99",
-          "name": "Amazon CodePipeline Delete a Pipeline",
+          },
           "request": {
-            "name": "Amazon CodePipeline Delete a Pipeline",
-            "description": {
-              "content": "Deletes the specified pipeline.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "deletePipeline"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
-                  "type": "any",
-                  "value": "{{region}}",
-                  "key": "region"
-                }
-              ]
-            },
+            "method": "POST",
             "header": [
               {
                 "key": "Content-Type",
                 "value": "application/x-amz-json-1.1"
               }
             ],
-            "method": "POST",
-            "auth": null,
             "body": {
               "mode": "raw",
               "raw": "{\n  \"name\": \"<string>\"\n}"
-            }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/deletePipeline",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "deletePipeline"
+              ]
+            },
+            "description": "Deletes the specified pipeline."
           },
           "response": [
             {
-              "id": "3ebd4ed7-c23f-474e-b246-c8040938356a",
+              "id": "bbeec227-0085-4398-8b6b-8a5673f9dbae",
               "name": "Pipeline deleted successfully",
               "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-amz-json-1.1"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\"\n}"
+                },
                 "url": {
-                  "path": [
-                    "deletePipeline"
-                  ],
+                  "raw": "{{baseUrl}}/deletePipeline",
                   "host": [
                     "{{baseUrl}}"
                   ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
-                      "type": "any",
-                      "value": "{{region}}",
-                      "key": "region"
-                    }
+                  "path": [
+                    "deletePipeline"
                   ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<API Key>"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"name\": \"example-resource\"\n}"
                 }
               },
               "status": "OK",
               "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
+              "_postman_previewlanguage": "text",
+              "header": [],
               "cookie": [],
-              "_postman_previewlanguage": "text"
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-10-21T20:12:16.000Z",
+              "updatedAt": "2026-10-21T20:12:16.000Z",
+              "uid": "35240-bbeec227-0085-4398-8b6b-8a5673f9dbae"
             },
             {
-              "id": "c7793843-b07d-4476-86f4-e188f8774a34",
+              "id": "c0960e7e-ae94-4955-a363-ffb34c4fc40b",
               "name": "Pipeline not found",
               "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-amz-json-1.1"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\"\n}"
+                },
                 "url": {
-                  "path": [
-                    "deletePipeline"
-                  ],
+                  "raw": "{{baseUrl}}/deletePipeline",
                   "host": [
                     "{{baseUrl}}"
                   ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
-                      "type": "any",
-                      "value": "{{region}}",
-                      "key": "region"
-                    }
+                  "path": [
+                    "deletePipeline"
                   ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<API Key>"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"name\": \"example-resource\"\n}"
                 }
               },
               "status": "Not Found",
               "code": 404,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
+              "_postman_previewlanguage": "text",
+              "header": [],
               "cookie": [],
-              "_postman_previewlanguage": "text"
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-10-21T20:12:16.000Z",
+              "updatedAt": "2026-10-21T20:12:16.000Z",
+              "uid": "35240-c0960e7e-ae94-4955-a363-ffb34c4fc40b"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "createdAt": "2026-10-21T20:12:16.000Z",
+          "updatedAt": "2026-10-21T20:12:16.000Z",
+          "uid": "35240-46d3b20e-93b3-4d06-8c83-b4be4815d543"
         }
       ],
-      "event": []
+      "id": "fa8ac6fa-4f10-4035-9ec5-bb587be0a50c",
+      "createdAt": "2026-10-21T20:12:16.000Z",
+      "updatedAt": "2026-10-21T20:12:16.000Z",
+      "uid": "35240-fa8ac6fa-4f10-4035-9ec5-bb587be0a50c"
     }
   ],
-  "event": [],
   "variable": [
     {
-      "description": {
-        "content": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
-        "type": "text/plain"
-      },
-      "type": "any",
-      "value": "us-east-1",
-      "key": "region"
-    },
-    {
-      "type": "string",
-      "value": "http://codepipeline.{{region}}.amazonaws.com",
-      "key": "baseUrl"
+      "key": "baseUrl",
+      "value": "https://codepipeline.amazonaws.com"
     }
-  ],
-  "auth": {
-    "type": "apikey",
-    "apikey": [
-      {
-        "key": "key",
-        "value": "Authorization"
-      },
-      {
-        "key": "value",
-        "value": "{{apiKey}}"
-      },
-      {
-        "key": "in",
-        "value": "header"
-      }
-    ]
-  },
-  "info": {
-    "_postman_id": "6935031d-ccb0-41a1-8ad5-b2d92a48b2dd",
-    "name": "AWS CodePipeline Executions Pipelines API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "<fullname>CodePipeline</fullname> <p> <b>Overview</b> </p> <p>This is the CodePipeline API Reference. This guide provides descriptions of the actions and data types for CodePipeline. Some functionality for your pipeline can only be configured through the API. For more information, see the <a href=\"https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html\">CodePipeline User Guide</a>.</p> <p>You can use the CodePipeline API to work with pipelines, stages, actions, and transitions.</p> <p> <i>Pipelines</i> are models of automated release processes. Each pipeline is uniquely named, and consists of stages, actions, and transitions. </p> <p>You can work with pipelines by calling:</p> <ul> <li> <p> <a>CreatePipeline</a>, which creates a uniquely named pipeline.</p> </li> <li> <p> <a>DeletePipeline</a>, which deletes the specified pipeline.</p> </li> <li> <p> <a>GetPipeline</a>, which returns information about the pipeline structure and pipeline metadata, including the pipeline Amazon Resource Name (ARN).</p> </li> <li> <p> <a>GetPipelineExecution</a>, which returns information about a specific execution of a pipeline.</p> </li> <li> <p> <a>GetPipelineState</a>, which returns information about the current state of the stages and actions of a pipeline.</p> </li> <li> <p> <a>ListActionExecutions</a>, which returns action-level details for past executions. The details include full stage and action-level details, including individual action duration, status, any errors that occurred during the execution, and input and output artifact location details.</p> </li> <li> <p> <a>ListPipelines</a>, which gets a summary of all of the pipelines associated with your account.</p> </li> <li> <p> <a>ListPipelineExecutions</a>, which gets a summary of the most recent executions for a pipeline.</p> </li> <li> <p> <a>StartPipelineExecution</a>, which runs the most recent revision of an artifact through the pipeline.</p> </li> <li> <p> <a>StopPipelineExecution</a>, which stops the specified pipeline execution from continuing through the pipeline.</p> </li> <li> <p> <a>UpdatePipeline</a>, which updates a pipeline with edits or changes to the structure of the pipeline.</p> </li> </ul> <p>Pipelines include <i>stages</i>. Each stage contains one or more actions that must complete before the next stage begins. A stage results in success or failure. If a stage fails, the pipeline stops at that stage and remains stopped until either a new version of an artifact appears in the source location, or a user takes action to rerun the most recent artifact through the pipeline. You can call <a>GetPipelineState</a>, which displays the status of a pipeline, including the status of stages in the pipeline, or <a>GetPipeline</a>, which returns the entire structure of the pipeline, including the stages of that pipeline. For more information about the structure of stages and actions, see <a href=\"https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-structure.html\">CodePipeline Pipeline Structure Reference</a>.</p> <p>Pipeline stages include <i>actions</i> that are categorized into categories such as source or build actions performed in a stage of a pipeline. For example, you can use a source action to import artifacts into a pipeline from a source such as Amazon S3. Like stages, you do not work with actions directly in most cases, but you do define and interact with actions when working with pipeline operations such as <a>CreatePipeline</a> and <a>GetPipelineState</a>. Valid action categories are:</p> <ul> <li> <p>Source</p> </li> <li> <p>Build</p> </li> <li> <p>Test</p> </li> <li> <p>Deploy</p> </li> <li> <p>Approval</p> </li> <li> <p>Invoke</p> </li> </ul> <p>Pipelines also include <i>transitions</i>, which allow the transition of artifacts from one stage to the next in a pipeline after the actions in one stage complete.</p> <p>You can work with transitions by calling:</p> <ul> <li> <p> <a>DisableStageTransition</a>, which prevents artifacts from transitioning to the next stage in a pipeline.</p> </li> <li> <p> <a>EnableStageTransition</a>, which enables transition of artifacts between stages in a pipeline. </p> </li> </ul> <p> <b>Using the API to integrate with CodePipeline</b> </p> <p>For third-party integrators or developers who want to create their own integrations with CodePipeline, the expected sequence varies from the standard API user. To integrate with CodePipeline, developers need to work with the following items:</p> <p> <b>Jobs</b>, which are instances of an action. For example, a job for a source action might import a revision of an artifact from a source. </p> <p>You can work with jobs by calling:</p> <ul> <li> <p> <a>AcknowledgeJob</a>, which confirms whether a job worker has received the specified job.</p> </li> <li> <p> <a>GetJobDetails</a>, which returns the details of a job.</p> </li> <li> <p> <a>PollForJobs</a>, which determines whether there are any jobs to act on.</p> </li> <li> <p> <a>PutJobFailureResult</a>, which provides details of a job failure. </p> </li> <li> <p> <a>PutJobSuccessResult</a>, which provides details of a job success.</p> </li> </ul> <p> <b>Third party jobs</b>, which are instances of an action created by a partner action and integrated into CodePipeline. Partner actions are created by members of the Amazon Web Services Partner Network.</p> <p>You can work with third party jobs by calling:</p> <ul> <li> <p> <a>AcknowledgeThirdPartyJob</a>, which confirms whether a job worker has received the specified job.</p> </li> <li> <p> <a>GetThirdPartyJobDetails</a>, which requests the details of a job for a partner action.</p> </li> <li> <p> <a>PollForThirdPartyJobs</a>, which determines whether there are any jobs to act on. </p> </li> <li> <p> <a>PutThirdPartyJobFailureResult</a>, which provides details of a job failure.</p> </li> <li> <p> <a>PutThirdPartyJobSuccessResult</a>, which provides details of a job success.</p> </li> </ul>\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
-      "type": "text/plain"
-    }
-  }
+  ]
 }
