@@ -66,143 +66,258 @@
 
 AWS CodePipeline is a fully managed continuous delivery service that helps you automate your release pipelines for fast and reliable application and infrastructure updates. CodePipeline automates the build, test, and deploy phases of your release process every time there is a code change, based on the release model you define.
 
-**URL:** [Visit APIs.json](https://raw.githubusercontent.com/api-evangelist/amazon-codepipeline/refs/heads/main/apis.yml)
+**Areas:** Amazon · AWS · CI/CD · Continuous Delivery · Developer Tools · DevOps · Pipelines · Release Automation
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Amazon CodePipeline on APIs.io
 
-## Tags:
+Everything profiled for Amazon CodePipeline is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/amazon-codepipeline/](https://apis.io/providers/amazon-codepipeline/)** — or go straight to one of the APIs or properties below.
 
- - Amazon, AWS, CI/CD, Continuous Delivery, DevOps, Pipeline, Release Automation
+### APIs (3)
 
-## Timestamps
+- [Amazon CodePipeline Executions API](https://apis.io/apis/amazon-codepipeline/amazon-codepipeline-executions-api/) — Operations for managing pipeline executions
+- [Amazon CodePipeline Pipelines API](https://apis.io/apis/amazon-codepipeline/amazon-codepipeline-pipelines-api/) — Operations for managing CodePipeline pipelines
+- [Amazon CodePipeline AWS CodePipeline API](https://apis.io/apis/amazon-codepipeline/amazon-codepipeline-aws-codepipeline-api/) — The AWS CodePipeline API from Amazon CodePipeline — 39 operation(s) for aws codepipeline.
 
-- **Created:** 2026-03-16
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Amazon CodePipeline API
+#### MCP servers (1)
 
-The Amazon CodePipeline REST API.
+Model Context Protocol servers that expose the API to agents.
 
-**Human URL:** [https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html](https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html)
+- [amazon-codepipeline](https://apis.io/servers/amazon-codepipeline/amazon-codepipeline/)
 
-#### Tags:
+#### Agentic access (1)
 
- - Amazon, AWS, CI/CD, Continuous Delivery, DevOps
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Properties
+- [Amazon Codepipeline Agentic Access](https://apis.io/agentic-access/amazon-codepipeline/amazon-codepipeline-agentic-access/)
 
+#### JSON Schema (314)
+
+The data models the API reads and writes.
+
+- [AccessKeyId](https://apis.io/schemas/amazon-codepipeline/amazon-codepipeline-access-key-id/)
+- [AccountId](https://apis.io/schemas/amazon-codepipeline/amazon-codepipeline-account-id/)
+- [AcknowledgeJobInput](https://apis.io/schemas/amazon-codepipeline/amazon-codepipeline-acknowledge-job-input/)
+- [AcknowledgeJobOutput](https://apis.io/schemas/amazon-codepipeline/amazon-codepipeline-acknowledge-job-output/)
+- [AcknowledgeThirdPartyJobInput](https://apis.io/schemas/amazon-codepipeline/amazon-codepipeline-acknowledge-third-party-job-input/)
+- [AcknowledgeThirdPartyJobOutput](https://apis.io/schemas/amazon-codepipeline/amazon-codepipeline-acknowledge-third-party-job-output/)
+- [ActionCategory](https://apis.io/schemas/amazon-codepipeline/amazon-codepipeline-action-category/)
+- [ActionConfiguration](https://apis.io/schemas/amazon-codepipeline/amazon-codepipeline-action-configuration/)
+- [ActionConfigurationKey](https://apis.io/schemas/amazon-codepipeline/amazon-codepipeline-action-configuration-key/)
+- [ActionConfigurationMap](https://apis.io/schemas/amazon-codepipeline/amazon-codepipeline-action-configuration-map/)
+- [ActionConfigurationProperty](https://apis.io/schemas/amazon-codepipeline/amazon-codepipeline-action-configuration-property/)
+- [ActionConfigurationPropertyList](https://apis.io/schemas/amazon-codepipeline/amazon-codepipeline-action-configuration-property-list/)
+- [ActionConfigurationPropertyType](https://apis.io/schemas/amazon-codepipeline/amazon-codepipeline-action-configuration-property-type/)
+- [ActionConfigurationQueryableValue](https://apis.io/schemas/amazon-codepipeline/amazon-codepipeline-action-configuration-queryable-value/)
+- [ActionConfigurationValue](https://apis.io/schemas/amazon-codepipeline/amazon-codepipeline-action-configuration-value/)
+- [ActionContext](https://apis.io/schemas/amazon-codepipeline/amazon-codepipeline-action-context/)
+- [ActionDeclaration](https://apis.io/schemas/amazon-codepipeline/amazon-codepipeline-action-declaration/)
+- [ActionExecution](https://apis.io/schemas/amazon-codepipeline/amazon-codepipeline-action-execution/)
+- [ActionExecutionDetail](https://apis.io/schemas/amazon-codepipeline/amazon-codepipeline-action-execution-detail/)
+- [ActionExecutionDetailList](https://apis.io/schemas/amazon-codepipeline/amazon-codepipeline-action-execution-detail-list/)
+- [ActionExecutionFilter](https://apis.io/schemas/amazon-codepipeline/amazon-codepipeline-action-execution-filter/)
+- [ActionExecutionId](https://apis.io/schemas/amazon-codepipeline/amazon-codepipeline-action-execution-id/)
+- [ActionExecutionInput](https://apis.io/schemas/amazon-codepipeline/amazon-codepipeline-action-execution-input/)
+- [ActionExecutionOutput](https://apis.io/schemas/amazon-codepipeline/amazon-codepipeline-action-execution-output/)
+- [ActionExecutionResult](https://apis.io/schemas/amazon-codepipeline/amazon-codepipeline-action-execution-result/)
+- …and 289 more published on APIs.io
+
+#### JSON Structure (314)
+
+Data models expressed in JSON Structure.
+
+- [Amazon Codepipeline Access Key Id Structure](https://apis.io/json-structure/amazon-codepipeline/amazon-codepipeline-access-key-id-structure/)
+- [Amazon Codepipeline Account Id Structure](https://apis.io/json-structure/amazon-codepipeline/amazon-codepipeline-account-id-structure/)
+- [Amazon Codepipeline Acknowledge Job Input Structure](https://apis.io/json-structure/amazon-codepipeline/amazon-codepipeline-acknowledge-job-input-structure/)
+- [Amazon Codepipeline Acknowledge Job Output Structure](https://apis.io/json-structure/amazon-codepipeline/amazon-codepipeline-acknowledge-job-output-structure/)
+- [Amazon Codepipeline Acknowledge Third Party Job Input Structure](https://apis.io/json-structure/amazon-codepipeline/amazon-codepipeline-acknowledge-third-party-job-input-structure/)
+- [Amazon Codepipeline Acknowledge Third Party Job Output Structure](https://apis.io/json-structure/amazon-codepipeline/amazon-codepipeline-acknowledge-third-party-job-output-structure/)
+- [Amazon Codepipeline Action Category Structure](https://apis.io/json-structure/amazon-codepipeline/amazon-codepipeline-action-category-structure/)
+- [Amazon Codepipeline Action Configuration Key Structure](https://apis.io/json-structure/amazon-codepipeline/amazon-codepipeline-action-configuration-key-structure/)
+- [Amazon Codepipeline Action Configuration Map Structure](https://apis.io/json-structure/amazon-codepipeline/amazon-codepipeline-action-configuration-map-structure/)
+- [Amazon Codepipeline Action Configuration Property List Structure](https://apis.io/json-structure/amazon-codepipeline/amazon-codepipeline-action-configuration-property-list-structure/)
+- [Amazon Codepipeline Action Configuration Property Structure](https://apis.io/json-structure/amazon-codepipeline/amazon-codepipeline-action-configuration-property-structure/)
+- [Amazon Codepipeline Action Configuration Property Type Structure](https://apis.io/json-structure/amazon-codepipeline/amazon-codepipeline-action-configuration-property-type-structure/)
+- [Amazon Codepipeline Action Configuration Queryable Value Structure](https://apis.io/json-structure/amazon-codepipeline/amazon-codepipeline-action-configuration-queryable-value-structure/)
+- [Amazon Codepipeline Action Configuration Structure](https://apis.io/json-structure/amazon-codepipeline/amazon-codepipeline-action-configuration-structure/)
+- [Amazon Codepipeline Action Configuration Value Structure](https://apis.io/json-structure/amazon-codepipeline/amazon-codepipeline-action-configuration-value-structure/)
+- [Amazon Codepipeline Action Context Structure](https://apis.io/json-structure/amazon-codepipeline/amazon-codepipeline-action-context-structure/)
+- [Amazon Codepipeline Action Declaration Structure](https://apis.io/json-structure/amazon-codepipeline/amazon-codepipeline-action-declaration-structure/)
+- [Amazon Codepipeline Action Execution Detail List Structure](https://apis.io/json-structure/amazon-codepipeline/amazon-codepipeline-action-execution-detail-list-structure/)
+- [Amazon Codepipeline Action Execution Detail Structure](https://apis.io/json-structure/amazon-codepipeline/amazon-codepipeline-action-execution-detail-structure/)
+- [Amazon Codepipeline Action Execution Filter Structure](https://apis.io/json-structure/amazon-codepipeline/amazon-codepipeline-action-execution-filter-structure/)
+- [Amazon Codepipeline Action Execution Id Structure](https://apis.io/json-structure/amazon-codepipeline/amazon-codepipeline-action-execution-id-structure/)
+- [Amazon Codepipeline Action Execution Input Structure](https://apis.io/json-structure/amazon-codepipeline/amazon-codepipeline-action-execution-input-structure/)
+- [Amazon Codepipeline Action Execution Output Structure](https://apis.io/json-structure/amazon-codepipeline/amazon-codepipeline-action-execution-output-structure/)
+- [Amazon Codepipeline Action Execution Result Structure](https://apis.io/json-structure/amazon-codepipeline/amazon-codepipeline-action-execution-result-structure/)
+- [Amazon Codepipeline Action Execution Status Structure](https://apis.io/json-structure/amazon-codepipeline/amazon-codepipeline-action-execution-status-structure/)
+- …and 289 more published on APIs.io
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Amazon Codepipeline Context](https://apis.io/jsonld/amazon-codepipeline/amazon-codepipeline-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Amazon Codepipeline Vocabulary](https://apis.io/vocabularies/amazon-codepipeline/amazon-codepipeline-vocabulary/)
+
+#### Examples (144)
+
+Example requests and responses.
+
+- [Amazon Codepipeline Acknowledge Job Input Example](https://apis.io/examples/amazon-codepipeline/amazon-codepipeline-acknowledge-job-input-example/)
+- [Amazon Codepipeline Acknowledge Job Output Example](https://apis.io/examples/amazon-codepipeline/amazon-codepipeline-acknowledge-job-output-example/)
+- [Amazon Codepipeline Acknowledge Third Party Job Input Example](https://apis.io/examples/amazon-codepipeline/amazon-codepipeline-acknowledge-third-party-job-input-example/)
+- [Amazon Codepipeline Acknowledge Third Party Job Output Example](https://apis.io/examples/amazon-codepipeline/amazon-codepipeline-acknowledge-third-party-job-output-example/)
+- [Amazon Codepipeline Action Configuration Example](https://apis.io/examples/amazon-codepipeline/amazon-codepipeline-action-configuration-example/)
+- [Amazon Codepipeline Action Configuration Map Example](https://apis.io/examples/amazon-codepipeline/amazon-codepipeline-action-configuration-map-example/)
+- [Amazon Codepipeline Action Configuration Property Example](https://apis.io/examples/amazon-codepipeline/amazon-codepipeline-action-configuration-property-example/)
+- [Amazon Codepipeline Action Context Example](https://apis.io/examples/amazon-codepipeline/amazon-codepipeline-action-context-example/)
+- [Amazon Codepipeline Action Declaration Example](https://apis.io/examples/amazon-codepipeline/amazon-codepipeline-action-declaration-example/)
+- [Amazon Codepipeline Action Execution Detail Example](https://apis.io/examples/amazon-codepipeline/amazon-codepipeline-action-execution-detail-example/)
+- [Amazon Codepipeline Action Execution Example](https://apis.io/examples/amazon-codepipeline/amazon-codepipeline-action-execution-example/)
+- [Amazon Codepipeline Action Execution Filter Example](https://apis.io/examples/amazon-codepipeline/amazon-codepipeline-action-execution-filter-example/)
+- [Amazon Codepipeline Action Execution Input Example](https://apis.io/examples/amazon-codepipeline/amazon-codepipeline-action-execution-input-example/)
+- [Amazon Codepipeline Action Execution Output Example](https://apis.io/examples/amazon-codepipeline/amazon-codepipeline-action-execution-output-example/)
+- [Amazon Codepipeline Action Execution Result Example](https://apis.io/examples/amazon-codepipeline/amazon-codepipeline-action-execution-result-example/)
+- [Amazon Codepipeline Action Revision Example](https://apis.io/examples/amazon-codepipeline/amazon-codepipeline-action-revision-example/)
+- [Amazon Codepipeline Action State Example](https://apis.io/examples/amazon-codepipeline/amazon-codepipeline-action-state-example/)
+- [Amazon Codepipeline Action Type Artifact Details Example](https://apis.io/examples/amazon-codepipeline/amazon-codepipeline-action-type-artifact-details-example/)
+- [Amazon Codepipeline Action Type Declaration Example](https://apis.io/examples/amazon-codepipeline/amazon-codepipeline-action-type-declaration-example/)
+- [Amazon Codepipeline Action Type Example](https://apis.io/examples/amazon-codepipeline/amazon-codepipeline-action-type-example/)
+- [Amazon Codepipeline Action Type Executor Example](https://apis.io/examples/amazon-codepipeline/amazon-codepipeline-action-type-executor-example/)
+- [Amazon Codepipeline Action Type Id Example](https://apis.io/examples/amazon-codepipeline/amazon-codepipeline-action-type-id-example/)
+- [Amazon Codepipeline Action Type Identifier Example](https://apis.io/examples/amazon-codepipeline/amazon-codepipeline-action-type-identifier-example/)
+- [Amazon Codepipeline Action Type Permissions Example](https://apis.io/examples/amazon-codepipeline/amazon-codepipeline-action-type-permissions-example/)
+- [Amazon Codepipeline Action Type Property Example](https://apis.io/examples/amazon-codepipeline/amazon-codepipeline-action-type-property-example/)
+- …and 119 more published on APIs.io
+
+#### Collections (41)
+
+Postman and Open Collection request collections.
+
+- [AWS CodePipeline Executions API](https://apis.io/collections/amazon-codepipeline/open-amazon-codepipeline-executions-api/)
+- [AWS CodePipeline Executions Pipelines API](https://apis.io/collections/amazon-codepipeline/open-amazon-codepipeline-pipelines-api/)
+- [AWS CodePipeline Executions #X Amz Target=CodePipeline 20150709.AcknowledgeJob API](https://apis.io/collections/amazon-codepipeline/open-amazon-codepipeline-x-amz-target-codepipeline-20150709-acknowledgejob-api/)
+- [AWS CodePipeline Executions #X Amz Target=CodePipeline 20150709.AcknowledgeThirdPartyJob API](https://apis.io/collections/amazon-codepipeline/open-amazon-codepipeline-x-amz-target-codepipeline-20150709-acknowledgethirdpartyjob-api/)
+- [AWS CodePipeline Executions #X Amz Target=CodePipeline 20150709.CreateCustomActionType API](https://apis.io/collections/amazon-codepipeline/open-amazon-codepipeline-x-amz-target-codepipeline-20150709-createcustomactiontype-api/)
+- [AWS CodePipeline Executions #X Amz Target=CodePipeline 20150709.CreatePipeline API](https://apis.io/collections/amazon-codepipeline/open-amazon-codepipeline-x-amz-target-codepipeline-20150709-createpipeline-api/)
+- [AWS CodePipeline Executions #X Amz Target=CodePipeline 20150709.DeleteCustomActionType API](https://apis.io/collections/amazon-codepipeline/open-amazon-codepipeline-x-amz-target-codepipeline-20150709-deletecustomactiontype-api/)
+- [AWS CodePipeline Executions #X Amz Target=CodePipeline 20150709.DeletePipeline API](https://apis.io/collections/amazon-codepipeline/open-amazon-codepipeline-x-amz-target-codepipeline-20150709-deletepipeline-api/)
+- [AWS CodePipeline Executions #X Amz Target=CodePipeline 20150709.DeleteWebhook API](https://apis.io/collections/amazon-codepipeline/open-amazon-codepipeline-x-amz-target-codepipeline-20150709-deletewebhook-api/)
+- [AWS CodePipeline Executions #X Amz Target=CodePipeline 20150709.DeregisterWebhookWithThirdParty API](https://apis.io/collections/amazon-codepipeline/open-amazon-codepipeline-x-amz-target-codepipeline-20150709-deregisterwebhookwiththirdparty-api/)
+- [AWS CodePipeline Executions #X Amz Target=CodePipeline 20150709.DisableStageTransition API](https://apis.io/collections/amazon-codepipeline/open-amazon-codepipeline-x-amz-target-codepipeline-20150709-disablestagetransition-api/)
+- [AWS CodePipeline Executions #X Amz Target=CodePipeline 20150709.EnableStageTransition API](https://apis.io/collections/amazon-codepipeline/open-amazon-codepipeline-x-amz-target-codepipeline-20150709-enablestagetransition-api/)
+- [AWS CodePipeline Executions #X Amz Target=CodePipeline 20150709.GetActionType API](https://apis.io/collections/amazon-codepipeline/open-amazon-codepipeline-x-amz-target-codepipeline-20150709-getactiontype-api/)
+- [AWS CodePipeline Executions #X Amz Target=CodePipeline 20150709.GetJobDetails API](https://apis.io/collections/amazon-codepipeline/open-amazon-codepipeline-x-amz-target-codepipeline-20150709-getjobdetails-api/)
+- [AWS CodePipeline Executions #X Amz Target=CodePipeline 20150709.GetPipeline API](https://apis.io/collections/amazon-codepipeline/open-amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipeline-api/)
+- [AWS CodePipeline Executions #X Amz Target=CodePipeline 20150709.GetPipelineExecution API](https://apis.io/collections/amazon-codepipeline/open-amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipelineexecution-api/)
+- [AWS CodePipeline Executions #X Amz Target=CodePipeline 20150709.GetPipelineState API](https://apis.io/collections/amazon-codepipeline/open-amazon-codepipeline-x-amz-target-codepipeline-20150709-getpipelinestate-api/)
+- [AWS CodePipeline Executions #X Amz Target=CodePipeline 20150709.GetThirdPartyJobDetails API](https://apis.io/collections/amazon-codepipeline/open-amazon-codepipeline-x-amz-target-codepipeline-20150709-getthirdpartyjobdetails-api/)
+- [AWS CodePipeline Executions #X Amz Target=CodePipeline 20150709.ListActionExecutions API](https://apis.io/collections/amazon-codepipeline/open-amazon-codepipeline-x-amz-target-codepipeline-20150709-listactionexecutions-api/)
+- [AWS CodePipeline Executions #X Amz Target=CodePipeline 20150709.ListActionTypes API](https://apis.io/collections/amazon-codepipeline/open-amazon-codepipeline-x-amz-target-codepipeline-20150709-listactiontypes-api/)
+- [AWS CodePipeline Executions #X Amz Target=CodePipeline 20150709.ListPipelineExecutions API](https://apis.io/collections/amazon-codepipeline/open-amazon-codepipeline-x-amz-target-codepipeline-20150709-listpipelineexecutions-api/)
+- [AWS CodePipeline Executions #X Amz Target=CodePipeline 20150709.ListPipelines API](https://apis.io/collections/amazon-codepipeline/open-amazon-codepipeline-x-amz-target-codepipeline-20150709-listpipelines-api/)
+- [AWS CodePipeline Executions #X Amz Target=CodePipeline 20150709.ListTagsForResource API](https://apis.io/collections/amazon-codepipeline/open-amazon-codepipeline-x-amz-target-codepipeline-20150709-listtagsforresource-api/)
+- [AWS CodePipeline Executions #X Amz Target=CodePipeline 20150709.ListWebhooks API](https://apis.io/collections/amazon-codepipeline/open-amazon-codepipeline-x-amz-target-codepipeline-20150709-listwebhooks-api/)
+- [AWS CodePipeline Executions #X Amz Target=CodePipeline 20150709.PollForJobs API](https://apis.io/collections/amazon-codepipeline/open-amazon-codepipeline-x-amz-target-codepipeline-20150709-pollforjobs-api/)
+- …and 16 more published on APIs.io
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Amazon Codepipeline Openapi Overlay](https://apis.io/overlays/amazon-codepipeline/amazon-codepipeline-openapi-overlay/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Amazon CodePipeline — jsonschema rules](https://apis.io/rules/amazon-codepipeline/amazon-codepipeline-jsonschema-spectral-rules/)
+- [Amazon CodePipeline API Rules](https://apis.io/rules/amazon-codepipeline/amazon-codepipeline-spectral-rules/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Amazon Codepipeline Authentication](https://apis.io/security/amazon-codepipeline/amazon-codepipeline-authentication/)
+- [Amazon Codepipeline Domain Security](https://apis.io/security/amazon-codepipeline/amazon-codepipeline-domain-security/)
+- [Amazon Codepipeline Trust Center](https://apis.io/security/amazon-codepipeline/amazon-codepipeline-trust-center/)
+- [Amazon Codepipeline Vulnerability Disclosure](https://apis.io/security/amazon-codepipeline/amazon-codepipeline-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://aws.amazon.com/codepipeline/)
 - [Documentation](https://docs.aws.amazon.com/codepipeline/)
-- [APIReference](https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html)
-- [OpenAPI](openapi/amazon-codepipeline-openapi-original.yaml)
-
-## Common Properties
-
-- [GettingStarted](https://docs.aws.amazon.com/codepipeline)
+- [Getting started](https://docs.aws.amazon.com/codepipeline)
 - [Pricing](https://aws.amazon.com/codepipeline/pricing/)
-- [Console](https://console.aws.amazon.com/codepipeline/)
-- [Portal](https://aws.amazon.com/codepipeline/)
-- [Documentation](https://docs.aws.amazon.com/codepipeline/)
-- [TermsOfService](https://aws.amazon.com/service-terms/)
-- [PrivacyPolicy](https://aws.amazon.com/privacy/)
-- [StatusPage](https://health.aws.amazon.com/health/status)
-- [Blog](https://aws.amazon.com/blogs/devops/)
-- [SignUp](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html)
-- [GitHubOrganization](https://github.com/aws)
+- [Sign up](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html)
+- [Blog](https://aws.amazon.com/blogs/devops/tag/aws-codepipeline/feed/)
+- [Terms of service](https://aws.amazon.com/service-terms/)
+- [Privacy policy](https://aws.amazon.com/privacy/)
+- [GitHub](https://github.com/aws)
+- [Status](https://health.aws.amazon.com/health/status)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| Pipeline Automation | Automate the entire release process from source code to production with customizable pipeline stages and actions. |
-| Parallel Execution | Run multiple actions in parallel within a pipeline stage to speed up your delivery workflows. |
-| Manual Approval Actions | Add manual approval gates to pipelines for human review before promoting changes to production environments. |
-| Pipeline Conditions | Define conditions that must be met for a pipeline to proceed, including CloudWatch alarms and custom conditions. |
-| Cross-Account Deployments | Deploy to multiple AWS accounts and regions from a single pipeline using cross-account roles and artifact stores. |
-| Custom Actions | Create custom pipeline actions using Lambda functions or CodeBuild projects for specialized workflow steps. |
-| Execution History | Track the full execution history of each pipeline run including status, timing, and artifact details for each action. |
+**Kin Score 54.8** — strong · rubric 0.25.0 · scored 2026-10-23
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 59.5 |
+| Contract governance | 31.8 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 60.7 |
+| Access clarity | 52.6 |
 
-| Name | Description |
-|------|-------------|
-| Continuous Delivery Pipeline | Automate the entire software delivery lifecycle from source commit through build, test, staging, and production deployme |
-| Multi-Environment Promotion | Automatically promote changes through development, staging, and production environments with approval gates between stag |
-| Infrastructure as Code Deployment | Deploy CloudFormation stacks and Terraform configurations as pipeline stages for automated infrastructure provisioning. |
-| Microservices Delivery | Orchestrate independent delivery pipelines for multiple microservices, each triggered by its own source repository. |
-| Blue/Green Deployments | Use CodeDeploy actions in pipelines to implement zero-downtime blue/green deployments automatically. |
+**Agent readiness 29.6** — agent-ready
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | verified |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
 
-| Name | Description |
-|------|-------------|
-| AWS CodeBuild | Use CodeBuild as the build and test stage in pipelines. |
-| AWS CodeDeploy | Use CodeDeploy as the deployment stage for EC2, Lambda, and ECS targets. |
-| AWS CodeCommit | Trigger pipelines automatically on CodeCommit repository changes. |
-| GitHub | Connect GitHub repositories as pipeline source stages with webhook triggers. |
-| Amazon S3 | Use S3 as a source stage or for storing pipeline artifacts between stages. |
-| AWS CloudFormation | Deploy infrastructure as code using CloudFormation actions in pipeline stages. |
-| AWS Elastic Beanstalk | Deploy application updates to Elastic Beanstalk environments from pipelines. |
-| Amazon ECS | Deploy container updates to ECS services as a pipeline deployment stage. |
-| Amazon EventBridge | Trigger pipelines from EventBridge events for event-driven delivery workflows. |
+**Regulatory alignment 35.3** — Horizontal (data, software, accessibility, platform)
 
-## Artifacts
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/amazon-codepipeline/](https://apis.io/providers/amazon-codepipeline/).
 
-Machine-readable API specifications organized by format.
+## How this profile is made
 
-### OpenAPI
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-- [amazon-codepipeline-openapi-original](openapi/amazon-codepipeline-openapi-original.yaml)
-- [amazon-codepipeline-openapi](openapi/amazon-codepipeline-openapi.yml)
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Amazon CodePipeline: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-### JSON Schema
+## Open an issue
 
-314 JSON Schema files generated from the OpenAPI specification.
-
-- [amazon-codepipeline-access-key-id-schema](json-schema/amazon-codepipeline-access-key-id-schema.json)
-- [amazon-codepipeline-account-id-schema](json-schema/amazon-codepipeline-account-id-schema.json)
-- [amazon-codepipeline-acknowledge-job-input-schema](json-schema/amazon-codepipeline-acknowledge-job-input-schema.json)
-- [amazon-codepipeline-acknowledge-job-output-schema](json-schema/amazon-codepipeline-acknowledge-job-output-schema.json)
-- [amazon-codepipeline-acknowledge-third-party-job-input-schema](json-schema/amazon-codepipeline-acknowledge-third-party-job-input-schema.json)
-- ...and 309 more in [json-schema/](json-schema/)
-
-### JSON Structure
-
-314 JSON Structure files in [json-structure/](json-structure/).
-
-### JSON-LD
-
-- [amazon-codepipeline-context](json-ld/amazon-codepipeline-context.jsonld)
-
-### Examples
-
-314 example JSON files in [examples/](examples/).
-
-## Capabilities
-
-Naftiko capabilities organized as shared per-API definitions composed into customer-facing workflows.
-
-### Shared Per-API Definitions
-
-- [codepipeline](capabilities/shared/codepipeline.yaml) — 39 operations
-
-### Workflow Capabilities
-
-| Workflow | APIs Combined | Tools | Persona |
-|----------|--------------|-------|---------|
-| [Amazon CodePipeline Release Pipeline Automation](capabilities/amazon-codepipeline-release-pipeline.yaml) | codepipeline | 14 | DevOps Engineer |
-
-## Vocabulary
-
-- [amazon-codepipeline-vocabulary](vocabulary/amazon-codepipeline-vocabulary.yaml) — Unified taxonomy mapping 1 resources, 5 actions, 1 workflows, and 3 personas
-
-## Rules
-
-- [amazon-codepipeline-spectral-rules](rules/amazon-codepipeline-spectral-rules.yml) — 10 rules enforcing Amazon CodePipeline API conventions
-
-## Maintainers
-
-**FN:** Kin Lane
-
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/amazon-codepipeline/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
